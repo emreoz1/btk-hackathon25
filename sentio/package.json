@@ -6,11 +6,14 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ingest": "node scripts/ingestData.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "@pinecone-database/pinecone": "^6.1.2",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "dotenv": "^17.2.1",
     "langchain": "^0.3.30",
     "next": "15.4.5",
     "react": "19.1.0",
