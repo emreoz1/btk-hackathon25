@@ -48,47 +48,130 @@ export async function POST(request) {
 
     const products = await Promise.all(productPromises);
 
-    // Her ürün için yorum özetlerini getir (paralel)
-    const reviewIdMapping = {
-      '1': ['1', '2', '3', '4'], // iPhone 15 Pro Max
-      '2': ['5', '6', '7'], // Samsung Galaxy S24 Ultra
-      '3': ['8', '9', '10'], // Sony WH-1000XM5
-      '4': ['11', '12', '13'], // MacBook Air M3
-      '5': ['14', '15', '16'], // Dyson V15 Detect
-      '6': ['17', '18'], // AirPods Pro 2
-      '7': ['19', '20'], // Dell XPS 15
-      '8': ['21', '22', '23'], // Xiaomi Robot Süpürge
-    };
-
+    // Her ürün için yorum özetlerini getir (paralel) - Pinecone'dan dynamic olarak çek
     const reviewSummaryPromises = products.map(async (product) => {
       try {
-        const reviewIds = reviewIdMapping[product.id] || [];
-        const reviewVectorIds = reviewIds.map(id => `review_${id}`);
+        // Pinecone'dan belirli bir ürüne ait tüm yorumları bul
+        let reviews = [];
         
-        if (reviewVectorIds.length === 0) {
+        try {
+          // İlk olarak query ile filtrelenmiş sonuçları dene
+          const queryResponse = await index.query({
+            vector: Array(768).fill(0), // 768 boyutlu dummy vector (Google text-embedding-004 boyutu)
+            topK: 1000, // Maksimum sonuç sayısı
+            filter: {
+              type: 'review',
+              productId: product.id
+            },
+            includeMetadata: true
+          });
+
+          console.log(`🔍 Query ile ${product.id} ürünü için ${queryResponse.matches.length} yorum bulundu`);
+
+          if (queryResponse.matches && queryResponse.matches.length > 0) {
+            reviews = queryResponse.matches.map(match => ({
+              rating: match.metadata.rating || 0,
+              comment: match.metadata.comment || match.metadata.content || '',
+              author: match.metadata.author || '',
+              date: match.metadata.date || ''
+            }));
+          }
+          
+          // Eğer filtreli query sonuç vermezse, productId'yi string olarak da dene
+          if (reviews.length === 0) {
+            console.log(`🔄 ${product.id} için string productId ile tekrar deneniyor`);
+            const stringQueryResponse = await index.query({
+              vector: Array(768).fill(0),
+              topK: 1000,
+              filter: {
+                type: 'review',
+                productId: product.id.toString()
+              },
+              includeMetadata: true
+            });
+            
+            console.log(`🔍 String Query ile ${product.id} ürünü için ${stringQueryResponse.matches.length} yorum bulundu`);
+            
+            if (stringQueryResponse.matches && stringQueryResponse.matches.length > 0) {
+              reviews = stringQueryResponse.matches.map(match => ({
+                rating: match.metadata.rating || 0,
+                comment: match.metadata.comment || match.metadata.content || '',
+                author: match.metadata.author || '',
+                date: match.metadata.date || ''
+              }));
+            }
+          }
+        } catch (queryError) {
+          console.log(`⚠️  ${product.id} için query filtreleme başarısız, tüm review'lar alınıp filtrelenecek:`, queryError.message);
+          
+          // Fallback: Tüm review'ları al ve clientta filtrele
+          try {
+            const allReviewsQuery = await index.query({
+              vector: Array(768).fill(0), // 768 boyutlu dummy vector
+              topK: 1000,
+              filter: { type: 'review' },
+              includeMetadata: true
+            });
+
+            console.log(`📊 Toplam ${allReviewsQuery.matches.length} review bulundu, ${product.id} için filtreleniyor`);
+
+            if (allReviewsQuery.matches && allReviewsQuery.matches.length > 0) {
+              // Debug: İlk birkaç review'ın metadata'sını kontrol et
+              console.log(`🔍 İlk review metadata örneği:`, allReviewsQuery.matches[0]?.metadata);
+              
+              // İstemci tarafında productId'ye göre filtrele - hem string hem number olarak kontrol et
+              const filteredReviews = allReviewsQuery.matches.filter(match => {
+                if (!match.metadata) return false;
+                
+                const matchProductId = match.metadata.productId;
+                const targetProductId = product.id;
+                
+                // String ve number karşılaştırması
+                return matchProductId === targetProductId || 
+                       matchProductId === targetProductId.toString() ||
+                       matchProductId.toString() === targetProductId.toString();
+              });
+              
+              console.log(`✅ ${filteredReviews.length} review ${product.id} ürünü için filtrelendi`);
+
+              reviews = filteredReviews.map(match => ({
+                rating: match.metadata.rating || 0,
+                comment: match.metadata.comment || match.metadata.content || '',
+                author: match.metadata.author || '',
+                date: match.metadata.date || ''
+              }));
+            }
+          } catch (fallbackError) {
+            console.error(`❌ ${product.id} için fallback query de başarısız:`, fallbackError.message);
+            // En son çare olarak boş reviews ile devam et
+            reviews = [];
+          }
+        }
+        
+        console.log(`📝 ${product.id} ürünü için toplam ${reviews.length} yorum işlendi`);
+        
+        if (reviews.length === 0) {
+          console.log(`⚠️  ${product.id} için hiç yorum bulunamadı`);
           return {
             productId: product.id,
             averageRating: 0,
             totalReviews: 0,
-            sentiment: 'neutral'
+            sentiment: 'neutral',
+            topComments: []
           };
         }
 
-        const reviewsQuery = await index.fetch(reviewVectorIds);
-        const reviews = Object.values(reviewsQuery.records).map(record => ({
-          rating: record.metadata.rating || 0,
-          comment: record.metadata.comment || record.metadata.content || ''
-        }));
-
         const avgRating = calculateAverageRating(reviews);
         const sentiment = avgRating >= 4 ? 'positive' : avgRating <= 2 ? 'negative' : 'neutral';
+
+        console.log(`⭐ ${product.id} - Ortalama puan: ${avgRating.toFixed(2)}, Yorum sayısı: ${reviews.length}, Sentiment: ${sentiment}`);
 
         return {
           productId: product.id,
           averageRating: avgRating,
           totalReviews: reviews.length,
           sentiment: sentiment,
-          topComments: reviews.slice(0, 5).map(r => r.comment).filter(c => c.length > 10)
+          topComments: reviews.slice(0, 5).map(r => r.comment).filter(c => c && c.length > 10)
         };
 
       } catch (error) {
