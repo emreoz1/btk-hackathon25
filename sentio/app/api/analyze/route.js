@@ -38,31 +38,67 @@ export async function POST(request) {
 
     const product = productQuery.records[`product_${productId}`].metadata;
 
-    // Yorumları çek - productId'ye göre review ID'lerini belirle ve fetch et
-    const reviewIdMapping = {
-      '1': ['1', '2', '3', '4'], // iPhone 15 Pro Max
-      '2': ['5', '6', '7'], // Samsung Galaxy S24 Ultra
-      '3': ['8', '9', '10'], // Sony WH-1000XM5
-      '4': ['11', '12', '13'], // MacBook Air M3
-      '5': ['14', '15', '16'], // Dyson V15 Detect
-      '6': ['17', '18'], // AirPods Pro 2
-      '7': ['19', '20'], // Dell XPS 15
-      '8': ['21', '22', '23'], // Xiaomi Robot Süpürge
-    };
-
-    const reviewIds = reviewIdMapping[productId] || [];
-    const reviewVectorIds = reviewIds.map(id => `review_${id}`);
-    
+    // Pinecone'dan belirli bir ürüne ait tüm yorumları bul
     let reviews = [];
     
-    if (reviewVectorIds.length > 0) {
-      const reviewsQuery = await index.fetch(reviewVectorIds);
+    try {
+      // İlk olarak query ile filtrelenmiş sonuçları dene
+      const queryResponse = await index.query({
+        vector: Array(768).fill(0), // 768 boyutlu dummy vector (Google text-embedding-004 boyutu)
+        topK: 1000, // Maksimum sonuç sayısı
+        filter: {
+          type: 'review',
+          productId: productId
+        },
+        includeMetadata: true
+      });
+
+      console.log(`🔍 Query ile ${productId} ürünü için ${queryResponse.matches.length} yorum bulundu`);
+
+      if (queryResponse.matches && queryResponse.matches.length > 0) {
+        reviews = queryResponse.matches.map(match => ({
+          reviewId: match.metadata.reviewId,
+          rating: match.metadata.rating || 0,
+          comment: match.metadata.comment || match.metadata.content || '',
+          author: match.metadata.author || '',
+          date: match.metadata.date || ''
+        }));
+      }
+    } catch (queryError) {
+      console.log('⚠️  Query filtreleme başarısız, tüm review\'lar alınıp filtrelenecek:', queryError.message);
       
-      reviews = Object.values(reviewsQuery.records).map(record => ({
-        rating: record.metadata.rating || 0,
-        comment: record.metadata.comment || record.metadata.content || '',
-        date: record.metadata.date || ''
-      }));
+      // Fallback: Tüm review'ları al ve clientta filtrele
+      try {
+        const allReviewsQuery = await index.query({
+          vector: Array(768).fill(0), // 768 boyutlu dummy vector
+          topK: 1000,
+          filter: { type: 'review' },
+          includeMetadata: true
+        });
+
+        console.log(`📊 Toplam ${allReviewsQuery.matches.length} review bulundu, ${productId} için filtreleniyor`);
+
+        if (allReviewsQuery.matches && allReviewsQuery.matches.length > 0) {
+          // İstemci tarafında productId'ye göre filtrele
+          const filteredReviews = allReviewsQuery.matches.filter(match => 
+            match.metadata && match.metadata.productId === productId
+          );
+          
+          console.log(`✅ ${filteredReviews.length} review ${productId} ürünü için filtrelendi`);
+
+          reviews = filteredReviews.map(match => ({
+            reviewId: match.metadata.reviewId,
+            rating: match.metadata.rating || 0,
+            comment: match.metadata.comment || match.metadata.content || '',
+            author: match.metadata.author || '',
+            date: match.metadata.date || ''
+          }));
+        }
+      } catch (fallbackError) {
+        console.error('❌ Fallback query de başarısız:', fallbackError.message);
+        // En son çare olarak boş reviews ile devam et
+        reviews = [];
+      }
     }
 
     const reviewTexts = reviews.map(review => 

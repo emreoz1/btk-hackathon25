@@ -1,0 +1,202 @@
+[
+  {
+    "productId": "1",
+    "name": "iPhone 15 Pro Max 256GB Doğal Titanyum",
+    "description": "Apple iPhone 15 Pro Max, A17 Pro çip, 48MP kamera sistemi, Titanium tasarım",
+    "price": 85999,
+    "category": "Telefon",
+    "brand": "Apple",
+    "imageUrl": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400&h=400&fit=crop&crop=center",
+    "features": ["A17 Pro çip", "48MP kamera", "256GB depolama", "Titanyum gövde", "5G"]
+  },
+  {
+    "productId": "2",
+    "name": "Samsung Galaxy S24 Ultra 512GB Siyah",
+    "description": "Samsung Galaxy S24 Ultra, Snapdragon 8 Gen 3, 200MP kamera, S Pen dahil",
+    "price": 79999,
+    "category": "Telefon",
+    "brand": "Samsung",
+    "imageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&h=400&fit=crop&crop=center",
+    "features": ["Snapdragon 8 Gen 3", "200MP kamera", "512GB depolama", "S Pen", "5G"]
+  },
+  {
+    "productId": "3",
+    "name": "Sony WH-1000XM5 Kablosuz Kulaklık",
+    "description": "Sony WH-1000XM5, aktif gürültü engelleme, 30 saat pil ömrü",
+    "price": 12999,
+    "category": "Kulaklık",
+    "brand": "Sony",
+    "imageUrl": "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&h=400&fit=crop&crop=center",
+    "features": ["Aktif gürültü engelleme", "30 saat pil", "Hi-Res Audio", "Çabuk şarj"]
+  },
+  {
+    "productId": "4",
+    "name": "MacBook Air M3 13\" 8GB 256GB",
+    "description": "Apple MacBook Air M3 çip, 13 inç Liquid Retina ekran, fanless tasarım",
+    "price": 45999,
+    "category": "Laptop",
+    "brand": "Apple",
+    "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=400&fit=crop&crop=center",
+    "features": ["M3 çip", "13\" Retina ekran", "8GB RAM", "256GB SSD", "Fanless"]
+  },
+  {
+    "productId": "5",
+    "name": "Dyson V15 Detect Kablosuz Süpürge",
+    "description": "Dyson V15 Detect, lazer ile toz tespiti, 60 dakika çalışma süresi",
+    "price": 24999,
+    "category": "Ev Elektroniği",
+    "brand": "Dyson",
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop&crop=center",
+    "features": ["Lazer toz tespiti", "60 dk pil", "HEPA filtreleme", "Akıllı sensor"]
+  },
+  {
+    "productId": "6",
+    "name": "AirPods Pro 2. Nesil",
+    "description": "Apple AirPods Pro 2. nesil, aktif gürültü engelleme, USB-C şarj kutusu",
+    "price": 8999,
+    "category": "Kulaklık",
+    "brand": "Apple",
+    "imageUrl": "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=400&h=400&fit=crop&crop=center",
+    "features": ["Aktif gürültü engelleme", "Şeffaflık modu", "USB-C", "H2 çip"]
+  },
+  {
+    "productId": "7",
+    "name": "Dell XPS 15 Intel i7 32GB 1TB",
+    "description": "Dell XPS 15, Intel Core i7, 32GB RAM, 1TB SSD, 15.6\" 4K ekran",
+    "price": 68999,
+    "category": "Laptop",
+    "brand": "Dell",
+    "imageUrl": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=400&fit=crop&crop=center",
+    "features": ["Intel Core i7", "32GB RAM", "1TB SSD", "4K ekran", "RTX grafik"]
+  },
+  {
+    "productId": "8",
+    "name": "Xiaomi Robot Süpürge S10+",
+    "description": "Xiaomi Robot Süpürge S10+, LiDAR navigasyon, otomatik toz boşaltma",
+    "price": 15999,
+    "category": "Ev Elektroniği",
+    "brand": "Xiaomi",
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop&crop=center",
+    "features": ["LiDAR navigasyon", "Otomatik boşaltma", "Harita kaydetme", "Sessiz çalışma"]
+  },
+  {
+    "productId": "9",
+    "name": "PlayStation 5 Digital Edition",
+    "description": "Sony PlayStation 5 Digital Edition, 825GB SSD, 4K oyun deneyimi",
+    "price": 19999,
+    "category": "Oyun Konsolu",
+    "brand": "Sony",
+    "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=400&h=400&fit=crop&crop=center",
+    "features": ["825GB SSD", "4K gaming", "Ray tracing", "DualSense kontrolcü", "3D ses"]
+  },
+  {
+    "productId": "10",
+    "name": "LG OLED C3 55\" 4K Smart TV",
+    "description": "LG OLED55C3PSA, 55 inç OLED 4K Smart TV, webOS işletim sistemi",
+    "price": 38999,
+    "category": "TV",
+    "brand": "LG",
+    "imageUrl": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=400&fit=crop&crop=center",
+    "features": ["OLED panel", "4K 120Hz", "webOS", "HDR10", "Dolby Vision"]
+  },
+  {
+    "productId": "11",
+    "name": "Beko Buzdolabı No Frost 600 Lt",
+    "description": "Beko GNE60530DX No Frost buzdolabı, A+ enerji sınıfı, çift kapı",
+    "price": 22999,
+    "category": "Beyaz Eşya",
+    "brand": "Beko",
+    "imageUrl": "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&h=400&fit=crop&crop=center",
+    "features": ["No Frost", "600 Lt hacim", "A+ enerji", "Çift kapı", "LED aydınlatma"]
+  },
+  {
+    "productId": "12",
+    "name": "Canon EOS R6 Mark II Kit",
+    "description": "Canon EOS R6 Mark II, 24MP Full Frame, 24-105mm lens dahil",
+    "price": 95999,
+    "category": "Kamera",
+    "brand": "Canon",
+    "imageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=400&h=400&fit=crop&crop=center",
+    "features": ["24MP Full Frame", "4K video", "Image stabilization", "RF 24-105mm lens", "WiFi"]
+  },
+  {
+    "productId": "13",
+    "name": "Tesla Model Y Performance",
+    "description": "Tesla Model Y Performance, AWD, 488 km menzil, Autopilot dahil",
+    "price": 1850000,
+    "category": "Elektrikli Araç",
+    "brand": "Tesla",
+    "imageUrl": "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400&h=400&fit=crop&crop=center",
+    "features": ["AWD", "488km menzil", "Autopilot", "15\" touchscreen", "Supercharger"]
+  },
+  {
+    "productId": "14",
+    "name": "Philips Hue Smart Ampul Seti",
+    "description": "Philips Hue White and Color Ambiance, 4'lü akıllı ampul seti",
+    "price": 2999,
+    "category": "Akıllı Ev",
+    "brand": "Philips",
+    "imageUrl": "https://images.unsplash.com/photo-1558002038-1055907df827?w=400&h=400&fit=crop&crop=center",
+    "features": ["16 milyon renk", "Sesli kontrol", "Zamanlayıcı", "Uzaktan kontrol", "Enerji tasarrufu"]
+  },
+  {
+    "productId": "15",
+    "name": "Nikon Z7 II Body",
+    "description": "Nikon Z7 II, 45.7MP Full Frame aynasız kamera gövdesi",
+    "price": 89999,
+    "category": "Kamera",
+    "brand": "Nikon",
+    "imageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=400&h=400&fit=crop&crop=center",
+    "features": ["45.7MP sensor", "4K 60p video", "Dual card slots", "5 eksen stabilizasyon", "Eye AF"]
+  },
+  {
+    "productId": "16",
+    "name": "Asus ROG Strix RTX 4080 16GB",
+    "description": "Asus ROG Strix GeForce RTX 4080, 16GB GDDR6X, oyun ekran kartı",
+    "price": 45999,
+    "category": "Bilgisayar Parçası",
+    "brand": "Asus",
+    "imageUrl": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=400&fit=crop&crop=center",
+    "features": ["RTX 4080", "16GB GDDR6X", "Ray tracing", "DLSS 3", "RGB aydınlatma"]
+  },
+  {
+    "productId": "17",
+    "name": "Samsung Galaxy Watch 6 Classic",
+    "description": "Samsung Galaxy Watch6 Classic, 47mm, LTE, sağlık takibi",
+    "price": 13999,
+    "category": "Akıllı Saat",
+    "brand": "Samsung",
+    "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop&crop=center",
+    "features": ["47mm AMOLED", "LTE bağlantı", "Kalp ritmi", "Uyku takibi", "GPS"]
+  },
+  {
+    "productId": "18",
+    "name": "iPad Pro 12.9\" M2 256GB",
+    "description": "Apple iPad Pro 12.9 inç, M2 çip, 256GB WiFi, Liquid Retina XDR ekran",
+    "price": 54999,
+    "category": "Tablet",
+    "brand": "Apple",
+    "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=400&fit=crop&crop=center",
+    "features": ["M2 çip", "12.9\" XDR ekran", "256GB depolama", "Apple Pencil uyumlu", "Face ID"]
+  },
+  {
+    "productId": "19",
+    "name": "Bosch WAX32KH1TR Çamaşır Makinesi",
+    "description": "Bosch WAX32KH1TR, 9kg kapasiteli, A+++ enerji sınıfı çamaşır makinesi",
+    "price": 18999,
+    "category": "Beyaz Eşya",
+    "brand": "Bosch",
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop&crop=center",
+    "features": ["9kg kapasite", "A+++ enerji", "EcoSilence motor", "AntiVibration", "LED display"]
+  },
+  {
+    "productId": "20",
+    "name": "Microsoft Surface Pro 9 i7",
+    "description": "Microsoft Surface Pro 9, Intel Core i7, 16GB RAM, 512GB SSD",
+    "price": 62999,
+    "category": "Tablet",
+    "brand": "Microsoft",
+    "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=400&fit=crop&crop=center",
+    "features": ["Intel Core i7", "16GB RAM", "512GB SSD", "13\" PixelSense", "Type Cover uyumlu"]
+  }
+]

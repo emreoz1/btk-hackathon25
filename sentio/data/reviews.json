@@ -1,0 +1,474 @@
+[
+  {
+    "reviewId": "1",
+    "productId": "1",
+    "rating": 5,
+    "comment": "Kamera kalitesi inanılmaz! 48MP ana kamera gerçekten fark yaratıyor. Titanyum kasası çok premium hissettiriyor.",
+    "author": "Mehmet Özkan",
+    "date": "2024-01-15"
+  },
+  {
+    "reviewId": "2",
+    "productId": "1",
+    "rating": 4,
+    "comment": "Performans mükemmel ama fiyat çok yüksek. Pil ömrü beklediğimden biraz daha kısa.",
+    "author": "Ayşe Demir",
+    "date": "2024-01-20"
+  },
+  {
+    "reviewId": "3",
+    "productId": "1",
+    "rating": 5,
+    "comment": "A17 Pro çip sayesinde oyunlarda hiç takılma yok. Video editing için de harika.",
+    "author": "Can Yılmaz",
+    "date": "2024-01-25"
+  },
+  {
+    "reviewId": "4",
+    "productId": "1",
+    "rating": 3,
+    "comment": "İyi telefon ama Android'den geçiş biraz zor oldu. Şarj hızı yavaş.",
+    "author": "Zeynep Kaya",
+    "date": "2024-01-30"
+  },
+  {
+    "reviewId": "5",
+    "productId": "2",
+    "rating": 5,
+    "comment": "S Pen ile not almak harika! 200MP kamera detay yakalamada çok başarılı.",
+    "author": "Oğuz Şahin",
+    "date": "2024-02-01"
+  },
+  {
+    "reviewId": "6",
+    "productId": "2",
+    "rating": 4,
+    "comment": "Ekran kalitesi muhteşem, renk doğruluğu çok iyi. Sadece biraz ağır.",
+    "author": "Elif Arslan",
+    "date": "2024-02-05"
+  },
+  {
+    "reviewId": "7",
+    "productId": "2",
+    "rating": 5,
+    "comment": "Snapdragon 8 Gen 3 performans canavarı! Hiç ısınma sorunu yaşamadım.",
+    "author": "Emre Çelik",
+    "date": "2024-02-10"
+  },
+  {
+    "reviewId": "8",
+    "productId": "3",
+    "rating": 5,
+    "comment": "Gürültü engelleme teknolojisi mükemmel! Uçakta bile çok sessiz.",
+    "author": "Fatma Aydın",
+    "date": "2024-01-10"
+  },
+  {
+    "reviewId": "9",
+    "productId": "3",
+    "rating": 4,
+    "comment": "Ses kalitesi harika ama uzun kullanımda kulak ağrısı yapabiliyor.",
+    "author": "Ahmet Koç",
+    "date": "2024-01-12"
+  },
+  {
+    "reviewId": "10",
+    "productId": "3",
+    "rating": 5,
+    "comment": "30 saat pil ömrü gerçekten doğru! Haftalar boyunca şarj etmeye gerek yok.",
+    "author": "Burcu Özdemir",
+    "date": "2024-01-18"
+  },
+  {
+    "reviewId": "11",
+    "productId": "4",
+    "rating": 5,
+    "comment": "M3 çip inanılmaz hızlı! Video montaj bile çok akıcı. Fanless tasarım sessizliği mükemmel.",
+    "author": "Murat Karaca",
+    "date": "2024-02-15"
+  },
+  {
+    "reviewId": "12",
+    "productId": "4",
+    "rating": 4,
+    "comment": "Çok hafif ve taşınabilir. Sadece portlar biraz az olmuş.",
+    "author": "Seda Yıldız",
+    "date": "2024-02-20"
+  },
+  {
+    "reviewId": "13",
+    "productId": "4",
+    "rating": 5,
+    "comment": "Ekran kalitesi harika, renk gamı çok geniş. Tasarım çok şık.",
+    "author": "Kemal Duran",
+    "date": "2024-02-25"
+  },
+  {
+    "reviewId": "14",
+    "productId": "5",
+    "rating": 4,
+    "comment": "Lazer ile toz gösterme özelliği çok ilginç! Temizlik performansı mükemmel.",
+    "author": "Deniz Aktaş",
+    "date": "2024-01-05"
+  },
+  {
+    "reviewId": "15",
+    "productId": "5",
+    "rating": 3,
+    "comment": "Güçlü ama çok gürültülü. Fiyat da oldukça yüksek.",
+    "author": "Hakan Polat",
+    "date": "2024-01-08"
+  },
+  {
+    "reviewId": "16",
+    "productId": "5",
+    "rating": 5,
+    "comment": "60 dakika pil ömrü tüm evi temizlemeye yetiyor. HEPA filtre gerçekten etkili.",
+    "author": "Gamze Uçar",
+    "date": "2024-01-12"
+  },
+  {
+    "reviewId": "17",
+    "productId": "6",
+    "rating": 5,
+    "comment": "H2 çip ile gürültü engelleme çok gelişmiş. Şeffaflık modu da harika.",
+    "author": "Serkan Güner",
+    "date": "2024-01-22"
+  },
+  {
+    "reviewId": "18",
+    "productId": "6",
+    "rating": 4,
+    "comment": "USB-C geçiş çok iyi olmuş. Ses kalitesi mükemmel ama pahalı.",
+    "author": "Melike Erdoğan",
+    "date": "2024-01-28"
+  },
+  {
+    "reviewId": "19",
+    "productId": "7",
+    "rating": 5,
+    "comment": "4K ekran kalitesi muhteşem! RTX grafik kartı ile oyunlar da akıcı.",
+    "author": "Barış Kılıç",
+    "date": "2024-02-12"
+  },
+  {
+    "reviewId": "20",
+    "productId": "7",
+    "rating": 4,
+    "comment": "Performans harika ama biraz ağır. Pil ömrü ortalama.",
+    "author": "Neslihan Öz",
+    "date": "2024-02-18"
+  },
+  {
+    "reviewId": "21",
+    "productId": "8",
+    "rating": 4,
+    "comment": "LiDAR navigasyon çok akıllı, mobilyaları çarpmıyor. Sessizlik konusunda iddia edildiği kadar iyi değil.",
+    "author": "Tolga Şen",
+    "date": "2024-01-14"
+  },
+  {
+    "reviewId": "22",
+    "productId": "8",
+    "rating": 5,
+    "comment": "Otomatik toz boşaltma özelliği harika! Haftalarca elle müdahale etmeye gerek yok.",
+    "author": "Gizem Acar",
+    "date": "2024-01-20"
+  },
+  {
+    "reviewId": "23",
+    "productId": "8",
+    "rating": 4,
+    "comment": "Fiyat/performans oranı çok iyi. Harita kaydetme özelliği kullanışlı.",
+    "author": "Cem Doğan",
+    "date": "2024-01-26"
+  },
+  {
+    "reviewId": "24",
+    "productId": "9",
+    "rating": 5,
+    "comment": "PlayStation 5 ile oyun deneyimi başka boyutta! SSD hızı inanılmaz.",
+    "author": "Berkay Çiftçi",
+    "date": "2024-02-28"
+  },
+  {
+    "reviewId": "25",
+    "productId": "9",
+    "rating": 4,
+    "comment": "DualSense kontrolcü haptic feedback özelliği harika. Sadece stok bulması zor.",
+    "author": "Pelin Taş",
+    "date": "2024-03-02"
+  },
+  {
+    "reviewId": "26",
+    "productId": "9",
+    "rating": 5,
+    "comment": "4K oyunlar çok güzel görünüyor. Ray tracing teknolojisi etkileyici.",
+    "author": "Onur Bal",
+    "date": "2024-03-05"
+  },
+  {
+    "reviewId": "27",
+    "productId": "10",
+    "rating": 5,
+    "comment": "OLED teknolojisi siyahları mükemmel gösteriyor. webOS kullanımı kolay.",
+    "author": "Selin Kurt",
+    "date": "2024-02-14"
+  },
+  {
+    "reviewId": "28",
+    "productId": "10",
+    "rating": 4,
+    "comment": "Görüntü kalitesi harika ama bazen yanıp sönme sorunu oluyor.",
+    "author": "Volkan Ateş",
+    "date": "2024-02-18"
+  },
+  {
+    "reviewId": "29",
+    "productId": "10",
+    "rating": 5,
+    "comment": "120Hz özelliği oyun deneyimini artırıyor. HDR desteği mükemmel.",
+    "author": "İrem Yüksel",
+    "date": "2024-02-22"
+  },
+  {
+    "reviewId": "30",
+    "productId": "11",
+    "rating": 4,
+    "comment": "No Frost özelliği buzlanma sorununu tamamen çözüyor. Sessiz çalışıyor.",
+    "author": "Recep Turan",
+    "date": "2024-01-30"
+  },
+  {
+    "reviewId": "31",
+    "productId": "11",
+    "rating": 5,
+    "comment": "600 litre hacim aile için ideal. Enerji tüketimi düşük.",
+    "author": "Sevgi Özkan",
+    "date": "2024-02-05"
+  },
+  {
+    "reviewId": "32",
+    "productId": "11",
+    "rating": 3,
+    "comment": "İyi buzdolabı ama kapı mıknatısı biraz zayıf.",
+    "author": "Tuncay Bozkurt",
+    "date": "2024-02-10"
+  },
+  {
+    "reviewId": "33",
+    "productId": "12",
+    "rating": 5,
+    "comment": "Canon EOS R6 Mark II fotoğraf kalitesi mükemmel! 24-105mm lens çok kullanışlı.",
+    "author": "Ece Demirci",
+    "date": "2024-03-01"
+  },
+  {
+    "reviewId": "34",
+    "productId": "12",
+    "rating": 4,
+    "comment": "Video kayıt performansı harika ama pil ömrü kısa.",
+    "author": "İlker Öztürk",
+    "date": "2024-03-08"
+  },
+  {
+    "reviewId": "35",
+    "productId": "12",
+    "rating": 5,
+    "comment": "Image stabilization özelliği çok etkili. Profesyonel sonuçlar alıyorum.",
+    "author": "Ceren Akın",
+    "date": "2024-03-12"
+  },
+  {
+    "reviewId": "36",
+    "productId": "13",
+    "rating": 5,
+    "comment": "Tesla Model Y Performance hızlanması inanılmaz! Autopilot çok güvenli.",
+    "author": "Kaan Erdoğan",
+    "date": "2024-03-15"
+  },
+  {
+    "reviewId": "37",
+    "productId": "13",
+    "rating": 4,
+    "comment": "Elektrikli araç deneyimi harika. Şarj istasyonu ağı geniş.",
+    "author": "Didem Avcı",
+    "date": "2024-03-18"
+  },
+  {
+    "reviewId": "38",
+    "productId": "13",
+    "rating": 5,
+    "comment": "488km menzil günlük kullanım için fazlasıyla yeterli. Sessiz sürüş.",
+    "author": "Orhan Mutlu",
+    "date": "2024-03-20"
+  },
+  {
+    "reviewId": "39",
+    "productId": "14",
+    "rating": 4,
+    "comment": "Philips Hue akıllı ampuller renk seçenekleri çok geniş. Kurulum kolay.",
+    "author": "Sibel Çetin",
+    "date": "2024-01-28"
+  },
+  {
+    "reviewId": "40",
+    "productId": "14",
+    "rating": 5,
+    "comment": "Sesli kontrol özelliği harika çalışıyor. Enerji tasarrufu sağlıyor.",
+    "author": "Mert Günal",
+    "date": "2024-02-01"
+  },
+  {
+    "reviewId": "41",
+    "productId": "14",
+    "rating": 3,
+    "comment": "İyi ürün ama hub zorunluluğu maliyet artırıyor.",
+    "author": "Canan İpek",
+    "date": "2024-02-08"
+  },
+  {
+    "reviewId": "42",
+    "productId": "15",
+    "rating": 5,
+    "comment": "Nikon Z7 II detay yakalama kabiliyeti muhteşem! 45.7MP gerçekten fark ediyor.",
+    "author": "Yusuf Tan",
+    "date": "2024-03-10"
+  },
+  {
+    "reviewId": "43",
+    "productId": "15",
+    "rating": 4,
+    "comment": "Eye AF özelliği portre çekimlerinde çok başarılı. Ergonomi iyi.",
+    "author": "Esra Güven",
+    "date": "2024-03-14"
+  },
+  {
+    "reviewId": "44",
+    "productId": "15",
+    "rating": 5,
+    "comment": "4K 60p video kalitesi profesyonel seviyede. Dual card slots güvenlik sağlıyor.",
+    "author": "Batuhan Sezer",
+    "date": "2024-03-17"
+  },
+  {
+    "reviewId": "45",
+    "productId": "16",
+    "rating": 5,
+    "comment": "RTX 4080 oyun performansı inanılmaz! 4K'da tüm oyunlar akıcı.",
+    "author": "Gizem Kayhan",
+    "date": "2024-03-22"
+  },
+  {
+    "reviewId": "46",
+    "productId": "16",
+    "rating": 4,
+    "comment": "Ray tracing özelliği görsel kaliteyi artırıyor ama güç tüketimi yüksek.",
+    "author": "Berkant Yaşar",
+    "date": "2024-03-25"
+  },
+  {
+    "reviewId": "47",
+    "productId": "16",
+    "rating": 5,
+    "comment": "DLSS 3 teknolojisi performansı ikiye katladı. RGB aydınlatma şık.",
+    "author": "Aslı Korkmaz",
+    "date": "2024-03-28"
+  },
+  {
+    "reviewId": "48",
+    "productId": "17",
+    "rating": 4,
+    "comment": "Galaxy Watch 6 Classic sağlık takibi özellikleri çok detaylı. Pil ömrü iyi.",
+    "author": "Umut Çağlar",
+    "date": "2024-02-12"
+  },
+  {
+    "reviewId": "49",
+    "productId": "17",
+    "rating": 5,
+    "comment": "LTE bağlantı sayesinde telefonsuz da kullanabiliyorum. AMOLED ekran net.",
+    "author": "Nazlı Duman",
+    "date": "2024-02-16"
+  },
+  {
+    "reviewId": "50",
+    "productId": "17",
+    "rating": 4,
+    "comment": "Uyku takibi çok başarılı. Sadece kayış biraz sert olmuş.",
+    "author": "Alper Özgür",
+    "date": "2024-02-20"
+  },
+  {
+    "reviewId": "51",
+    "productId": "18",
+    "rating": 5,
+    "comment": "iPad Pro M2 çip ile performans laptop seviyesinde! XDR ekran muhteşem.",
+    "author": "Berna Topal",
+    "date": "2024-03-05"
+  },
+  {
+    "reviewId": "52",
+    "productId": "18",
+    "rating": 4,
+    "comment": "Apple Pencil ile çizim deneyimi harika. Sadece Magic Keyboard pahalı.",
+    "author": "Selçuk Yazar",
+    "date": "2024-03-08"
+  },
+  {
+    "reviewId": "53",
+    "productId": "18",
+    "rating": 5,
+    "comment": "Face ID hızlı ve güvenli. 256GB depolama çoğu iş için yeterli.",
+    "author": "Leyla Ünal",
+    "date": "2024-03-12"
+  },
+  {
+    "reviewId": "54",
+    "productId": "19",
+    "rating": 4,
+    "comment": "Bosch çamaşır makinesi 9kg kapasite ile aile için ideal. Sessiz çalışıyor.",
+    "author": "Mehmet Cihan",
+    "date": "2024-02-25"
+  },
+  {
+    "reviewId": "55",
+    "productId": "19",
+    "rating": 5,
+    "comment": "A+++ enerji sınıfı elektrik faturasını düşürüyor. EcoSilence motor mükemmel.",
+    "author": "Funda Kılınç",
+    "date": "2024-02-28"
+  },
+  {
+    "reviewId": "56",
+    "productId": "19",
+    "rating": 3,
+    "comment": "İyi makine ama program süresi biraz uzun.",
+    "author": "Engin Bayrak",
+    "date": "2024-03-02"
+  },
+  {
+    "reviewId": "57",
+    "productId": "20",
+    "rating": 5,
+    "comment": "Surface Pro 9 laptop yerine geçebiliyor. PixelSense ekran çok net.",
+    "author": "Burcu Erbaş",
+    "date": "2024-03-18"
+  },
+  {
+    "reviewId": "58",
+    "productId": "20",
+    "rating": 4,
+    "comment": "Intel Core i7 performansı mükemmel. Type Cover ile tam bilgisayar deneyimi.",
+    "author": "Doğan Sert",
+    "date": "2024-03-22"
+  },
+  {
+    "reviewId": "59",
+    "productId": "20",
+    "rating": 4,
+    "comment": "16GB RAM çoklu görev için yeterli. Pil ömrü ortalama seviyede.",
+    "author": "Tuba Hancı",
+    "date": "2024-03-25"
+  }
+]

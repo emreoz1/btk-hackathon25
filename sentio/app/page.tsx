@@ -190,33 +190,30 @@ export default function Home() {
     setProductDetailsLoading(true);
     
     try {
-      // Ürün detaylarını API'den al (şimdilik mock data kullanacağız)
-      // Gerçek projede bu bir API çağrısı olurdu
-      const mockDetails = {
-        reviews: [
-          { id: 1, rating: 5, comment: "Harika bir ürün, çok memnunum!", author: "Ahmet K.", date: "2024-01-15" },
-          { id: 2, rating: 4, comment: "Kaliteli ancak biraz pahalı.", author: "Ayşe M.", date: "2024-01-10" },
-          { id: 3, rating: 5, comment: "Beklentilerimi karşıladı, tavsiye ederim.", author: "Mehmet S.", date: "2024-01-08" }
-        ],
-        stores: [
-          { name: "Teknosa", price: product.price, inStock: true, url: "#" },
-          { name: "Vatan Bilgisayar", price: product.price * 1.05, inStock: true, url: "#" },
-          { name: "Hepsiburada", price: product.price * 0.95, inStock: true, url: "#" },
-          { name: "Trendyol", price: product.price * 1.02, inStock: false, url: "#" }
-        ],
-        specifications: {
-          "Marka": product.brand,
-          "Kategori": product.category,
-          "Garanti": "2 Yıl",
-          "Kargo": "Ücretsiz",
-          "İade": "14 Gün"
-        }
-      };
+      // Ürün detaylarını API'den al
+      const response = await fetch('/api/product-detail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ productId: product.id }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Ürün detayları alınamadı');
+      }
+
+      const data = await response.json();
+      setProductDetails(data);
       
-      setProductDetails(mockDetails);
     } catch (error) {
       console.error('Ürün detayları yüklenirken hata:', error);
-      setProductDetails(null);
+      // Hata durumunda boş detaylar set et
+      setProductDetails({
+        reviews: [],
+        stores: [],
+        specifications: {}
+      });
     } finally {
       setProductDetailsLoading(false);
     }
@@ -742,6 +739,7 @@ export default function Home() {
               details={productDetails}
               loading={productDetailsLoading}
               onBack={handleBackFromDetail}
+              onAnalyze={handleAnalyze}
             />
           </div>
         )}

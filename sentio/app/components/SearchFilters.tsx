@@ -23,8 +23,15 @@ export default function SearchFilters({ onFilterChange, currentQuery = '' }: Sea
     { value: 'Laptop', label: 'Laptop' },
     { value: 'Kulaklık', label: 'Kulaklık' },
     { value: 'Ev Elektroniği', label: 'Ev Elektroniği' },
-    { value: 'Oyun', label: 'Oyun' },
-    { value: 'Aksesuar', label: 'Aksesuar' }
+    { value: 'Oyun Konsolu', label: 'Oyun Konsolu' },
+    { value: 'TV', label: 'TV' },
+    { value: 'Beyaz Eşya', label: 'Beyaz Eşya' },
+    { value: 'Kamera', label: 'Kamera' },
+    { value: 'Elektrikli Araç', label: 'Elektrikli Araç' },
+    { value: 'Akıllı Ev', label: 'Akıllı Ev' },
+    { value: 'Bilgisayar Parçası', label: 'Bilgisayar Parçası' },
+    { value: 'Akıllı Saat', label: 'Akıllı Saat' },
+    { value: 'Tablet', label: 'Tablet' }
   ];
 
   const priceRanges = [

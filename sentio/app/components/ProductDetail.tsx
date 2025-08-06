@@ -39,9 +39,10 @@ interface ProductDetailProps {
   details: ProductDetails | null;
   loading: boolean;
   onBack: () => void;
+  onAnalyze?: (productId: string, productName: string) => void;
 }
 
-export default function ProductDetail({ product, details, loading, onBack }: ProductDetailProps) {
+export default function ProductDetail({ product, details, loading, onBack, onAnalyze }: ProductDetailProps) {
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('tr-TR', {
       style: 'currency',
@@ -109,6 +110,21 @@ export default function ProductDetail({ product, details, loading, onBack }: Pro
               <h1 className="text-3xl font-bold text-gray-900 mb-2">{product.name}</h1>
               <p className="text-xl text-blue-600 font-semibold">{formatPrice(product.price)}</p>
               <p className="text-gray-600 mt-2">{product.description}</p>
+              
+              {/* Analiz Butonu */}
+              {onAnalyze && (
+                <div className="mt-4">
+                  <button
+                    onClick={() => onAnalyze(product.id, product.name)}
+                    className="flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                  >
+                    <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                    Ürünü Analiz Et
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* Özellikler */}
