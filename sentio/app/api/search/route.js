@@ -47,69 +47,187 @@ export async function POST(request) {
     
     // Kategori tespiti
     const categoryMap = {
+      // Telefon kategorisi
       'iphone': 'Telefon',
       'telefon': 'Telefon',
       'phone': 'Telefon',
       'samsung galaxy': 'Telefon',
       'galaxy': 'Telefon',
+      'xiaomi': 'Telefon',
+      'huawei': 'Telefon',
+      'oppo': 'Telefon',
+      'vivo': 'Telefon',
+      
+      // Laptop kategorisi
       'laptop': 'Laptop',
       'macbook': 'Laptop',
       'notebook': 'Laptop',
       'dell xps': 'Laptop',
+      'lenovo': 'Laptop',
+      'asus': 'Laptop',
+      'hp': 'Laptop',
+      'acer': 'Laptop',
+      'thinkpad': 'Laptop',
+      
+      // Kulaklık kategorisi
       'kulaklık': 'Kulaklık',
       'kulaklik': 'Kulaklık',
       'headphone': 'Kulaklık',
       'airpods': 'Kulaklık',
       'sony wh': 'Kulaklık',
+      'beats': 'Kulaklık',
+      'bose': 'Kulaklık',
+      'jbl': 'Kulaklık',
+      
+      // Ev Elektroniği
       'süpürge': 'Ev Elektroniği',
       'supurge': 'Ev Elektroniği',
       'robot süpürge': 'Ev Elektroniği',
       'robot supurge': 'Ev Elektroniği',
       'dyson': 'Ev Elektroniği',
       'xiaomi robot': 'Ev Elektroniği',
+      'elektrikli süpürge': 'Ev Elektroniği',
+      'şarjlı süpürge': 'Ev Elektroniği',
+      
+      // Oyun Konsolu
       'playstation': 'Oyun Konsolu',
       'ps5': 'Oyun Konsolu',
+      'ps4': 'Oyun Konsolu',
+      'xbox': 'Oyun Konsolu',
+      'nintendo': 'Oyun Konsolu',
       'oyun konsolu': 'Oyun Konsolu',
-      'gaming': 'Oyun Konsolu',
+      'gaming console': 'Oyun Konsolu',
+      
+      // TV
       'tv': 'TV',
       'televizyon': 'TV',
       'oled': 'TV',
       'smart tv': 'TV',
       'lg oled': 'TV',
+      'samsung tv': 'TV',
+      'sony tv': 'TV',
+      'tcl': 'TV',
+      
+      // Beyaz Eşya
       'buzdolabı': 'Beyaz Eşya',
       'buzdolabi': 'Beyaz Eşya',
       'çamaşır makinesi': 'Beyaz Eşya',
       'camasir makinesi': 'Beyaz Eşya',
+      'bulaşık makinesi': 'Beyaz Eşya',
+      'bulasik makinesi': 'Beyaz Eşya',
       'beyaz eşya': 'Beyaz Eşya',
       'fridge': 'Beyaz Eşya',
+      'arçelik': 'Beyaz Eşya',
+      'bosch': 'Beyaz Eşya',
+      'siemens': 'Beyaz Eşya',
+      
+      // Kamera
       'kamera': 'Kamera',
       'canon': 'Kamera',
       'nikon': 'Kamera',
-      'fotoğraf': 'Kamera',
-      'fotograf': 'Kamera',
+      'sony alpha': 'Kamera',
+      'fotoğraf makinesi': 'Kamera',
+      'fotograf makinesi': 'Kamera',
+      'dslr': 'Kamera',
+      'mirrorless': 'Kamera',
+      
+      // Elektrikli Araç
       'tesla': 'Elektrikli Araç',
       'elektrikli araç': 'Elektrikli Araç',
+      'elektrikli araba': 'Elektrikli Araç',
       'electric car': 'Elektrikli Araç',
       'model y': 'Elektrikli Araç',
+      'model 3': 'Elektrikli Araç',
+      'bmw i3': 'Elektrikli Araç',
+      'nissan leaf': 'Elektrikli Araç',
+      
+      // Akıllı Ev
       'akıllı ev': 'Akıllı Ev',
       'akilli ev': 'Akıllı Ev',
       'smart home': 'Akıllı Ev',
       'philips hue': 'Akıllı Ev',
       'ampul': 'Akıllı Ev',
+      'akıllı anahtar': 'Akıllı Ev',
+      'sensör': 'Akıllı Ev',
+      'alexa': 'Akıllı Ev',
+      'google nest': 'Akıllı Ev',
+      
+      // Bilgisayar Parçası
       'ekran kartı': 'Bilgisayar Parçası',
       'ekran karti': 'Bilgisayar Parçası',
       'graphics card': 'Bilgisayar Parçası',
       'rtx': 'Bilgisayar Parçası',
       'gtx': 'Bilgisayar Parçası',
       'asus rog': 'Bilgisayar Parçası',
+      'nvidia': 'Bilgisayar Parçası',
+      'amd': 'Bilgisayar Parçası',
+      'işlemci': 'Bilgisayar Parçası',
+      'islemci': 'Bilgisayar Parçası',
+      'ram': 'Bilgisayar Parçası',
+      'ssd': 'Bilgisayar Parçası',
+      'anakart': 'Bilgisayar Parçası',
+      
+      // Akıllı Saat
       'akıllı saat': 'Akıllı Saat',
       'akilli saat': 'Akıllı Saat',
       'smartwatch': 'Akıllı Saat',
       'galaxy watch': 'Akıllı Saat',
       'apple watch': 'Akıllı Saat',
+      'fitbit': 'Akıllı Saat',
+      'garmin': 'Akıllı Saat',
+      'huawei watch': 'Akıllı Saat',
+      
+      // Tablet
       'tablet': 'Tablet',
       'ipad': 'Tablet',
-      'surface pro': 'Tablet'
+      'surface pro': 'Tablet',
+      'samsung tablet': 'Tablet',
+      'galaxy tab': 'Tablet',
+      'lenovo tab': 'Tablet',
+      
+      // Diğer kategoriler
+      'kitap': 'Kitap',
+      'book': 'Kitap',
+      'roman': 'Kitap',
+      'dergi': 'Kitap',
+      
+      'oyuncak': 'Oyuncak',
+      'toy': 'Oyuncak',
+      'lego': 'Oyuncak',
+      'bebek oyuncak': 'Oyuncak',
+      
+      'kozmetik': 'Kozmetik',
+      'makyaj': 'Kozmetik',
+      'parfüm': 'Kozmetik',
+      'krem': 'Kozmetik',
+      'şampuan': 'Kozmetik',
+      
+      'giyim': 'Giyim',
+      'clothing': 'Giyim',
+      'tişört': 'Giyim',
+      'pantolon': 'Giyim',
+      'elbise': 'Giyim',
+      'ayakkabı': 'Giyim',
+      
+      'mutfak': 'Mutfak Aleti',
+      'blender': 'Mutfak Aleti',
+      'mikser': 'Mutfak Aleti',
+      'kahve makinesi': 'Mutfak Aleti',
+      'tost makinesi': 'Mutfak Aleti',
+      'fritöz': 'Mutfak Aleti',
+      
+      'takı': 'Takı',
+      'jewelry': 'Takı',
+      'kolye': 'Takı',
+      'küpe': 'Takı',
+      'yüzük': 'Takı',
+      'bilezik': 'Takı',
+      
+      'anne bebek': 'Anne & Bebek',
+      'bebek': 'Anne & Bebek',
+      'mama': 'Anne & Bebek',
+      'bez': 'Anne & Bebek',
+      'emzik': 'Anne & Bebek'
     };
     
     const detectedCategory = Object.keys(categoryMap).find(keyword => 
