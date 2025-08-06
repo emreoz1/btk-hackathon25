@@ -9,6 +9,60 @@ const pinecone = new Pinecone({
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
+// Akıllı sorgu analizi fonksiyonu
+async function analyzeQueryWithAI(query) {
+  try {
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    
+    const prompt = `
+    Aşağıdaki e-ticaret arama sorgusunu analiz et ve JSON formatında sadece kategori ve marka bilgilerini döndür:
+
+    Sorgu: "${query}"
+
+    Mevcut kategoriler: Telefon, Laptop, Kulaklık, Ev Elektroniği, Oyun Konsolu, TV, Beyaz Eşya, Kamera, Elektrikli Araç, Akıllı Ev, Bilgisayar Parçası, Akıllı Saat, Tablet, Kitap, Oyuncak, Kozmetik, Giyim, Mutfak Aleti, Takı, Anne & Bebek
+
+    Mevcut markalar: Apple, Samsung, Sony, Xiaomi, Dell, Dyson, Tesla, Canon, Nikon, LG, TCL, Arçelik, Bosch, Siemens, Microsoft, Asus, HP, Acer, Lenovo, Nintendo, PlayStation, Xbox, Huawei, Oppo, Vivo, Beats, Bose, JBL, Fitbit, Garmin, Lego, Philips
+
+    Sadece bu JSON formatını döndür (başka hiçbir açıklama yapma):
+    {
+      "category": "kategori_adı veya null",
+      "brand": "marka_adı veya null",
+      "confidence": 0.0-1.0 arası güven skoru
+    }
+
+    Örnek: "iPhone 15" için -> {"category": "Telefon", "brand": "Apple", "confidence": 0.95}
+    `;
+
+    const result = await model.generateContent(prompt);
+    const response = result.response.text().trim();
+    
+    // JSON'ı parse et
+    const jsonMatch = response.match(/\{[\s\S]*\}/);
+    if (jsonMatch) {
+      const parsed = JSON.parse(jsonMatch[0]);
+      console.log('🤖 AI Analiz Sonucu:', parsed);
+      
+      // Confidence score düşükse null döndür
+      if (parsed.confidence < 0.3) {
+        return { category: null, brand: null, confidence: parsed.confidence };
+      }
+      
+      return {
+        category: parsed.category === "null" ? null : parsed.category,
+        brand: parsed.brand === "null" ? null : parsed.brand,
+        confidence: parsed.confidence
+      };
+    } else {
+      console.log('⚠️ AI response parse edilemedi:', response);
+      return { category: null, brand: null, confidence: 0 };
+    }
+  } catch (error) {
+    console.log('⚠️ AI analizi hatası:', error.message);
+    // AI hata verirse boş döndür
+    return { category: null, brand: null, confidence: 0 };
+  }
+}
+
 export async function POST(request) {
   try {
     const { query, category, minPrice, maxPrice } = await request.json();
@@ -23,226 +77,9 @@ export async function POST(request) {
 
     console.log('🔍 Arama sorgusu:', query);
 
-    // Sorguyu analiz et ve akıllı filtreleme yap
-    const queryLower = query.toLowerCase();
-    const detectedFilters = {};
-    
-    // Marka tespiti
-    const brands = ['apple', 'samsung', 'sony', 'xiaomi', 'dell', 'dyson'];
-    const detectedBrand = brands.find(brand => queryLower.includes(brand));
-    
-    // Marka adını doğru formatta ayarla
-    let brandName = null;
-    if (detectedBrand) {
-      const brandMap = {
-        'apple': 'Apple',
-        'samsung': 'Samsung', 
-        'sony': 'Sony',
-        'xiaomi': 'Xiaomi',
-        'dell': 'Dell',
-        'dyson': 'Dyson'
-      };
-      brandName = brandMap[detectedBrand];
-    }
-    
-    // Kategori tespiti
-    const categoryMap = {
-      // Telefon kategorisi
-      'iphone': 'Telefon',
-      'telefon': 'Telefon',
-      'phone': 'Telefon',
-      'samsung galaxy': 'Telefon',
-      'galaxy': 'Telefon',
-      'xiaomi': 'Telefon',
-      'huawei': 'Telefon',
-      'oppo': 'Telefon',
-      'vivo': 'Telefon',
-      
-      // Laptop kategorisi
-      'laptop': 'Laptop',
-      'macbook': 'Laptop',
-      'notebook': 'Laptop',
-      'dell xps': 'Laptop',
-      'lenovo': 'Laptop',
-      'asus': 'Laptop',
-      'hp': 'Laptop',
-      'acer': 'Laptop',
-      'thinkpad': 'Laptop',
-      
-      // Kulaklık kategorisi
-      'kulaklık': 'Kulaklık',
-      'kulaklik': 'Kulaklık',
-      'headphone': 'Kulaklık',
-      'airpods': 'Kulaklık',
-      'sony wh': 'Kulaklık',
-      'beats': 'Kulaklık',
-      'bose': 'Kulaklık',
-      'jbl': 'Kulaklık',
-      
-      // Ev Elektroniği
-      'süpürge': 'Ev Elektroniği',
-      'supurge': 'Ev Elektroniği',
-      'robot süpürge': 'Ev Elektroniği',
-      'robot supurge': 'Ev Elektroniği',
-      'dyson': 'Ev Elektroniği',
-      'xiaomi robot': 'Ev Elektroniği',
-      'elektrikli süpürge': 'Ev Elektroniği',
-      'şarjlı süpürge': 'Ev Elektroniği',
-      
-      // Oyun Konsolu
-      'playstation': 'Oyun Konsolu',
-      'ps5': 'Oyun Konsolu',
-      'ps4': 'Oyun Konsolu',
-      'xbox': 'Oyun Konsolu',
-      'nintendo': 'Oyun Konsolu',
-      'oyun konsolu': 'Oyun Konsolu',
-      'gaming console': 'Oyun Konsolu',
-      
-      // TV
-      'tv': 'TV',
-      'televizyon': 'TV',
-      'oled': 'TV',
-      'smart tv': 'TV',
-      'lg oled': 'TV',
-      'samsung tv': 'TV',
-      'sony tv': 'TV',
-      'tcl': 'TV',
-      
-      // Beyaz Eşya
-      'buzdolabı': 'Beyaz Eşya',
-      'buzdolabi': 'Beyaz Eşya',
-      'çamaşır makinesi': 'Beyaz Eşya',
-      'camasir makinesi': 'Beyaz Eşya',
-      'bulaşık makinesi': 'Beyaz Eşya',
-      'bulasik makinesi': 'Beyaz Eşya',
-      'beyaz eşya': 'Beyaz Eşya',
-      'fridge': 'Beyaz Eşya',
-      'arçelik': 'Beyaz Eşya',
-      'bosch': 'Beyaz Eşya',
-      'siemens': 'Beyaz Eşya',
-      
-      // Kamera
-      'kamera': 'Kamera',
-      'canon': 'Kamera',
-      'nikon': 'Kamera',
-      'sony alpha': 'Kamera',
-      'fotoğraf makinesi': 'Kamera',
-      'fotograf makinesi': 'Kamera',
-      'dslr': 'Kamera',
-      'mirrorless': 'Kamera',
-      
-      // Elektrikli Araç
-      'tesla': 'Elektrikli Araç',
-      'elektrikli araç': 'Elektrikli Araç',
-      'elektrikli araba': 'Elektrikli Araç',
-      'electric car': 'Elektrikli Araç',
-      'model y': 'Elektrikli Araç',
-      'model 3': 'Elektrikli Araç',
-      'bmw i3': 'Elektrikli Araç',
-      'nissan leaf': 'Elektrikli Araç',
-      
-      // Akıllı Ev
-      'akıllı ev': 'Akıllı Ev',
-      'akilli ev': 'Akıllı Ev',
-      'smart home': 'Akıllı Ev',
-      'philips hue': 'Akıllı Ev',
-      'ampul': 'Akıllı Ev',
-      'akıllı anahtar': 'Akıllı Ev',
-      'sensör': 'Akıllı Ev',
-      'alexa': 'Akıllı Ev',
-      'google nest': 'Akıllı Ev',
-      
-      // Bilgisayar Parçası
-      'ekran kartı': 'Bilgisayar Parçası',
-      'ekran karti': 'Bilgisayar Parçası',
-      'graphics card': 'Bilgisayar Parçası',
-      'rtx': 'Bilgisayar Parçası',
-      'gtx': 'Bilgisayar Parçası',
-      'asus rog': 'Bilgisayar Parçası',
-      'nvidia': 'Bilgisayar Parçası',
-      'amd': 'Bilgisayar Parçası',
-      'işlemci': 'Bilgisayar Parçası',
-      'islemci': 'Bilgisayar Parçası',
-      'ram': 'Bilgisayar Parçası',
-      'ssd': 'Bilgisayar Parçası',
-      'anakart': 'Bilgisayar Parçası',
-      
-      // Akıllı Saat
-      'akıllı saat': 'Akıllı Saat',
-      'akilli saat': 'Akıllı Saat',
-      'smartwatch': 'Akıllı Saat',
-      'galaxy watch': 'Akıllı Saat',
-      'apple watch': 'Akıllı Saat',
-      'fitbit': 'Akıllı Saat',
-      'garmin': 'Akıllı Saat',
-      'huawei watch': 'Akıllı Saat',
-      
-      // Tablet
-      'tablet': 'Tablet',
-      'ipad': 'Tablet',
-      'surface pro': 'Tablet',
-      'samsung tablet': 'Tablet',
-      'galaxy tab': 'Tablet',
-      'lenovo tab': 'Tablet',
-      
-      // Diğer kategoriler
-      'kitap': 'Kitap',
-      'book': 'Kitap',
-      'roman': 'Kitap',
-      'dergi': 'Kitap',
-      
-      'oyuncak': 'Oyuncak',
-      'toy': 'Oyuncak',
-      'lego': 'Oyuncak',
-      'bebek oyuncak': 'Oyuncak',
-      
-      'kozmetik': 'Kozmetik',
-      'makyaj': 'Kozmetik',
-      'parfüm': 'Kozmetik',
-      'krem': 'Kozmetik',
-      'şampuan': 'Kozmetik',
-      
-      'giyim': 'Giyim',
-      'clothing': 'Giyim',
-      'tişört': 'Giyim',
-      'pantolon': 'Giyim',
-      'elbise': 'Giyim',
-      'ayakkabı': 'Giyim',
-      
-      'mutfak': 'Mutfak Aleti',
-      'blender': 'Mutfak Aleti',
-      'mikser': 'Mutfak Aleti',
-      'kahve makinesi': 'Mutfak Aleti',
-      'tost makinesi': 'Mutfak Aleti',
-      'fritöz': 'Mutfak Aleti',
-      
-      'takı': 'Takı',
-      'jewelry': 'Takı',
-      'kolye': 'Takı',
-      'küpe': 'Takı',
-      'yüzük': 'Takı',
-      'bilezik': 'Takı',
-      
-      'anne bebek': 'Anne & Bebek',
-      'bebek': 'Anne & Bebek',
-      'mama': 'Anne & Bebek',
-      'bez': 'Anne & Bebek',
-      'emzik': 'Anne & Bebek'
-    };
-    
-    const detectedCategory = Object.keys(categoryMap).find(keyword => 
-      queryLower.includes(keyword)
-    );
-    
-    if (detectedCategory) {
-      detectedFilters.category = categoryMap[detectedCategory];
-    }
-    
-    if (brandName) {
-      detectedFilters.brand = brandName;
-    }
-    
-    console.log('🎯 Tespit edilen filtreler:', detectedFilters);
+    // Akıllı sorgu analizi - Gemini ile kategori ve marka tespiti
+    const detectedFilters = await analyzeQueryWithAI(query);
+    console.log('🎯 AI ile tespit edilen filtreler:', detectedFilters);
 
     // Gemini ile sorguyu vektöre çevir
     const model = genAI.getGenerativeModel({ model: "text-embedding-004" });
@@ -264,16 +101,16 @@ export async function POST(request) {
       if (maxPrice) filter.price['$lte'] = maxPrice;
     }
     
-    // Akıllı tespit edilen filtreler - sadece manuel filtre yoksa uygula
-    if (!filter.category && detectedFilters.category) {
+    // AI ile tespit edilen filtreler - sadece manuel filtre yoksa uygula
+    if (!filter.category && detectedFilters.category && detectedFilters.confidence > 0.5) {
       filter.category = detectedFilters.category;
-      console.log('🎯 Kategori otomatik tespit edildi:', detectedFilters.category);
+      console.log('🤖 Kategori AI ile tespit edildi:', detectedFilters.category, `(güven: ${detectedFilters.confidence})`);
     }
     
     // Marka filtresi her zaman uygulanabilir (kategori ile çakışmaz)
-    if (detectedFilters.brand) {
+    if (detectedFilters.brand && detectedFilters.confidence > 0.4) {
       filter.brand = detectedFilters.brand;
-      console.log('🎯 Marka otomatik tespit edildi:', detectedFilters.brand);
+      console.log('🤖 Marka AI ile tespit edildi:', detectedFilters.brand, `(güven: ${detectedFilters.confidence})`);
     }
     
     console.log('🔧 Kullanılacak filtreler:', filter);
@@ -310,7 +147,7 @@ export async function POST(request) {
         let categoryMatch = true;
         
         // Marka kontrolü
-        if (detectedFilters.brand) {
+        if (detectedFilters.brand && detectedFilters.confidence > 0.4) {
           const productBrand = match.metadata?.brand?.toLowerCase() || '';
           const searchBrand = detectedFilters.brand.toLowerCase();
           brandMatch = productBrand.includes(searchBrand) || searchBrand.includes(productBrand);
@@ -318,7 +155,7 @@ export async function POST(request) {
         
         // Kategori kontrolü (manual kategori filtresi varsa ona öncelik ver)
         if (!category || category === 'all') {
-          if (detectedFilters.category) {
+          if (detectedFilters.category && detectedFilters.confidence > 0.5) {
             categoryMatch = match.metadata?.category === detectedFilters.category;
           }
         }
@@ -331,7 +168,7 @@ export async function POST(request) {
 
     // İsim ve açıklama bazlı ek akıllı filtreleme
     if (query && relevantResults.length > 0) {
-      const queryWords = queryLower.split(' ').filter(word => word.length > 2);
+      const queryWords = query.toLowerCase().split(' ').filter(word => word.length > 2);
       
       // Manuel kategori çakışması varsa kelime eşleşmesi daha katı olsun
       const hasManualCategoryFilter = category && category !== 'all';
@@ -471,6 +308,7 @@ export async function POST(request) {
         detectedFilters,
         appliedFilters: filter,
         originalResults: searchResults.matches.length,
+        aiConfidence: detectedFilters.confidence,
         hasConflict: category && category !== 'all' && detectedFilters.category && 
           detectedFilters.category !== category
       }
