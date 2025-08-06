@@ -7,6 +7,7 @@ import SearchFilters from './components/SearchFilters';
 import ProductAnalysis from './components/ProductAnalysis';
 import ProductComparison from './components/ProductComparison';
 import SEOGenerator from './components/SEOGenerator';
+import ProductDetail from './components/ProductDetail';
 
 interface Product {
   id: string;
@@ -50,15 +51,21 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [searchInsight, setSearchInsight] = useState('');
   const [hasSearched, setHasSearched] = useState(false);
+  const [currentQuery, setCurrentQuery] = useState('');
   
   // Faz 2: Yeni state'ler
-  const [activeTab, setActiveTab] = useState<'search' | 'analysis' | 'compare' | 'vision' | 'seo'>('search');
+  const [activeTab, setActiveTab] = useState<'search' | 'analysis' | 'compare' | 'vision' | 'seo' | 'product-detail'>('search');
   const [analysis, setAnalysis] = useState<Analysis | null>(null);
   const [analysisLoading, setAnalysisLoading] = useState(false);
   const [analyzedProductName, setAnalyzedProductName] = useState('');
   const [comparisonProducts, setComparisonProducts] = useState<Product[]>([]);
   const [comparisonResult, setComparisonResult] = useState<any>(null);
   const [comparisonLoading, setComparisonLoading] = useState(false);
+  
+  // Ürün detay state'leri
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [productDetails, setProductDetails] = useState<any>(null);
+  const [productDetailsLoading, setProductDetailsLoading] = useState(false);
   
   // Faz 3: Vision state'leri
   const [visionLoading, setVisionLoading] = useState(false);
@@ -73,6 +80,10 @@ export default function Home() {
   const handleSearch = async (query: string, filters: SearchFilters = {}) => {
     setLoading(true);
     setHasSearched(true);
+    
+    // Sorguyu kaydet (filtreler için) - boş string bile kaydet
+    setCurrentQuery(query);
+    console.log('🔍 Arama başlatılıyor:', { query, filters });
     
     try {
       const response = await fetch('/api/search', {
@@ -97,6 +108,24 @@ export default function Home() {
       setSearchInsight('');
     } finally {
       setLoading(false);
+    }
+  };
+
+  // Filtreler için özel handler
+  const handleFilterChange = async (query: string, filters: SearchFilters = {}) => {
+    // Eğer sorgu boş ise mevcut sorguyu kullan
+    const searchQuery = query || currentQuery || '';
+    console.log('🔧 Filtre değişikliği:', { 
+      providedQuery: query, 
+      currentQuery, 
+      finalQuery: searchQuery, 
+      filters,
+      hasCurrentQuery: !!currentQuery
+    });
+    
+    // Eğer hem sorgu hem de filtre varsa arama yap
+    if (searchQuery || Object.keys(filters).length > 0) {
+      await handleSearch(searchQuery, filters);
     }
   };
 
@@ -152,6 +181,52 @@ export default function Home() {
   const handleRemoveFromComparison = (productId: string) => {
     setComparisonProducts(comparisonProducts.filter(p => p.id !== productId));
     setComparisonResult(null);
+  };
+
+  // Ürün inceleme fonksiyonu
+  const handleInspect = async (product: Product) => {
+    setSelectedProduct(product);
+    setActiveTab('product-detail');
+    setProductDetailsLoading(true);
+    
+    try {
+      // Ürün detaylarını API'den al (şimdilik mock data kullanacağız)
+      // Gerçek projede bu bir API çağrısı olurdu
+      const mockDetails = {
+        reviews: [
+          { id: 1, rating: 5, comment: "Harika bir ürün, çok memnunum!", author: "Ahmet K.", date: "2024-01-15" },
+          { id: 2, rating: 4, comment: "Kaliteli ancak biraz pahalı.", author: "Ayşe M.", date: "2024-01-10" },
+          { id: 3, rating: 5, comment: "Beklentilerimi karşıladı, tavsiye ederim.", author: "Mehmet S.", date: "2024-01-08" }
+        ],
+        stores: [
+          { name: "Teknosa", price: product.price, inStock: true, url: "#" },
+          { name: "Vatan Bilgisayar", price: product.price * 1.05, inStock: true, url: "#" },
+          { name: "Hepsiburada", price: product.price * 0.95, inStock: true, url: "#" },
+          { name: "Trendyol", price: product.price * 1.02, inStock: false, url: "#" }
+        ],
+        specifications: {
+          "Marka": product.brand,
+          "Kategori": product.category,
+          "Garanti": "2 Yıl",
+          "Kargo": "Ücretsiz",
+          "İade": "14 Gün"
+        }
+      };
+      
+      setProductDetails(mockDetails);
+    } catch (error) {
+      console.error('Ürün detayları yüklenirken hata:', error);
+      setProductDetails(null);
+    } finally {
+      setProductDetailsLoading(false);
+    }
+  };
+
+  // Ürün detayından geri dön
+  const handleBackFromDetail = () => {
+    setActiveTab('search');
+    setSelectedProduct(null);
+    setProductDetails(null);
   };
 
   // Faz 2: Ürün karşılaştırma fonksiyonu
@@ -376,7 +451,7 @@ export default function Home() {
             {/* Filters */}
             {hasSearched && (
               <div className="mb-6">
-                <SearchFilters onFilterChange={handleSearch} />
+                <SearchFilters onFilterChange={handleFilterChange} currentQuery={currentQuery} />
               </div>
             )}
 
@@ -436,6 +511,7 @@ export default function Home() {
                         product={product}
                         onAnalyze={handleAnalyze}
                         onAddToComparison={handleAddToComparison}
+                        onInspect={handleInspect}
                         isInComparison={comparisonProducts.some(p => p.id === product.id)}
                       />
                     ))}
@@ -634,6 +710,7 @@ export default function Home() {
                             product={product}
                             onAnalyze={handleAnalyze}
                             onAddToComparison={handleAddToComparison}
+                            onInspect={handleInspect}
                             isInComparison={comparisonProducts.some(p => p.id === product.id)}
                           />
                         ))}
@@ -653,6 +730,18 @@ export default function Home() {
               descriptions={seoDescriptions}
               isLoading={seoLoading}
               onGenerate={handleGenerateSEO}
+            />
+          </div>
+        )}
+
+        {/* Product Detail Tab */}
+        {activeTab === 'product-detail' && selectedProduct && (
+          <div>
+            <ProductDetail
+              product={selectedProduct}
+              details={productDetails}
+              loading={productDetailsLoading}
+              onBack={handleBackFromDetail}
             />
           </div>
         )}

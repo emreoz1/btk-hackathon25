@@ -84,7 +84,7 @@ export default function SEOGenerator({ descriptions, isLoading, onGenerate }: SE
                 value={productName}
                 onChange={(e) => setProductName(e.target.value)}
                 placeholder="Örn: Samsung Galaxy S25"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                 required
                 disabled={isLoading}
               />
@@ -101,7 +101,7 @@ export default function SEOGenerator({ descriptions, isLoading, onGenerate }: SE
                 value={brand}
                 onChange={(e) => setBrand(e.target.value)}
                 placeholder="Örn: Samsung"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                 disabled={isLoading}
               />
             </div>
@@ -117,7 +117,7 @@ export default function SEOGenerator({ descriptions, isLoading, onGenerate }: SE
                 value={model}
                 onChange={(e) => setModel(e.target.value)}
                 placeholder="Örn: SM-S928B"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                 disabled={isLoading}
               />
             </div>
@@ -131,7 +131,7 @@ export default function SEOGenerator({ descriptions, isLoading, onGenerate }: SE
                 id="category"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                 disabled={isLoading}
               >
                 {categories.map((cat) => (
@@ -154,7 +154,7 @@ export default function SEOGenerator({ descriptions, isLoading, onGenerate }: SE
               onChange={(e) => setKeywords(e.target.value)}
               rows={3}
               placeholder="Örn: 200MP kamera, titanyum kasa, 5G, uzun batarya ömrü (virgülle ayırın)"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+              className="w-full px-3 py-2 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
               disabled={isLoading}
             />
             <p className="text-xs text-gray-500 mt-1">

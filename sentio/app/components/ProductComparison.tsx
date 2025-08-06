@@ -149,7 +149,7 @@ const ProductComparison: React.FC<ProductComparisonProps> = ({
                   type="text"
                   value={userProfile.priorities}
                   onChange={(e) => setUserProfile({...userProfile, priorities: e.target.value})}
-                  className="w-full p-2 border rounded-md text-sm"
+                  className="w-full p-2 text-black border rounded-md text-sm"
                   placeholder="En önem verdiğiniz özellikler..."
                 />
               </div>
@@ -162,7 +162,7 @@ const ProductComparison: React.FC<ProductComparisonProps> = ({
                   type="text"
                   value={userProfile.budget}
                   onChange={(e) => setUserProfile({...userProfile, budget: e.target.value})}
-                  className="w-full p-2 border rounded-md text-sm"
+                  className="w-full p-2 text-black border rounded-md text-sm"
                   placeholder="Bütçe aralığınız..."
                 />
               </div>
@@ -175,7 +175,7 @@ const ProductComparison: React.FC<ProductComparisonProps> = ({
                   type="text"
                   value={userProfile.usage}
                   onChange={(e) => setUserProfile({...userProfile, usage: e.target.value})}
-                  className="w-full p-2 border rounded-md text-sm"
+                  className="w-full p-2 text-black border rounded-md text-sm"
                   placeholder="Nasıl kullanacaksınız?"
                 />
               </div>
@@ -187,7 +187,7 @@ const ProductComparison: React.FC<ProductComparisonProps> = ({
                 <select
                   value={userProfile.experience}
                   onChange={(e) => setUserProfile({...userProfile, experience: e.target.value})}
-                  className="w-full p-2 border rounded-md text-sm"
+                  className="w-full p-2 text-black border rounded-md text-sm"
                 >
                   <option value="">Seçiniz</option>
                   <option value="beginner">Başlangıç</option>

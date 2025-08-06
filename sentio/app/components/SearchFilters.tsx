@@ -1,15 +1,21 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface SearchFiltersProps {
   onFilterChange: (query: string, filters: any) => void;
+  currentQuery?: string;
 }
 
-export default function SearchFilters({ onFilterChange }: SearchFiltersProps) {
+export default function SearchFilters({ onFilterChange, currentQuery = '' }: SearchFiltersProps) {
   const [category, setCategory] = useState('all');
   const [priceRange, setPriceRange] = useState({ min: '', max: '' });
   const [isOpen, setIsOpen] = useState(false);
+
+  // Debug için currentQuery değişikliklerini takip et
+  useEffect(() => {
+    console.log('📝 SearchFilters currentQuery güncellendi:', currentQuery);
+  }, [currentQuery]);
 
   const categories = [
     { value: 'all', label: 'Tüm Kategoriler' },
@@ -31,6 +37,7 @@ export default function SearchFilters({ onFilterChange }: SearchFiltersProps) {
   ];
 
   const handleCategoryChange = (newCategory: string) => {
+    console.log('📂 Kategori değişikliği:', { newCategory, currentQuery });
     setCategory(newCategory);
     applyFilters(newCategory, priceRange);
   };
@@ -40,6 +47,7 @@ export default function SearchFilters({ onFilterChange }: SearchFiltersProps) {
       min: min === '' ? '' : String(min), 
       max: max === '' ? '' : String(max) 
     };
+    console.log('💰 Fiyat aralığı değişikliği:', { newRange, currentQuery });
     setPriceRange(newRange);
     applyFilters(category, newRange);
   };
@@ -59,15 +67,21 @@ export default function SearchFilters({ onFilterChange }: SearchFiltersProps) {
       filters.maxPrice = parseInt(price.max);
     }
 
-    // We need the current search query - this is a simplified version
-    // In a real app, you'd pass the current query or store it in context
-    onFilterChange('', filters);
+    console.log('🔧 Filtre uygulanıyor:', { 
+      query: currentQuery, 
+      filters, 
+      category: cat 
+    });
+
+    // Mevcut sorguyu kullan - eğer yoksa boş string gönder
+    onFilterChange(currentQuery || '', filters);
   };
 
   const clearFilters = () => {
+    console.log('🧹 Filtreler temizleniyor, mevcut sorgu:', currentQuery);
     setCategory('all');
     setPriceRange({ min: '', max: '' });
-    onFilterChange('', {});
+    onFilterChange(currentQuery || '', {});
   };
 
   const hasActiveFilters = category !== 'all' || priceRange.min || priceRange.max;
@@ -104,7 +118,7 @@ export default function SearchFilters({ onFilterChange }: SearchFiltersProps) {
             <select
               value={category}
               onChange={(e) => handleCategoryChange(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+              className="w-full px-3 py-2 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
             >
               {categories.map((cat) => (
                 <option key={cat.value} value={cat.value}>
@@ -147,14 +161,14 @@ export default function SearchFilters({ onFilterChange }: SearchFiltersProps) {
                 placeholder="Min fiyat"
                 value={priceRange.min}
                 onChange={(e) => setPriceRange({ ...priceRange, min: e.target.value })}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+                className="w-full px-3 py-2 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
               />
               <input
                 type="number"
                 placeholder="Max fiyat"
                 value={priceRange.max}
                 onChange={(e) => setPriceRange({ ...priceRange, max: e.target.value })}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+                className="w-full px-3 py-2 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
               />
               <button
                 onClick={() => applyFilters(category, priceRange)}

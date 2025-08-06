@@ -18,6 +18,7 @@ interface ProductCardProps {
   product: Product;
   onAnalyze?: (productId: string, productName: string) => void;
   onAddToComparison?: (product: Product) => void;
+  onInspect?: (product: Product) => void;
   isInComparison?: boolean;
   showAnalyzeButton?: boolean;
   showCompareButton?: boolean;
@@ -27,6 +28,7 @@ export default function ProductCard({
   product, 
   onAnalyze, 
   onAddToComparison, 
+  onInspect,
   isInComparison, 
   showAnalyzeButton = true, 
   showCompareButton = true 
@@ -139,7 +141,10 @@ export default function ProductCard({
               </button>
             )}
             
-            <button className="bg-blue-600 hover:bg-blue-700 text-white text-xs px-4 py-2 rounded-lg transition-colors duration-200">
+            <button 
+              onClick={() => onInspect?.(product)}
+              className="bg-blue-600 hover:bg-blue-700 text-white text-xs px-4 py-2 rounded-lg transition-colors duration-200"
+            >
               İncele
             </button>
           </div>

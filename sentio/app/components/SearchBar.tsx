@@ -33,7 +33,7 @@ export default function SearchBar({ onSearch, loading }: SearchBarProps) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Neyi arıyorsunuz? Örnek: '3000 TL altı gaming laptop'"
-            className="w-full px-6 py-4 text-lg border-2 border-gray-300 rounded-xl shadow-sm focus:border-blue-500 focus:ring-blue-500 focus:outline-none pr-16"
+            className="w-full px-6 py-4 text-lg text-black border-2 border-gray-300 rounded-xl shadow-sm focus:border-blue-500 focus:ring-blue-500 focus:outline-none pr-16"
             disabled={loading}
           />
           <button
