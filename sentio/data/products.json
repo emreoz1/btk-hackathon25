@@ -199,4 +199,804 @@
     "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=400&fit=crop&crop=center",
     "features": ["Intel Core i7", "16GB RAM", "512GB SSD", "13\" PixelSense", "Type Cover uyumlu"]
   }
+  {
+    "productId": "21",
+    "name": "Arçelik Telve K-3300 Türk Kahve Makinesi",
+    "description": "Arçelik Telve, tek tuşla bol köpüklü Türk kahvesi yapma imkanı sunar.",
+    "price": 2499,
+    "category": "Mutfak Aleti",
+    "brand": "Arçelik",
+    "imageUrl": "https://images.unsplash.com/photo-1565452344018-a5b9b7811913?w=400&h=400&fit=crop&crop=center",
+    "features": ["CookSense teknolojisi", "Taşmayı önleyici sensör", "Sesli uyarı", "Tek tuşla kontrol"]
+  },
+  {
+    "productId": "22",
+    "name": "Philips Airfryer XXL HD9650/90",
+    "description": "Philips Airfryer XXL, %90'a kadar daha az yağ ile yiyecekleri pişirir.",
+    "price": 8999,
+    "category": "Mutfak Aleti",
+    "brand": "Philips",
+    "imageUrl": "https://images.unsplash.com/photo-1582159040431-b9247f08210b?w=400&h=400&fit=crop&crop=center",
+    "features": ["Fat Removal teknolojisi", "7.3L kapasite", "Sıcak tutma modu", "Bulaşık makinesinde yıkanabilir parçalar"]
+  },
+  {
+    "productId": "23",
+    "name": "Nike Air Zoom Pegasus 40 Koşu Ayakkabısı",
+    "description": "Nike Pegasus 40, her seviyeden koşucu için yastıklama ve destek sunar.",
+    "price": 4299,
+    "category": "Giyim",
+    "brand": "Nike",
+    "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop&crop=center",
+    "features": ["React köpük", "Zoom Air birimleri", "Nefes alabilen file", "Dayanıklı kauçuk taban"]
+  },
+  {
+    "productId": "24",
+    "name": "Stanley Quencher Termos Bardak 1.18L",
+    "description": "Stanley Quencher, içecekleri saatlerce soğuk veya sıcak tutar.",
+    "price": 1999,
+    "category": "Mutfak Eşyası",
+    "brand": "Stanley",
+    "imageUrl": "https://images.unsplash.com/photo-1627005889215-77e888a7b332?w=400&h=400&fit=crop&crop=center",
+    "features": ["Paslanmaz çelik", "1.18L kapasite", "FlowState kapak", "Araç bardaklığı uyumlu"]
+  },
+  {
+    "productId": "25",
+    "name": "Oral-B iO Series 9 Şarjlı Diş Fırçası",
+    "description": "Oral-B iO 9, yapay zeka destekli fırçalama takibi sunar.",
+    "price": 7499,
+    "category": "Kişisel Bakım",
+    "brand": "Oral-B",
+    "imageUrl": "https://images.unsplash.com/photo-1600948835848-2c40135d1f2b?w=400&h=400&fit=crop&crop=center",
+    "features": ["Manyetik iO teknolojisi", "3D diş takibi", "Renkli ekran", "7 fırçalama modu"]
+  },
+  {
+    "productId": "26",
+    "name": "Dyson Supersonic Saç Kurutma Makinesi",
+    "description": "Dyson Supersonic, aşırı ısı olmadan hızlı kurutma ve şekillendirme sağlar.",
+    "price": 17999,
+    "category": "Kişisel Bakım",
+    "brand": "Dyson",
+    "imageUrl": "https://images.unsplash.com/photo-1522335789203-aabd1fc544e5?w=400&h=400&fit=crop&crop=center",
+    "features": ["Akıllı ısı kontrolü", "Güçlü dijital motor", "Manyetik başlıklar", "Hava akımı teknolojisi"]
+  },
+  {
+    "productId": "27",
+    "name": "Lego Star Wars Millennium Falcon 75192",
+    "description": "7541 parçadan oluşan bu set, en detaylı Millennium Falcon modelidir.",
+    "price": 29999,
+    "category": "Oyuncak",
+    "brand": "Lego",
+    "imageUrl": "https://images.unsplash.com/photo-1596731422893-f24823423714?w=400&h=400&fit=crop&crop=center",
+    "features": ["7541 parça", "Koleksiyon serisi", "Detaylı iç mekan", "Mini figürler dahil"]
+  },
+  {
+    "productId": "28",
+    "name": "The North Face Borealis Sırt Çantası",
+    "description": "The North Face Borealis, günlük kullanım ve doğa yürüyüşleri için idealdir.",
+    "price": 3499,
+    "category": "Aksesuar",
+    "brand": "The North Face",
+    "imageUrl": "https://images.unsplash.com/photo-1577733966930-d92f88fcc815?w=400&h=400&fit=crop&crop=center",
+    "features": ["FlexVent süspansiyon", "Laptop bölmesi", "28L kapasite", "Suya dayanıklı kumaş"]
+  },
+  {
+    "productId": "29",
+    "name": "Levi's 501 Original Fit Jean Pantolon",
+    "description": "Zamansız bir klasik olan Levi's 501, ikonik düğmeli tasarıma sahiptir.",
+    "price": 2899,
+    "category": "Giyim",
+    "brand": "Levi's",
+    "imageUrl": "https://images.unsplash.com/photo-1602293589930-4535de382d6f?w=400&h=400&fit=crop&crop=center",
+    "features": ["%100 pamuk", "Düğmeli tasarım", "Düz paça", "Klasik 5 cepli stil"]
+  },
+  {
+    "productId": "30",
+    "name": "Garmin Fenix 7 Sapphire Solar Akıllı Saat",
+    "description": "Garmin Fenix 7, solar şarj ve gelişmiş spor metrikleri sunar.",
+    "price": 28999,
+    "category": "Akıllı Saat",
+    "brand": "Garmin",
+    "imageUrl": "https://images.unsplash.com/photo-1508685096489-7f7406521554?w=400&h=400&fit=crop&crop=center",
+    "features": ["Solar şarj", "Safir cam", "Çoklu GNSS desteği", "TopoActive haritalar", "Puls Oksimetre"]
+  },
+  {
+    "productId": "31",
+    "name": "Nutribullet Pro 900W Blender",
+    "description": "Nutribullet Pro, 900 watt motor gücüyle besinleri kolayca parçalar.",
+    "price": 3999,
+    "category": "Mutfak Aleti",
+    "brand": "Nutribullet",
+    "imageUrl": "https://images.unsplash.com/photo-1594437973824-914856555198?w=400&h=400&fit=crop&crop=center",
+    "features": ["900W motor", "Besin öğesi çıkarma", "Kolay temizlik", "Kompakt tasarım", "BPA içermeyen kaplar"]
+  },
+  {
+    "productId": "32",
+    "name": "Google Chromecast with Google TV (4K)",
+    "description": "Tüm eğlence içeriklerinizi tek bir yerde toplayan akıllı TV cihazı.",
+    "price": 2199,
+    "category": "Elektronik",
+    "brand": "Google",
+    "imageUrl": "https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?w=400&h=400&fit=crop&crop=center",
+    "features": ["4K HDR yayın", "Google TV arayüzü", "Sesli kumanda", "Binlerce uygulama", "Kolay kurulum"]
+  },
+  {
+    "productId": "33",
+    "name": "Anker PowerCore III 20000mAh Powerbank",
+    "description": "Yüksek kapasiteli Anker PowerCore, cihazlarınızı defalarca şarj eder.",
+    "price": 1499,
+    "category": "Aksesuar",
+    "brand": "Anker",
+    "imageUrl": "https://images.unsplash.com/photo-1588854333339-c967d37a1a2f?w=400&h=400&fit=crop&crop=center",
+    "features": ["20000mAh kapasite", "PowerIQ teknolojisi", "USB-C ve USB-A portları", "Hızlı şarj desteği"]
+  },
+  {
+    "productId": "34",
+    "name": "Faber-Castell Grip Plus 0.7mm Versatil Kalem",
+    "description": "Ergonomik tutuş ve dayanıklı uç mekanizması ile konforlu yazım deneyimi.",
+    "price": 199,
+    "category": "Kırtasiye",
+    "brand": "Faber-Castell",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=400&h=400&fit=crop&crop=center",
+    "features": ["Ergonomik kauçuk tutma yeri", "0.7mm uç", "Gizlenebilir uç", "Dahili silgi"]
+  },
+  {
+    "productId": "35",
+    "name": "JBL Flip 6 Taşınabilir Bluetooth Hoparlör",
+    "description": "JBL Flip 6, güçlü ses performansı ve suya dayanıklı tasarımıyla öne çıkar.",
+    "price": 3799,
+    "category": "Elektronik",
+    "brand": "JBL",
+    "imageUrl": "https://images.unsplash.com/photo-1550009158-94ae7d2d82d4?w=400&h=400&fit=crop&crop=center",
+    "features": ["Bluetooth 5.1", "IP67 su ve toz geçirmezlik", "12 saat çalma süresi", "PartyBoost özelliği"]
+  }
+  {
+    "productId": "36",
+    "name": "Ülker Çikolatalı Gofret 36g",
+    "description": "Nesillerdir değişmeyen lezzet, çıtır gofret yaprakları ve enfes çikolata kaplaması.",
+    "price": 5,
+    "category": "Yemek",
+    "brand": "Ülker",
+    "imageUrl": "https://images.unsplash.com/photo-1582293041079-7814c24a2ec3?w=400&h=400&fit=crop&crop=center",
+    "features": ["Çıtır gofret", "Sütlü çikolata kaplama", "Klasik lezzet", "Atıştırmalık"]
+  },
+  {
+    "productId": "37",
+    "name": "Sütaş Süt 1L",
+    "description": "Türkiye'nin en sevilen sütü, %100 doğal ve taze, UHT teknolojisiyle paketlenmiştir.",
+    "price": 38,
+    "category": "Yemek",
+    "brand": "Sütaş",
+    "imageUrl": "https://images.unsplash.com/photo-1559598467-f8b76c8155d0?w=400&h=400&fit=crop&crop=center",
+    "features": ["UHT Süt", "Tam yağlı", "1 Litre", "Kalsiyum kaynağı"]
+  },
+  {
+    "productId": "38",
+    "name": "Pınar Beyaz Peynir 500g",
+    "description": "Kahvaltıların vazgeçilmezi, ideal tuz oranı ve lezzetiyle tam kıvamında süzme peynir.",
+    "price": 145,
+    "category": "Yemek",
+    "brand": "Pınar",
+    "imageUrl": "https://images.unsplash.com/photo-1589924691995-58248ef70732?w=400&h=400&fit=crop&crop=center",
+    "features": ["Süzme peynir", "500g paket", "Kahvaltılık", "Yüksek protein"]
+  },
+  {
+    "productId": "39",
+    "name": "Filiz Burgu Makarna 500g",
+    "description": "Anadolu'nun bereketli topraklarından gelen durum buğdayı ile üretilmiştir.",
+    "price": 25,
+    "category": "Yemek",
+    "brand": "Filiz",
+    "imageUrl": "https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=400&h=400&fit=crop&crop=center",
+    "features": ["Durum buğdayı irmiği", "500g", "Burgu şekli", "Hızlı pişirme"]
+  },
+  {
+    "productId": "40",
+    "name": "Reis Kırmızı Mercimek 1kg",
+    "description": "Çorbaların ve geleneksel yemeklerin vazgeçilmezi, besleyici ve lezzetli kırmızı mercimek.",
+    "price": 75,
+    "category": "Yemek",
+    "brand": "Reis",
+    "imageUrl": "https://images.unsplash.com/photo-1587588313284-5f33230a6ee4?w=400&h=400&fit=crop&crop=center",
+    "features": ["Yerli üretim", "1kg paket", "Yüksek lif", "Protein deposu"]
+  },
+  {
+    "productId": "41",
+    "name": "Doğuş Siyah Filiz Çay 1kg",
+    "description": "Karadeniz'in en taze çay yapraklarından elde edilen, demli ve lezzetli Türk çayı.",
+    "price": 160,
+    "category": "Yemek",
+    "brand": "Doğuş",
+    "imageUrl": "https://images.unsplash.com/photo-1541533267753-2683a165b432?w=400&h=400&fit=crop&crop=center",
+    "features": ["Dökme çay", "1kg", "Siyah çay", "Yoğun dem"]
+  },
+  {
+    "productId": "42",
+    "name": "Torku Banada Kakaolu Fındık Kreması 400g",
+    "description": "Bol fındık ve doğal pancar şekeri ile üretilmiş, kahvaltıların tatlı yıldızı.",
+    "price": 85,
+    "category": "Yemek",
+    "brand": "Torku",
+    "imageUrl": "https://images.unsplash.com/photo-1575424751414-b141d0442375?w=400&h=400&fit=crop&crop=center",
+    "features": ["Kakaolu fındık kreması", "Trans yağ içermez", "400g cam kavanoz", "Sürülebilir"]
+  },
+  {
+    "productId": "43",
+    "name": "Coca-Cola 2.5L",
+    "description": "Efsanevi lezzet, en keyifli anların ve kalabalık sofraların içeceği.",
+    "price": 50,
+    "category": "Yemek",
+    "brand": "Coca-Cola",
+    "imageUrl": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=400&h=400&fit=crop&crop=center",
+    "features": ["Gazlı içecek", "2.5 Litre", "Orijinal tat", "Serinletici"]
+  },
+  {
+    "productId": "44",
+    "name": "Eti Popkek Limonlu 60g",
+    "description": "Yumuşak keki, enfes limonlu sosu ve üzerindeki granülleri ile efsane bir lezzet.",
+    "price": 7,
+    "category": "Yemek",
+    "brand": "Eti",
+    "imageUrl": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&h=400&fit=crop&crop=center",
+    "features": ["Limonlu sos", "Yumuşak kek", "Atıştırmalık", "Tek porsiyon"]
+  },
+  {
+    "productId": "45",
+    "name": "Barilla Pesto Genovese Sosu 190g",
+    "description": "Taze fesleğen, parmesan peyniri ve çam fıstığı ile hazırlanan otantik İtalyan sosu.",
+    "price": 110,
+    "category": "Yemek",
+    "brand": "Barilla",
+    "imageUrl": "https://images.unsplash.com/photo-1626999279099-9a74e5a952c4?w=400&h=400&fit=crop&crop=center",
+    "features": ["Fesleğenli pesto", "Kullanıma hazır", "190g cam kavanoz", "Makarna sosu"]
+  },
+  {
+    "productId": "46",
+    "name": "Namet Dana Kangal Sucuk 250g",
+    "description": "Geleneksel yöntemlerle fermente edilmiş, baharatları tam kıvamında dana kangal sucuk.",
+    "price": 150,
+    "category": "Yemek",
+    "brand": "Namet",
+    "imageUrl": "https://images.unsplash.com/photo-1618449322363-a68b5a0b7e51?w=400&h=400&fit=crop&crop=center",
+    "features": ["%100 Dana eti", "Fermente sucuk", "Isıl işlem görmüş", "Kahvaltılık"]
+  },
+  {
+    "productId": "47",
+    "name": "Superfresh Dondurulmuş Pizza King 780g",
+    "description": "Bol malzemeli, pratik ve lezzetli, fırına hazır dondurulmuş pizza.",
+    "price": 180,
+    "category": "Yemek",
+    "brand": "Superfresh",
+    "imageUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=400&fit=crop&crop=center",
+    "features": ["Dondurulmuş", "Karışık pizza", "780g", "Pratik öğün"]
+  },
+  {
+    "productId": "48",
+    "name": "Dardanel Ton Balığı 2x160g",
+    "description": "Sağlıklı ve pratik bir öğün için ayçiçek yağında konserve ton balığı.",
+    "price": 120,
+    "category": "Yemek",
+    "brand": "Dardanel",
+    "imageUrl": "https://images.unsplash.com/photo-1552039757-c3461b58535a?w=400&h=400&fit=crop&crop=center",
+    "features": ["Konserve ton balığı", "Ayçiçek yağlı", "2'li paket", "Omega 3 kaynağı"]
+  },
+  {
+    "productId": "49",
+    "name": "Tadım Kavrulmuş Tuzlu Ay Çekirdeği 200g",
+    "description": "En taze ve dolgun ay çekirdekleri özenle kavruldu, sohbetlerinize eşlik etmeye hazır.",
+    "price": 45,
+    "category": "Yemek",
+    "brand": "Tadım",
+    "imageUrl": "https://images.unsplash.com/photo-1596749363556-258a14f3a033?w=400&h=400&fit=crop&crop=center",
+    "features": ["Tuzlu", "Kavrulmuş", "Ay çekirdeği", "Kuruyemiş"]
+  },
+  {
+    "productId": "50",
+    "name": "Lay's Klasik Patates Cipsi Parti Boy",
+    "description": "İncecik kesilmiş patatesler, tam kıvamında tuz oranı ile çıtır çıtır bir lezzet.",
+    "price": 40,
+    "category": "Yemek",
+    "brand": "Lay's",
+    "imageUrl": "https://images.unsplash.com/photo-1599490659213-e2b9527bd0a7?w=400&h=400&fit=crop&crop=center",
+    "features": ["Patates cipsi", "Klasik tuzlu", "Parti boy", "Atıştırmalık"]
+  },
+  {
+    "productId": "51",
+    "name": "Calve Ketçap 650g",
+    "description": "Lezzetli domateslerden üretilmiş, yemeklerin ve atıştırmalıkların vazgeçilmez sosu.",
+    "price": 65,
+    "category": "Yemek",
+    "brand": "Calve",
+    "imageUrl": "https://images.unsplash.com/photo-1626201349582-b7c1266a15e6?w=400&h=400&fit=crop&crop=center",
+    "features": ["Domates ketçabı", "650g", "Sıkma şişe", "Koruyucu içermez"]
+  },
+  {
+    "productId": "52",
+    "name": "Yudum Ayçiçek Yağı 2L",
+    "description": "Hafifliği ve lezzetiyle tüm sıcak ve soğuk yemekleriniz için ideal bitkisel yağ.",
+    "price": 130,
+    "category": "Yemek",
+    "brand": "Yudum",
+    "imageUrl": "https://images.unsplash.com/photo-1625752254943-431801267566?w=400&h=400&fit=crop&crop=center",
+    "features": ["Ayçiçek yağı", "2 Litre", "Kızartmalar için uygun", "Vitamin E kaynağı"]
+  },
+  {
+    "productId": "53",
+    "name": "Nestle Nesquik Kakaolu Tahıl Gevreği 450g",
+    "description": "Çocukların sevdiği çikolata topları, sütle buluşunca harika bir kahvaltı seçeneği.",
+    "price": 90,
+    "category": "Yemek",
+    "brand": "Nestle",
+    "imageUrl": "https://images.unsplash.com/photo-1552526881-421ce87143c7?w=400&h=400&fit=crop&crop=center",
+    "features": ["Kakaolu mısır gevreği", "Vitamin ve mineral ilaveli", "450g kutu", "Kahvaltılık"]
+  },
+  {
+    "productId": "54",
+    "name": "İçim %18 Yağlı Krema 200ml",
+    "description": "Yemeklerinize ve tatlılarınıza lezzet ve kıvam katmak için ideal mutfak kreması.",
+    "price": 35,
+    "category": "Yemek",
+    "brand": "İçim",
+    "imageUrl": "https://images.unsplash.com/photo-1606852885994-675038c11f45?w=400&h=400&fit=crop&crop=center",
+    "features": ["Mutfak kreması", "%18 yağlı", "200ml", "Yemek ve tatlılar için"]
+  },
+  {
+    "productId": "55",
+    "name": "Uno Tost Ekmeği 550g",
+    "description": "Mükemmel tostlar için ideal boyutta dilimlenmiş, yumuşacık beyaz tost ekmeği.",
+    "price": 55,
+    "category": "Yemek",
+    "brand": "Uno",
+    "imageUrl": "https://images.unsplash.com/photo-1586512821217-0130ba8a7354?w=400&h=400&fit=crop&crop=center",
+    "features": ["Büyük dilimler", "Tost ekmeği", "550g", "Yumuşak doku"]
+  }
+  {
+    "productId": "56",
+    "name": "Brita Filtreli Su Şişesi 600ml",
+    "description": "Hareket halindeyken musluk suyunu filtreleyerek daha lezzetli hale getiren pratik su şişesi.",
+    "price": 450,
+    "category": "Su Şişesi",
+    "brand": "Brita",
+    "imageUrl": "https://images.unsplash.com/photo-155441221-58e1e7c577a7?w=400&h=400&fit=crop&crop=center",
+    "features": ["Aktif karbon filtre", "600ml kapasite", "BPA içermez", "Bulaşık makinesinde yıkanabilir"]
+  },
+  {
+    "productId": "57",
+    "name": "L'Oréal Paris Telescopic Maskara Siyah",
+    "description": "Kirpikleri kökten uca uzatan ve belirginleştiren, topaklanma yapmayan esnek fırçalı maskara.",
+    "price": 480,
+    "category": "Kozmetik",
+    "brand": "L'Oréal Paris",
+    "imageUrl": "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=400&h=400&fit=crop&crop=center",
+    "features": ["Uzatıcı etki", "Siyah renk", "Esnek fırça", "Oftalmolojik olarak test edilmiştir"]
+  },
+  {
+    "productId": "58",
+    "name": "Pandora Moments Yılan Zincir Bileklik",
+    "description": "Kişiselleştirilebilir charm'lar için tasarlanmış, ikonik gümüş yılan zincir bileklik.",
+    "price": 3200,
+    "category": "Takı",
+    "brand": "Pandora",
+    "imageUrl": "https://images.unsplash.com/photo-1611652022417-a57343e4942b?w=400&h=400&fit=crop&crop=center",
+    "features": ["925 ayar gümüş", "Charm uyumlu", "İkonik varil klips", "Farklı boyut seçenekleri"]
+  },
+  {
+    "productId": "59",
+    "name": "Zen Pırlanta 0.40 Karat Tektaş Yüzük",
+    "description": "Zarif ve zamansız bir tasarıma sahip, F renk ve VS berraklıkta 0.40 karat pırlanta tektaş yüzük.",
+    "price": 45000,
+    "category": "Mücevher",
+    "brand": "Zen Pırlanta",
+    "imageUrl": "https://images.unsplash.com/photo-1598561086321-c1622b7a4891?w=400&h=400&fit=crop&crop=center",
+    "features": ["0.40 Karat pırlanta", "14 Ayar Beyaz Altın", "Uluslararası sertifika", "Tektaş tasarım"]
+  },
+  {
+    "productId": "60",
+    "name": "GoPro HERO12 Black Aksiyon Kamerası",
+    "description": "HyperSmooth 6.0 stabilizasyonu ve 5.3K video kaydı ile maceralarınızı ölümsüzleştirin.",
+    "price": 18999,
+    "category": "Teknoloji",
+    "brand": "GoPro",
+    "imageUrl": "https://images.unsplash.com/photo-1526903277836-224449834a3b?w=400&h=400&fit=crop&crop=center",
+    "features": ["5.3K 60fps video", "HyperSmooth 6.0", "Su geçirmez (10m)", "Çift LCD ekran"]
+  },
+  {
+    "productId": "61",
+    "name": "MAC Retro Matte Ruj - Ruby Woo",
+    "description": "Tüm cilt tonlarına uyan, ikonik, canlı ve mat bitişli kırmızı ruj.",
+    "price": 850,
+    "category": "Kozmetik",
+    "brand": "MAC",
+    "imageUrl": "https://images.unsplash.com/photo-1594488518062-8537364273f3?w=400&h=400&fit=crop&crop=center",
+    "features": ["Yoğun pigment", "Mat bitiş", "Uzun süre kalıcı", "İkonik kırmızı renk"]
+  },
+  {
+    "productId": "62",
+    "name": "The Ordinary Niacinamide 10% + Zinc 1% Serum",
+    "description": "Lekeleri ve gözenek görünümünü azaltmaya yardımcı, sebum dengeleyici yüz serumu.",
+    "price": 350,
+    "category": "Kozmetik",
+    "brand": "The Ordinary",
+    "imageUrl": "https://images.unsplash.com/photo-1600185392942-7248b1d9c391?w=400&h=400&fit=crop&crop=center",
+    "features": ["Niacinamide ve Çinko", "Leke karşıtı", "Gözenek sıkılaştırıcı", "30ml damlalıklı şişe"]
+  },
+  {
+    "productId": "63",
+    "name": "Swarovski Attract Damla Küpe",
+    "description": "Zarif ve ışıltılı, her ortama uygun, rodyum kaplama damla kesim kristal küpeler.",
+    "price": 4250,
+    "category": "Takı",
+    "brand": "Swarovski",
+    "imageUrl": "https://images.unsplash.com/photo-1610173827230-6715f80b2c15?w=400&h=400&fit=crop&crop=center",
+    "features": ["Swarovski kristalleri", "Damla kesim", "Rodyum kaplama", "Günlük ve özel kullanım"]
+  },
+  {
+    "productId": "64",
+    "name": "Rolex Submariner Date Saat",
+    "description": "Dalgıç saatlerinin arketipi. Oystersteel çelik kasa ve siyah seramik çerçeve.",
+    "price": 550000,
+    "category": "Mücevher",
+    "brand": "Rolex",
+    "imageUrl": "https://images.unsplash.com/photo-1620626817264-cbd96b341f23?w=400&h=400&fit=crop&crop=center",
+    "features": ["Otomatik mekanizma", "300m su geçirmezlik", "Oystersteel kasa", "Seramik çerçeve"]
+  },
+  {
+    "productId": "65",
+    "name": "Amazon Kindle Paperwhite 16GB",
+    "description": "Göz yormayan 6.8 inç ekranı ve ayarlanabilir sıcak ışığı ile kitap okuma keyfi.",
+    "price": 7999,
+    "category": "Teknoloji",
+    "brand": "Amazon",
+    "imageUrl": "https://images.unsplash.com/photo-1535252317436-1d898a9c3080?w=400&h=400&fit=crop&crop=center",
+    "features": ["6.8 inç e-ink ekran", "Su geçirmez", "Ayarlanabilir sıcak ışık", "Haftalar süren pil ömrü"]
+  },
+  {
+    "productId": "66",
+    "name": "Hydro Flask Geniş Ağızlı Su Şişesi 946ml",
+    "description": "TempShield yalıtımı sayesinde içecekleri 24 saate kadar soğuk, 12 saate kadar sıcak tutar.",
+    "price": 1800,
+    "category": "Su Şişesi",
+    "brand": "Hydro Flask",
+    "imageUrl": "https://images.unsplash.com/photo-1598512752271-33f913a53233?w=400&h=400&fit=crop&crop=center",
+    "features": ["Paslanmaz çelik", "Çift duvarlı yalıtım", "Geniş ağız", "Toz boya kaplama"]
+  },
+  {
+    "productId": "67",
+    "name": "Dior Sauvage Eau de Parfum 100ml",
+    "description": "Taze bergamot ve güçlü odunsu notaların birleşimiyle maskülen ve etkileyici bir koku.",
+    "price": 5800,
+    "category": "Kozmetik",
+    "brand": "Dior",
+    "imageUrl": "https://images.unsplash.com/photo-1622618970335-e6c71073a41e?w=400&h=400&fit=crop&crop=center",
+    "features": ["Erkek parfümü", "Eau de Parfum", "100ml", "Narenciye ve odunsu notalar"]
+  },
+  {
+    "productId": "68",
+    "name": "DJI Mini 4 Pro Drone",
+    "description": "249 gram altı hafif tasarımı ve 4K 100fps video çekim yeteneği ile profesyonel sonuçlar.",
+    "price": 39999,
+    "category": "Teknoloji",
+    "brand": "DJI",
+    "imageUrl": "https://images.unsplash.com/photo-1507582020474-0a3f5aee33d1?w=400&h=400&fit=crop&crop=center",
+    "features": ["4K 100fps video", "249g altı ağırlık", "Çok yönlü engel algılama", "Dikey çekim"]
+  },
+  {
+    "productId": "69",
+    "name": "Atasay 14 Ayar Altın Harf Kolye",
+    "description": "Kişiye özel bir hediye seçeneği olan, zarif ve modern tasarımlı 14 ayar altın harf kolye.",
+    "price": 5500,
+    "category": "Mücevher",
+    "brand": "Atasay",
+    "imageUrl": "https://images.unsplash.com/photo-1611591437134-477a34863f68?w=400&h=400&fit=crop&crop=center",
+    "features": ["14 ayar sarı altın", "Kişiselleştirilebilir harf", "Minimalist tasarım", "42cm zincir uzunluğu"]
+  },
+  {
+    "productId": "70",
+    "name": "Logitech MX Master 3S Kablosuz Mouse",
+    "description": "Sessiz tıklamalar, 8K DPI takibi ve MagSpeed tekerleği ile üst düzey verimlilik.",
+    "price": 4200,
+    "category": "Teknoloji",
+    "brand": "Logitech",
+    "imageUrl": "https://images.unsplash.com/photo-1615664731872-49174627d252?w=400&h=400&fit=crop&crop=center",
+    "features": ["Sessiz tıklama", "8000 DPI sensör", "MagSpeed tekerlek", "Ergonomik tasarım"]
+  }
+  {
+    "productId": "71",
+    "name": "Elden Ring - PlayStation 5 Oyunu",
+    "description": "FromSoftware tarafından geliştirilen, eleştirmenlerce beğenilen, fantastik bir aksiyon-RPG deneyimi.",
+    "price": 1499,
+    "category": "Oyun",
+    "brand": "Bandai Namco",
+    "imageUrl": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=400&h=400&fit=crop&crop=center",
+    "features": ["Aksiyon-RPG", "Açık dünya", "Zorlayıcı oynanış", "PS5 için optimize edildi"]
+  },
+  {
+    "productId": "72",
+    "name": "Chicco Next2Me Anne Yanı Beşiği",
+    "description": "Bebeğinizin gece boyunca yanınızda güvenle uyumasını sağlayan, yüksekliği ayarlanabilir anne yanı beşiği.",
+    "price": 6500,
+    "category": "Anne & Bebek",
+    "brand": "Chicco",
+    "imageUrl": "https://images.unsplash.com/photo-1616045107560-f14813f4d634?w=400&h=400&fit=crop&crop=center",
+    "features": ["Anne yanı kullanımı", "Yükseklik ayarı", "Hafif iskelet", "Sallanma modu"]
+  },
+  {
+    "productId": "73",
+    "name": "Lego City Polis Merkezi 60316",
+    "description": "Helikopter, devriye arabası ve 3 katlı polis merkezi içeren bu set ile çocuklar kendi maceralarını yaratabilir.",
+    "price": 2800,
+    "category": "Çocuk",
+    "brand": "Lego",
+    "imageUrl": "https://images.unsplash.com/photo-1588665387928-a4a3b4d58853?w=400&h=400&fit=crop&crop=center",
+    "features": ["668 parça", "5 mini figür", "Helikopter ve araba dahil", "7+ yaş için uygun"]
+  },
+  {
+    "productId": "74",
+    "name": "Catan Kutu Oyunu",
+    "description": "Kaynakları toplayın, ticaret yapın ve Catan adasını kolonileştirmek için yarışın. Strateji ve şans bir arada.",
+    "price": 1100,
+    "category": "Oyun",
+    "brand": "Catan Studio",
+    "imageUrl": "https://images.unsplash.com/photo-1610890714278-c7a077a27077?w=400&h=400&fit=crop&crop=center",
+    "features": ["Strateji oyunu", "3-4 oyuncu", "Modüler oyun tahtası", "Kolay kurallar"]
+  },
+  {
+    "productId": "75",
+    "name": "Prima Premium Care Bebek Bezi 3 Beden",
+    "description": "Bebeğinizin cildini korumak için tasarlanmış, emici kanallara ve ipeksi yumuşaklığa sahip bebek bezi.",
+    "price": 450,
+    "category": "Anne & Bebek",
+    "brand": "Prima",
+    "imageUrl": "https://images.unsplash.com/photo-1546484883-d5d8a03c6bee?w=400&h=400&fit=crop&crop=center",
+    "features": ["Islaklık göstergesi", "Esnek yan bantlar", "Nefes alan yüzey", "12 saate kadar kuruluk"]
+  },
+  {
+    "productId": "76",
+    "name": "Barbie Rüya Evi (Dreamhouse)",
+    "description": "3 katlı, asansörlü, havuzlu ve 70'ten fazla aksesuar içeren bu ev, Barbie için sonsuz hikaye imkanı sunar.",
+    "price": 8500,
+    "category": "Çocuk",
+    "brand": "Barbie",
+    "imageUrl": "https://images.unsplash.com/photo-1599421497958-b18a3a3d5821?w=400&h=400&fit=crop&crop=center",
+    "features": ["3 katlı yapı", "Asansör ve kaydırak", "Işıklar ve sesler", "70+ aksesuar"]
+  },
+  {
+    "productId": "77",
+    "name": "Philips Avent Natural Biberon Seti",
+    "description": "Anne memesine benzer geniş emziği ile doğal kavrama hissi sunan, antikolik valfli biberon başlangıç seti.",
+    "price": 950,
+    "category": "Anne & Bebek",
+    "brand": "Philips Avent",
+    "imageUrl": "https://images.unsplash.com/photo-1619616039537-02c0a4d0483c?w=400&h=400&fit=crop&crop=center",
+    "features": ["Doğal emiş hissi", "Antikolik valf", "BPA içermez", "Farklı boyutlarda 4 biberon"]
+  },
+  {
+    "productId": "78",
+    "name": "Nintendo Switch - OLED Model",
+    "description": "Canlı 7 inç OLED ekranı, geniş ayarlanabilir standı ve gelişmiş sesiyle oyun deneyiminizi bir üst seviyeye taşıyın.",
+    "price": 14500,
+    "category": "Oyun",
+    "brand": "Nintendo",
+    "imageUrl": "https://images.unsplash.com/photo-1612036782180-6f0b6cd84627?w=400&h=400&fit=crop&crop=center",
+    "features": ["7 inç OLED ekran", "64GB dahili hafıza", "3 oyun modu", "Geliştirilmiş ses"]
+  },
+  {
+    "productId": "79",
+    "name": "Hot Wheels 5'li Araba Seti",
+    "description": "Her pakette farklı modellerin yer aldığı, koleksiyonluk ve yüksek performanslı 1:64 ölçekli metal arabalar.",
+    "price": 250,
+    "category": "Çocuk",
+    "brand": "Hot Wheels",
+    "imageUrl": "https://images.unsplash.com/photo-1594950444510-928a6c1cf60f?w=400&h=400&fit=crop&crop=center",
+    "features": ["5'li paket", "1:64 ölçek", "Metal gövde", "Koleksiyonluk"]
+  },
+  {
+    "productId": "80",
+    "name": "Mustela Vitamin Barrier 1-2-3 Pişik Kremi 100ml",
+    "description": "Doğumdan itibaren kullanıma uygun, pişiği önlemeye, yatıştırmaya ve onarmaya yardımcı bakım kremi.",
+    "price": 320,
+    "category": "Anne & Bebek",
+    "brand": "Mustela",
+    "imageUrl": "https://images.unsplash.com/photo-1599351431202-393278278c52?w=400&h=400&fit=crop&crop=center",
+    "features": ["%98 doğal kökenli içerik", "Hipoalerjenik", "Parfüm içermez", "Klinik olarak test edilmiştir"]
+  },
+  {
+    "productId": "81",
+    "name": "Razer BlackWidow V4 Pro Oyuncu Klavyesi",
+    "description": "Razer Chroma RGB aydınlatma, mekanik tuşlar ve özel makro tuşları ile profesyonel oyuncu klavyesi.",
+    "price": 7500,
+    "category": "Oyun",
+    "brand": "Razer",
+    "imageUrl": "https://images.unsplash.com/photo-1601445638532-3c6f6c3aa128?w=400&h=400&fit=crop&crop=center",
+    "features": ["Mekanik Yeşil Tuşlar", "Chroma RGB aydınlatma", "Manyetik bilek desteği", "Özel medya tuşları"]
+  },
+  {
+    "productId": "82",
+    "name": "Küçük Prens - Antoine de Saint-Exupéry",
+    "description": "Hem çocuklara hem de yetişkinlere hitap eden, tüm zamanların en çok okunan klasik eserlerinden biri.",
+    "price": 45,
+    "category": "Çocuk",
+    "brand": "Can Çocuk Yayınları",
+    "imageUrl": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=400&fit=crop&crop=center",
+    "features": ["Klasik Eser", "Felsefi hikaye", "Resimli baskı", "Her yaş için"]
+  },
+  {
+    "productId": "83",
+    "name": "Doona+ Grup 0+ Bebek Arabası ve Ana Kucağı",
+    "description": "Saniyeler içinde ana kucağından bebek arabasına dönüşen, seyahatler için devrim niteliğinde bir ürün.",
+    "price": 12000,
+    "category": "Anne & Bebek",
+    "brand": "Doona",
+    "imageUrl": "https://images.unsplash.com/photo-1582156885323-9366114a72d3?w=400&h=400&fit=crop&crop=center",
+    "features": ["Bebek arabası ve ana kucağı bir arada", "Uçak kabin onayı", "Gelişmiş güvenlik standartları", "Tek tuşla dönüşüm"]
+  },
+  {
+    "productId": "84",
+    "name": "SteelSeries Arctis Nova 7 Kablosuz Oyuncu Kulaklığı",
+    "description": "Nova Akustik Sistemi ve yapay zeka destekli gürültü engelleme ile üstün ses kalitesi sunar.",
+    "price": 6000,
+    "category": "Oyun",
+    "brand": "SteelSeries",
+    "imageUrl": "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&h=400&fit=crop&crop=center",
+    "features": ["2.4GHz ve Bluetooth bağlantı", "38 saat pil ömrü", "Yapay zeka destekli mikrofon", "ComfortMAX sistemi"]
+  },
+  {
+    "productId": "85",
+    "name": "Micro Mini Deluxe LED Işıklı Scooter",
+    "description": "Çocukların denge becerilerini geliştiren, tekerlekleri ışıklı, 3 tekerlekli, güvenli ve dayanıklı scooter.",
+    "price": 3500,
+    "category": "Çocuk",
+    "brand": "Micro",
+    "imageUrl": "https://images.unsplash.com/photo-1588693995543-a64016597964?w=400&h=400&fit=crop&crop=center",
+    "features": ["Işıklı LED tekerlekler", "Ayarlanabilir gidon", "Kaymaz zemin", "2-5 yaş için"]
+  },
+  {
+    "productId": "86",
+    "name": "Lansinoh 2'si 1 Arada Elektrikli Süt Pompası",
+    "description": "Hem tekli hem de çiftli kullanıma uygun, 3 farklı sağım stili ve 8 emiş gücü seviyesi sunar.",
+    "price": 4200,
+    "category": "Anne & Bebek",
+    "brand": "Lansinoh",
+    "imageUrl": "https://images.unsplash.com/photo-1629821812604-ee5a975d27c6?w=400&h=400&fit=crop&crop=center",
+    "features": ["Çiftli ve tekli kullanım", "Hijyenik kapalı sistem", "LCD ekran", "Biberonlarla uyumlu"]
+  },
+  {
+    "productId": "87",
+    "name": "EA Sports FC 25 - PC (Steam Kodu)",
+    "description": "HyperMotionV teknolojisi ile futbol gerçekçiliğini zirveye taşıyan, yeni nesil futbol oyunu.",
+    "price": 1800,
+    "category": "Oyun",
+    "brand": "Electronic Arts",
+    "imageUrl": "https://images.unsplash.com/photo-1544275133-4f35b497263b?w=400&h=400&fit=crop&crop=center",
+    "features": ["PC için dijital kod", "Gelişmiş grafikler", "Ultimate Team modu", "Kariyer modu"]
+  },
+  {
+    "productId": "88",
+    "name": "WeeBaby Cam Rende",
+    "description": "Bebeklerin ek gıdaya geçiş döneminde meyve ve sebzeleri püre yapmak için ideal, sağlıklı cam rende.",
+    "price": 80,
+    "category": "Anne & Bebek",
+    "brand": "WeeBaby",
+    "imageUrl": "https://images.unsplash.com/photo-1506068220516-f5ce993c042d?w=400&h=400&fit=crop&crop=center",
+    "features": ["Sağlıklı cam malzeme", "Kolay temizlik", "Besin değerini korur", "Ek gıda dönemi için"]
+  },
+  {
+    "productId": "89",
+    "name": "Faber-Castell 24'lü Kuru Boya Kalemi",
+    "description": "Canlı ve parlak renkler, yüksek kaliteli pigmentler ve kırılmaya karşı dirençli SV ucu.",
+    "price": 220,
+    "category": "Çocuk",
+    "brand": "Faber-Castell",
+    "imageUrl": "https://images.unsplash.com/photo-1574126154517-d1e0d89ef734?w=400&h=400&fit=crop&crop=center",
+    "features": ["24 farklı renk", "Altıgen gövde", "Yüksek pigment kalitesi", "Kolay açılır"]
+  },
+  {
+    "productId": "90",
+    "name": "Motorola MBP483 Görüntülü Bebek Telsizi",
+    "description": "2.8 inç renkli ekranı, gece görüşü ve karşılıklı konuşma özelliği ile bebeğinizi her an izleyin.",
+    "price": 3800,
+    "category": "Anne & Bebek",
+    "brand": "Motorola",
+    "imageUrl": "https://images.unsplash.com/photo-1619198381989-8d7768a834e5?w=400&h=400&fit=crop&crop=center",
+    "features": ["2.8 inç renkli ekran", "Kızılötesi gece görüşü", "Karşılıklı konuşma", "Oda sıcaklığı göstergesi"]
+  }
+  {
+    "productId": "91",
+    "name": "İnce Memed 1 - Yaşar Kemal",
+    "description": "Türk edebiyatının en büyük eserlerinden biri olan İnce Memed, bir dağ köyünde yaşayan Memed'in ağalığa karşı verdiği onur mücadelesini anlatır.",
+    "price": 180,
+    "category": "Kitap",
+    "brand": "Yapı Kredi Yayınları",
+    "imageUrl": "https://images.unsplash.com/photo-1589998059171-988d887df646?w=400&h=400&fit=crop&crop=center",
+    "features": ["Türk Edebiyatı", "Roman", "Klasik", "Karton Kapak"]
+  },
+  {
+    "productId": "92",
+    "name": "1984 - George Orwell",
+    "description": "'Büyük Birader'in herkesi izlediği totaliter bir dünyayı anlatan, distopik edebiyatın kült eseri.",
+    "price": 110,
+    "category": "Kitap",
+    "brand": "Can Yayınları",
+    "imageUrl": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&h=400&fit=crop&crop=center",
+    "features": ["Dünya Edebiyatı", "Distopya", "Bilim Kurgu", "Roman"]
+  },
+  {
+    "productId": "93",
+    "name": "Sapiens: İnsan Türünün Kısa Bir Tarihi - Yuval Noah Harari",
+    "description": "İnsan türünün yüz bin yıllık tarihini, bilişsel, tarım ve bilimsel devrimler üzerinden anlatan sürükleyici bir popüler bilim kitabı.",
+    "price": 250,
+    "category": "Kitap",
+    "brand": "Kolektif Kitap",
+    "imageUrl": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=400&h=400&fit=crop&crop=center",
+    "features": ["Popüler Bilim", "Tarih", "Antropoloji", "Uluslararası Çoksatan"]
+  },
+  {
+    "productId": "94",
+    "name": "Kürk Mantolu Madonna - Sabahattin Ali",
+    "description": "İnsan ruhunun derinliklerine inen, melankolik ve dokunaklı bir aşk hikayesini konu alan Türk edebiyatı klasiği.",
+    "price": 60,
+    "category": "Kitap",
+    "brand": "Yapı Kredi Yayınları",
+    "imageUrl": "https://images.unsplash.com/photo-1543002588-b9b6562934c2?w=400&h=400&fit=crop&crop=center",
+    "features": ["Türk Edebiyatı", "Roman", "Aşk", "Psikolojik"]
+  },
+  {
+    "productId": "95",
+    "name": "Harry Potter ve Felsefe Taşı - J.K. Rowling",
+    "description": "Sıradan bir çocuk olduğunu sanan Harry'nin, bir büyücü olduğunu öğrenmesi ve Hogwarts'taki maceralarının başlangıcı.",
+    "price": 160,
+    "category": "Kitap",
+    "brand": "Yapı Kredi Yayınları",
+    "imageUrl": "https://images.unsplash.com/photo-1610967394399-19c235b53d4c?w=400&h=400&fit=crop&crop=center",
+    "features": ["Fantastik", "Macera", "Genç Yetişkin", "Serinin ilk kitabı"]
+  },
+  {
+    "productId": "96",
+    "name": "Atomik Alışkanlıklar - James Clear",
+    "description": "İyi alışkanlıklar edinmek ve kötü olanlardan kurtulmak için pratik ve kanıta dayalı yöntemler sunan bir kişisel gelişim rehberi.",
+    "price": 190,
+    "category": "Kitap",
+    "brand": "Pegasus Yayınları",
+    "imageUrl": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=400&h=400&fit=crop&crop=center",
+    "features": ["Kişisel Gelişim", "Alışkanlıklar", "Psikoloji", "Pratik Rehber"]
+  },
+  {
+    "productId": "97",
+    "name": "Yüzüklerin Efendisi: Yüzük Kardeşliği - J.R.R. Tolkien",
+    "description": "Modern fantastik edebiyatın temel taşı. Frodo Baggins'in Tek Yüzük'ü yok etmek için çıktığı tehlikeli yolculuğun başlangıcı.",
+    "price": 280,
+    "category": "Kitap",
+    "brand": "Metis Yayıncılık",
+    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=400&fit=crop&crop=center",
+    "features": ["Fantastik Edebiyat", "Macera", "Epik", "Klasik"]
+  },
+  {
+    "productId": "98",
+    "name": "Tutunamayanlar - Oğuz Atay",
+    "description": "Modern Türk edebiyatının en önemli eserlerinden biri. Bireyin toplum içindeki yabancılaşmasını ve iç çatışmalarını konu alır.",
+    "price": 290,
+    "category": "Kitap",
+    "brand": "İletişim Yayıncılık",
+    "imageUrl": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=400&h=400&fit=crop&crop=center",
+    "features": ["Türk Edebiyatı", "Modernist Roman", "Postmodern", "Felsefi"]
+  },
+  {
+    "productId": "99",
+    "name": "Simyacı - Paulo Coelho",
+    "description": "Endülüslü çoban Santiago'nun hazinesini bulmak için Mısır'a yaptığı yolculuğu ve bu süreçte kendini keşfedişini anlatan felsefi bir masal.",
+    "price": 120,
+    "category": "Kitap",
+    "brand": "Can Yayınları",
+    "imageUrl": "https://images.unsplash.com/photo-1549122728-f519709442a6?w=400&h=400&fit=crop&crop=center",
+    "features": ["Felsefi Roman", "Macera", "Maneviyat", "Dünya Çoksatanı"]
+  },
+  {
+    "productId": "100",
+    "name": "Dune - Frank Herbert",
+    "description": "Bilim kurgu edebiyatının başyapıtlarından biri. Uzak bir gelecekte, gezegenler arası siyasi entrikaları ve çöl gezegeni Arrakis'in mücadelesini anlatır.",
+    "price": 260,
+    "category": "Kitap",
+    "brand": "İthaki Yayınları",
+    "imageUrl": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=400&h=400&fit=crop&crop=center",
+    "features": ["Bilim Kurgu", "Epik", "Politika", "Klasik"]
+  }
 ]
