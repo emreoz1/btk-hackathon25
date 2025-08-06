@@ -6,6 +6,7 @@ import ProductCard from './components/ProductCard';
 import SearchFilters from './components/SearchFilters';
 import ProductAnalysis from './components/ProductAnalysis';
 import ProductComparison from './components/ProductComparison';
+import SEOGenerator from './components/SEOGenerator';
 
 interface Product {
   id: string;
@@ -36,6 +37,14 @@ interface Analysis {
   summary: string;
 }
 
+interface SEODescription {
+  tone: string;
+  title: string;
+  metaDescription: string;
+  longDescription: string;
+  tags: string[];
+}
+
 export default function Home() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(false);
@@ -43,7 +52,7 @@ export default function Home() {
   const [hasSearched, setHasSearched] = useState(false);
   
   // Faz 2: Yeni state'ler
-  const [activeTab, setActiveTab] = useState<'search' | 'analysis' | 'compare' | 'vision'>('search');
+  const [activeTab, setActiveTab] = useState<'search' | 'analysis' | 'compare' | 'vision' | 'seo'>('search');
   const [analysis, setAnalysis] = useState<Analysis | null>(null);
   const [analysisLoading, setAnalysisLoading] = useState(false);
   const [analyzedProductName, setAnalyzedProductName] = useState('');
@@ -56,6 +65,10 @@ export default function Home() {
   const [visionDescription, setVisionDescription] = useState('');
   const [visionSearchQuery, setVisionSearchQuery] = useState('');
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+
+  // SEO Generator state'leri
+  const [seoDescriptions, setSeoDescriptions] = useState<SEODescription[]>([]);
+  const [seoLoading, setSeoLoading] = useState(false);
 
   const handleSearch = async (query: string, filters: SearchFilters = {}) => {
     setLoading(true);
@@ -219,6 +232,35 @@ export default function Home() {
     setHasSearched(false);
   };
 
+  // SEO açıklama üretme fonksiyonu
+  const handleGenerateSEO = async (data: any) => {
+    setSeoLoading(true);
+    setActiveTab('seo');
+    
+    try {
+      const response = await fetch('/api/seo-generator', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('SEO açıklama üretimi başarısız');
+      }
+
+      const result = await response.json();
+      setSeoDescriptions(result.descriptions || []);
+      
+    } catch (error) {
+      console.error('SEO üretimi hatası:', error);
+      setSeoDescriptions([]);
+    } finally {
+      setSeoLoading(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
@@ -300,6 +342,22 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               Görsel Arama
+            </div>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('seo')}
+            className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              activeTab === 'seo'
+                ? 'bg-white text-indigo-600 shadow-sm'
+                : 'text-gray-600 hover:text-gray-800'
+            }`}
+          >
+            <div className="flex items-center justify-center">
+              <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+              </svg>
+              SEO Açıklama
             </div>
           </button>
         </div>
@@ -585,6 +643,17 @@ export default function Home() {
                 )}
               </div>
             )}
+          </div>
+        )}
+
+        {/* SEO Generator Tab */}
+        {activeTab === 'seo' && (
+          <div>
+            <SEOGenerator
+              descriptions={seoDescriptions}
+              isLoading={seoLoading}
+              onGenerate={handleGenerateSEO}
+            />
           </div>
         )}
       </main>
