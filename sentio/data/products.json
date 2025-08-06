@@ -198,7 +198,7 @@
     "brand": "Microsoft",
     "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=400&fit=crop&crop=center",
     "features": ["Intel Core i7", "16GB RAM", "512GB SSD", "13\" PixelSense", "Type Cover uyumlu"]
-  }
+  },
   {
     "productId": "21",
     "name": "Arçelik Telve K-3300 Türk Kahve Makinesi",
@@ -348,7 +348,7 @@
     "brand": "JBL",
     "imageUrl": "https://images.unsplash.com/photo-1550009158-94ae7d2d82d4?w=400&h=400&fit=crop&crop=center",
     "features": ["Bluetooth 5.1", "IP67 su ve toz geçirmezlik", "12 saat çalma süresi", "PartyBoost özelliği"]
-  }
+  },
   {
     "productId": "36",
     "name": "Ülker Çikolatalı Gofret 36g",
@@ -548,7 +548,7 @@
     "brand": "Uno",
     "imageUrl": "https://images.unsplash.com/photo-1586512821217-0130ba8a7354?w=400&h=400&fit=crop&crop=center",
     "features": ["Büyük dilimler", "Tost ekmeği", "550g", "Yumuşak doku"]
-  }
+  },
   {
     "productId": "56",
     "name": "Brita Filtreli Su Şişesi 600ml",
@@ -698,7 +698,7 @@
     "brand": "Logitech",
     "imageUrl": "https://images.unsplash.com/photo-1615664731872-49174627d252?w=400&h=400&fit=crop&crop=center",
     "features": ["Sessiz tıklama", "8000 DPI sensör", "MagSpeed tekerlek", "Ergonomik tasarım"]
-  }
+  },
   {
     "productId": "71",
     "name": "Elden Ring - PlayStation 5 Oyunu",
@@ -898,7 +898,7 @@
     "brand": "Motorola",
     "imageUrl": "https://images.unsplash.com/photo-1619198381989-8d7768a834e5?w=400&h=400&fit=crop&crop=center",
     "features": ["2.8 inç renkli ekran", "Kızılötesi gece görüşü", "Karşılıklı konuşma", "Oda sıcaklığı göstergesi"]
-  }
+  },
   {
     "productId": "91",
     "name": "İnce Memed 1 - Yaşar Kemal",

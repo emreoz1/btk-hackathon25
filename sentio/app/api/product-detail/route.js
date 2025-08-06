@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import reviewsData from '../../../data/reviews.json';
+import productsData from '../../../data/products.json';
 
 export async function POST(request) {
   try {
@@ -102,83 +103,19 @@ export async function POST(request) {
 
 // Yardımcı fonksiyonlar
 function getBasePriceForProduct(productId) {
-  // Gerçek projede bu ürün veritabanından gelecek
-  const priceMap = {
-    '1': 85999,   // iPhone 15 Pro Max
-    '2': 79999,   // Samsung Galaxy S24 Ultra
-    '3': 12999,   // Sony WH-1000XM5
-    '4': 45999,   // MacBook Air M3
-    '5': 24999,   // Dyson V15 Detect
-    '6': 18999,   // AirPods Pro 2
-    '7': 89999,   // ASUS ROG Strix
-    '8': 8999,    // Xiaomi Robot Vacuum
-    '9': 21999,   // PlayStation 5
-    '10': 52999,  // LG OLED TV
-    '11': 35999,  // Bosch Buzdolabı
-    '12': 67999,  // Canon EOS R6 Mark II
-    '13': 1599999, // Tesla Model Y
-    '14': 2999,   // Philips Hue
-    '15': 89999,  // Nikon Z7 II
-    '16': 43999,  // NVIDIA RTX 4080
-    '17': 12999,  // Galaxy Watch 6 Classic
-    '18': 54999,  // iPad Pro M2
-    '19': 18999,  // Bosch Çamaşır Makinesi
-    '20': 67999   // Surface Pro 9
-  };
-  
-  return priceMap[productId] || 10000; // Default fiyat
+  // Gerçek ürün verisinden fiyatı al
+  const product = productsData.find(p => p.productId === productId);
+  return product ? product.price : 10000; // Default fiyat
 }
 
 function getBrandForProduct(productId) {
-  const brandMap = {
-    '1': 'Apple',
-    '2': 'Samsung',
-    '3': 'Sony', 
-    '4': 'Apple',
-    '5': 'Dyson',
-    '6': 'Apple',
-    '7': 'ASUS',
-    '8': 'Xiaomi',
-    '9': 'Sony',
-    '10': 'LG',
-    '11': 'Bosch',
-    '12': 'Canon',
-    '13': 'Tesla',
-    '14': 'Philips',
-    '15': 'Nikon',
-    '16': 'NVIDIA',
-    '17': 'Samsung',
-    '18': 'Apple',
-    '19': 'Bosch',
-    '20': 'Microsoft'
-  };
-  
-  return brandMap[productId] || 'Bilinmeyen';
+  // Gerçek ürün verisinden markayı al
+  const product = productsData.find(p => p.productId === productId);
+  return product ? product.brand : 'Bilinmeyen';
 }
 
 function getCategoryForProduct(productId) {
-  const categoryMap = {
-    '1': 'Telefon',
-    '2': 'Telefon',
-    '3': 'Kulaklık',
-    '4': 'Laptop',
-    '5': 'Ev Elektroniği',
-    '6': 'Kulaklık',
-    '7': 'Laptop',
-    '8': 'Ev Elektroniği',
-    '9': 'Oyun Konsolu',
-    '10': 'Televizyon',
-    '11': 'Beyaz Eşya',
-    '12': 'Fotoğraf Makinesi',
-    '13': 'Otomobil',
-    '14': 'Akıllı Ev',
-    '15': 'Fotoğraf Makinesi',
-    '16': 'Bilgisayar Parçası',
-    '17': 'Akıllı Saat',
-    '18': 'Tablet',
-    '19': 'Beyaz Eşya',
-    '20': 'Tablet'
-  };
-  
-  return categoryMap[productId] || 'Genel';
+  // Gerçek ürün verisinden kategoriyi al
+  const product = productsData.find(p => p.productId === productId);
+  return product ? product.category : 'Genel';
 }
