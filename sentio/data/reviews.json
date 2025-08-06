@@ -471,4 +471,1644 @@
     "author": "Tuba Hancı",
     "date": "2024-03-25"
   }
+  {
+    "reviewId": "1",
+    "productId": "1",
+    "rating": 5,
+    "comment": "Kamera kalitesi inanılmaz! 48MP ana kamera gerçekten fark yaratıyor. Titanyum kasası çok premium hissettiriyor.",
+    "author": "Mehmet Özkan",
+    "date": "2025-01-15"
+  },
+  {
+    "reviewId": "2",
+    "productId": "1",
+    "rating": 4,
+    "comment": "Performans mükemmel ama fiyat çok yüksek. Pil ömrü beklediğimden biraz daha kısa.",
+    "author": "Ayşe Demir",
+    "date": "2025-01-20"
+  },
+  {
+    "reviewId": "3",
+    "productId": "1",
+    "rating": 5,
+    "comment": "A17 Pro çip sayesinde oyunlarda hiç takılma yok. Video düzenleme için de harika.",
+    "author": "Can Yılmaz",
+    "date": "2025-01-25"
+  },
+  {
+    "reviewId": "4",
+    "productId": "2",
+    "rating": 5,
+    "comment": "S Pen ile not almak harika! 200MP kamera detay yakalamada çok başarılı.",
+    "author": "Oğuz Şahin",
+    "date": "2025-02-01"
+  },
+  {
+    "reviewId": "5",
+    "productId": "2",
+    "rating": 4,
+    "comment": "Ekran kalitesi muhteşem, renk doğruluğu çok iyi. Sadece biraz ağır.",
+    "author": "Elif Arslan",
+    "date": "2025-02-05"
+  },
+  {
+    "reviewId": "6",
+    "productId": "2",
+    "rating": 5,
+    "comment": "Snapdragon 8 Gen 3 performans canavarı! Yapay zeka özellikleri çok kullanışlı.",
+    "author": "Emre Çelik",
+    "date": "2025-02-10"
+  },
+  {
+    "reviewId": "7",
+    "productId": "3",
+    "rating": 5,
+    "comment": "Gürültü engelleme teknolojisi mükemmel! Uçakta bile motor sesi duymuyorsunuz.",
+    "author": "Fatma Aydın",
+    "date": "2025-01-10"
+  },
+  {
+    "reviewId": "8",
+    "productId": "3",
+    "rating": 4,
+    "comment": "Ses kalitesi harika ama uzun kullanımda kulak terletmesi yapabiliyor.",
+    "author": "Ahmet Koç",
+    "date": "2025-01-12"
+  },
+  {
+    "reviewId": "9",
+    "productId": "3",
+    "rating": 5,
+    "comment": "30 saat pil ömrü gerçekten doğru! Şarjını unutturuyor.",
+    "author": "Burcu Özdemir",
+    "date": "2025-01-18"
+  },
+  {
+    "reviewId": "10",
+    "productId": "4",
+    "rating": 5,
+    "comment": "M3 çip inanılmaz hızlı! Video montaj bile çok akıcı. Fansız tasarım sessizliği mükemmel.",
+    "author": "Murat Karaca",
+    "date": "2025-02-15"
+  },
+  {
+    "reviewId": "11",
+    "productId": "4",
+    "rating": 4,
+    "comment": "Çok hafif ve taşınabilir. Keşke iki yerine üç tane port olsaydı.",
+    "author": "Seda Yıldız",
+    "date": "2025-02-20"
+  },
+  {
+    "reviewId": "12",
+    "productId": "4",
+    "rating": 5,
+    "comment": "Pil ömrü bir günü rahatlıkla çıkarıyor. Ekran kalitesi harika.",
+    "author": "Kemal Duran",
+    "date": "2025-02-25"
+  },
+  {
+    "reviewId": "13",
+    "productId": "5",
+    "rating": 5,
+    "comment": "Lazer ile tozları görmek temizliği bir oyuna çeviriyor! Alerjisi olanlar için HEPA filtre şart.",
+    "author": "Gamze Uçar",
+    "date": "2025-01-12"
+  },
+  {
+    "reviewId": "14",
+    "productId": "5",
+    "rating": 3,
+    "comment": "Çok güçlü ama aşırı gürültülü. Fiyatı da bir süpürge için astronomik.",
+    "author": "Hakan Polat",
+    "date": "2025-01-08"
+  },
+  {
+    "reviewId": "15",
+    "productId": "5",
+    "rating": 4,
+    "comment": "Akıllı sensörü sayesinde halı ve parke arasında gücü kendi ayarlıyor, çok pratik.",
+    "author": "Deniz Aktaş",
+    "date": "2025-01-05"
+  },
+  {
+    "reviewId": "16",
+    "productId": "6",
+    "rating": 5,
+    "comment": "H2 çip ile gürültü engelleme çok gelişmiş. Şeffaflık modu o kadar doğal ki kulağınızda olduğunu unutuyorsunuz.",
+    "author": "Serkan Güner",
+    "date": "2025-01-22"
+  },
+  {
+    "reviewId": "17",
+    "productId": "6",
+    "rating": 4,
+    "comment": "USB-C'ye geçmeleri çok iyi olmuş. Ses kalitesi mükemmel ama fiyatı biraz daha uygun olabilirdi.",
+    "author": "Melike Erdoğan",
+    "date": "2025-01-28"
+  },
+  {
+    "reviewId": "18",
+    "productId": "7",
+    "rating": 5,
+    "comment": "4K ekran kalitesi muhteşem! Tasarım işleri için kullanıyorum, renkler çok doğru.",
+    "author": "Barış Kılıç",
+    "date": "2025-02-12"
+  },
+  {
+    "reviewId": "19",
+    "productId": "7",
+    "rating": 4,
+    "comment": "Performans harika ama yoğun kullanımda ısınıyor. Soğutucu bir stant ile kullanmak gerek.",
+    "author": "Neslihan Öz",
+    "date": "2025-02-18"
+  },
+  {
+    "reviewId": "20",
+    "productId": "8",
+    "rating": 5,
+    "comment": "Otomatik toz boşaltma özelliği hayat kurtarıyor! Haftalarca elle müdahale etmiyorum.",
+    "author": "Gizem Acar",
+    "date": "2025-01-20"
+  },
+  {
+    "reviewId": "21",
+    "productId": "8",
+    "rating": 4,
+    "comment": "LiDAR navigasyon sayesinde haritalama çok başarılı. Fiyat/performans oranı çok iyi.",
+    "author": "Cem Doğan",
+    "date": "2025-01-26"
+  },
+  {
+    "reviewId": "22",
+    "productId": "9",
+    "rating": 5,
+    "comment": "Oyun deneyimi başka boyutta! SSD sayesinde yükleme ekranı görmüyorum.",
+    "author": "Berkay Çiftçi",
+    "date": "2025-02-28"
+  },
+  {
+    "reviewId": "23",
+    "productId": "9",
+    "rating": 4,
+    "comment": "DualSense kontrolcünün dokunsal geri bildirimi harika. Sadece konsolun boyutu biraz büyük.",
+    "author": "Pelin Taş",
+    "date": "2025-03-02"
+  },
+  {
+    "reviewId": "24",
+    "productId": "10",
+    "rating": 5,
+    "comment": "OLED panelin siyahları gerçek siyah. Sinema salonu gibi. webOS arayüzü de çok hızlı.",
+    "author": "Selin Kurt",
+    "date": "2025-02-14"
+  },
+  {
+    "reviewId": "25",
+    "productId": "10",
+    "rating": 5,
+    "comment": "120Hz oyun modu PS5 ile mükemmel bir ikili oldu. Akıcılık inanılmaz.",
+    "author": "İrem Yüksel",
+    "date": "2025-02-22"
+  },
+  {
+    "reviewId": "26",
+    "productId": "11",
+    "rating": 5,
+    "comment": "600 litre hacmiyle geniş ailem için tam yetti. Sessiz çalışması da büyük bir artı.",
+    "author": "Sevgi Özkan",
+    "date": "2025-02-05"
+  },
+  {
+    "reviewId": "27",
+    "productId": "11",
+    "rating": 3,
+    "comment": "Genel olarak iyi ama içindeki rafların yerini çok fazla değiştiremiyorum, esnek değil.",
+    "author": "Tuncay Bozkurt",
+    "date": "2025-02-10"
+  },
+  {
+    "reviewId": "28",
+    "productId": "12",
+    "rating": 5,
+    "comment": "Görüntü sabitleme özelliği o kadar iyi ki, tripotsuz bile net videolar çekebiliyorum.",
+    "author": "Ceren Akın",
+    "date": "2025-03-12"
+  },
+  {
+    "reviewId": "29",
+    "productId": "12",
+    "rating": 4,
+    "comment": "Fotoğraf kalitesi mükemmel ama gövdesi biraz ağır. Uzun çekimlerde yoruyor.",
+    "author": "İlker Öztürk",
+    "date": "2025-03-08"
+  },
+  {
+    "reviewId": "30",
+    "productId": "13",
+    "rating": 5,
+    "comment": "Hızlanması inanılmaz bir deneyim! Supercharger ağının geniş olması büyük rahatlık.",
+    "author": "Kaan Erdoğan",
+    "date": "2025-03-15"
+  },
+  {
+    "reviewId": "31",
+    "productId": "13",
+    "rating": 4,
+    "comment": "Autopilot uzun yolda çok konforlu. Ama şehir içinde hala dikkatli olmak gerekiyor.",
+    "author": "Didem Avcı",
+    "date": "2025-03-18"
+  },
+  {
+    "reviewId": "32",
+    "productId": "14",
+    "rating": 5,
+    "comment": "Sesli komutla evin ışıklarını kontrol etmek çok keyifli. Renk seçenekleri sonsuz.",
+    "author": "Mert Günal",
+    "date": "2025-02-01"
+  },
+  {
+    "reviewId": "33",
+    "productId": "14",
+    "rating": 3,
+    "comment": "Ampuller güzel ama çalışması için gereken Hue Bridge'in ayrı satılması kötü.",
+    "author": "Canan İpek",
+    "date": "2025-02-08"
+  },
+  {
+    "reviewId": "34",
+    "productId": "15",
+    "rating": 5,
+    "comment": "45.7MP sensörle çektiğim fotoğraflardaki detaylara inanamıyorum. Manzara fotoğrafçıları için ideal.",
+    "author": "Yusuf Tan",
+    "date": "2025-03-10"
+  },
+  {
+    "reviewId": "35",
+    "productId": "15",
+    "rating": 4,
+    "comment": "Göz AF özelliği portrelerde hayat kurtarıyor. Sadece menüsü biraz karışık geldi.",
+    "author": "Esra Güven",
+    "date": "2025-03-14"
+  },
+  {
+    "reviewId": "36",
+    "productId": "16",
+    "rating": 5,
+    "comment": "DLSS 3 teknolojisi performansı ikiye katlıyor. 4K'da ultra ayarlarda akıcı oyun keyfi.",
+    "author": "Aslı Korkmaz",
+    "date": "2025-03-28"
+  },
+  {
+    "reviewId": "37",
+    "productId": "16",
+    "rating": 4,
+    "comment": "Soğutması çok başarılı, yük altında bile serin çalışıyor. Ama kartın boyutu çok büyük, kasama zor sığdı.",
+    "author": "Berkant Yaşar",
+    "date": "2025-03-25"
+  },
+  {
+    "reviewId": "38",
+    "productId": "17",
+    "rating": 5,
+    "comment": "Döner çerçeve ile menüler arasında gezinmek çok pratik. AMOLED ekran güneş altında bile net.",
+    "author": "Nazlı Duman",
+    "date": "2025-02-16"
+  },
+  {
+    "reviewId": "39",
+    "productId": "17",
+    "rating": 4,
+    "comment": "Uyku takibi özelliği çok detaylı analizler sunuyor. Keşke pili 2 günden fazla gitseydi.",
+    "author": "Alper Özgür",
+    "date": "2025-02-20"
+  },
+  {
+    "reviewId": "40",
+    "productId": "18",
+    "rating": 5,
+    "comment": "Apple Pencil ile bu ekranda çizim yapmak kağıda çizim yapmaktan daha keyifli. Profesyoneller için.",
+    "author": "Selçuk Yazar",
+    "date": "2025-03-08"
+  },
+  {
+    "reviewId": "41",
+    "productId": "18",
+    "rating": 5,
+    "comment": "M2 çip sayesinde bir tabletten çok daha fazlası. Bilgisayarımı unutturdu.",
+    "author": "Berna Topal",
+    "date": "2025-03-05"
+  },
+  {
+    "reviewId": "42",
+    "productId": "19",
+    "rating": 5,
+    "comment": "EcoSilence motor o kadar sessiz ki, makinenin çalıştığını unutuyorum.",
+    "author": "Funda Kılınç",
+    "date": "2025-02-28"
+  },
+  {
+    "reviewId": "43",
+    "productId": "19",
+    "rating": 4,
+    "comment": "9kg kapasitesi sayesinde yorgan bile yıkayabiliyorum. Çok kullanışlı.",
+    "author": "Mehmet Cihan",
+    "date": "2025-02-25"
+  },
+  {
+    "reviewId": "44",
+    "productId": "20",
+    "rating": 5,
+    "comment": "Type Cover ile tam bir dizüstü bilgisayar oluyor. Hem hafif hem güçlü.",
+    "author": "Burcu Erbaş",
+    "date": "2025-03-18"
+  },
+  {
+    "reviewId": "45",
+    "productId": "20",
+    "rating": 4,
+    "comment": "Performansı çok iyi ama klavyesi ve kalemi ayrı satılıyor, bu da maliyeti artırıyor.",
+    "author": "Doğan Sert",
+    "date": "2025-03-22"
+  },
+  {
+    "reviewId": "46",
+    "productId": "21",
+    "rating": 5,
+    "comment": "CookSense teknolojisi sayesinde kahve hiç taşmıyor ve tam kıvamında oluyor. Harika bir ürün!",
+    "author": "Derya Yılmaz",
+    "date": "2025-04-10"
+  },
+  {
+    "reviewId": "47",
+    "productId": "21",
+    "rating": 4,
+    "comment": "Bol köpüklü kahve yapıyor. Sadece haznesi biraz daha büyük olabilirdi.",
+    "author": "Ali Çetin",
+    "date": "2025-04-15"
+  },
+  {
+    "reviewId": "48",
+    "productId": "22",
+    "rating": 5,
+    "comment": "Fat Removal teknolojisi gerçekten işe yarıyor. Patatesler hem lezzetli hem de çok daha hafif oluyor.",
+    "author": "Zeynep Arslan",
+    "date": "2025-05-01"
+  },
+  {
+    "reviewId": "49",
+    "productId": "22",
+    "rating": 4,
+    "comment": "XXL kapasitesi kalabalık aileler için ideal. Temizlemesi de çok kolay.",
+    "author": "Mustafa Kaya",
+    "date": "2025-05-05"
+  },
+  {
+    "reviewId": "50",
+    "productId": "23",
+    "rating": 5,
+    "comment": "Pegasus 40 ile koşmak çok konforlu. React köpük tabanı adeta bulutların üzerinde hissettiriyor.",
+    "author": "Eren Koç",
+    "date": "2025-06-11"
+  },
+  {
+    "reviewId": "51",
+    "productId": "23",
+    "rating": 4,
+    "comment": "Hem günlük kullanım hem de uzun koşular için uygun. Ayağı iyi sarıyor.",
+    "author": "Selin Can",
+    "date": "2025-06-15"
+  },
+  {
+    "reviewId": "52",
+    "productId": "24",
+    "rating": 5,
+    "comment": "Stanley Quencher gün boyu suyumu soğuk tutuyor. Arabanın bardaklığına tam oturuyor.",
+    "author": "Selin Demir",
+    "date": "2025-07-20"
+  },
+  {
+    "reviewId": "53",
+    "productId": "24",
+    "rating": 4,
+    "comment": "Çok popüler olduğu için aldım, kalitesi gerçekten iyi. Sadece biraz ağır.",
+    "author": "Mert Akın",
+    "date": "2025-07-22"
+  },
+  {
+    "reviewId": "54",
+    "productId": "25",
+    "rating": 5,
+    "comment": "3D diş takibi sayesinde hiç bir noktayı atlamıyorum. Diş hekimim bile farkı anladı.",
+    "author": "Onur Tekin",
+    "date": "2025-05-18"
+  },
+  {
+    "reviewId": "55",
+    "productId": "25",
+    "rating": 4,
+    "comment": "Farklı fırçalama modları çok kullanışlı. Renkli ekranı motive edici.",
+    "author": "Ece Nur",
+    "date": "2025-05-21"
+  },
+  {
+    "reviewId": "56",
+    "productId": "26",
+    "rating": 5,
+    "comment": "Dyson Supersonic saçlarımı yıpratmadan çok hızlı kurutuyor. Verdiğim paraya kesinlikle değdi.",
+    "author": "Bahar Kurt",
+    "date": "2025-06-02"
+  },
+  {
+    "reviewId": "57",
+    "productId": "26",
+    "rating": 3,
+    "comment": "İyi kurutuyor ama sesi beklediğimden daha yüksek. Manyetik başlıkları pratik.",
+    "author": "Koray Şen",
+    "date": "2025-06-05"
+  },
+  {
+    "reviewId": "58",
+    "productId": "27",
+    "rating": 5,
+    "comment": "Bu seti yapmak tam bir keyifti. Detayları inanılmaz. Lego koleksiyonumun en değerli parçası.",
+    "author": "Tuna Polat",
+    "date": "2025-07-01"
+  },
+  {
+    "reviewId": "59",
+    "productId": "27",
+    "rating": 5,
+    "comment": "Bir oyuncaktan çok daha fazlası, bir sanat eseri. Evin en güzel köşesinde sergiliyorum.",
+    "author": "Koleksiyoner Can",
+    "date": "2025-07-07"
+  },
+  {
+    "reviewId": "60",
+    "productId": "28",
+    "rating": 5,
+    "comment": "Hem laptop hem de kitaplarım rahatça sığıyor. Bel desteği çok iyi, uzun süre taşısam da ağrı yapmıyor.",
+    "author": "Gökçe Aydın",
+    "date": "2025-08-01"
+  },
+  {
+    "reviewId": "61",
+    "productId": "28",
+    "rating": 4,
+    "comment": "Kaliteli ve sağlam bir çanta. Göz sayısı biraz daha fazla olabilirdi.",
+    "author": "Umut Vural",
+    "date": "2025-08-03"
+  },
+  {
+    "reviewId": "62",
+    "productId": "29",
+    "rating": 5,
+    "comment": "Levi's 501 kalitesi asla değişmiyor. Yıllarca giyebileceğim bir pantolon.",
+    "author": "Fatih Yılmaz",
+    "date": "2025-07-15"
+  },
+  {
+    "reviewId": "63",
+    "productId": "29",
+    "rating": 5,
+    "comment": "Original fit kesimi tam istediğim gibi. Klasik ve her zaman şık.",
+    "author": "Taylan Efe",
+    "date": "2025-07-18"
+  },
+  {
+    "reviewId": "64",
+    "productId": "30",
+    "rating": 5,
+    "comment": "Doğa yürüyüşleri için aldım. Solar şarj özelliği sayesinde dağda bile şarj derdim olmuyor. Haritaları mükemmel.",
+    "author": "Cem Şahin",
+    "date": "2025-06-25"
+  },
+  {
+    "reviewId": "65",
+    "productId": "30",
+    "rating": 4,
+    "comment": "Tüm spor aktivitelerimi detaylıca kaydediyor. Sadece arayüzüne alışmak biraz zaman aldı.",
+    "author": "Sporcu Deniz",
+    "date": "2025-06-28"
+  },
+  {
+    "reviewId": "66",
+    "productId": "31",
+    "rating": 5,
+    "comment": "Sabahları smoothie yapmak için harika. Motoru çok güçlü, buzları bile rahatça parçalıyor.",
+    "author": "Pelin Kara",
+    "date": "2025-05-29"
+  },
+  {
+    "reviewId": "67",
+    "productId": "31",
+    "rating": 4,
+    "comment": "Pratik ve kullanışlı. Temizlemesi de çok kolay. Bazen biraz gürültülü çalışabiliyor.",
+    "author": "Okan Dere",
+    "date": "2025-06-01"
+  },
+  {
+    "reviewId": "68",
+    "productId": "32",
+    "rating": 5,
+    "comment": "Tüm streaming platformlarını tek bir kumandada birleştirdi. Sesli arama çok pratik.",
+    "author": "Ahmet Çelik",
+    "date": "2025-04-20"
+  },
+  {
+    "reviewId": "69",
+    "productId": "32",
+    "rating": 4,
+    "comment": "Görüntü kalitesi çok iyi. Kurulumu da basit. Kumandası biraz küçük.",
+    "author": "Eda Taşçı",
+    "date": "2025-04-25"
+  },
+  {
+    "reviewId": "70",
+    "productId": "33",
+    "rating": 4,
+    "comment": "Kapasitesi çok iyi, telefonumu 4-5 kez şarj edebiliyorum. Sadece biraz ağır.",
+    "author": "Yasemin Doğan",
+    "date": "2025-07-10"
+  },
+  {
+    "reviewId": "71",
+    "productId": "33",
+    "rating": 5,
+    "comment": "Anker kalitesi. Hem hızlı şarj ediyor hem de güvenli. Seyahatlerin vazgeçilmezi.",
+    "author": "Gezgin Ali",
+    "date": "2025-07-14"
+  },
+  {
+    "reviewId": "72",
+    "productId": "34",
+    "rating": 5,
+    "comment": "Yumuşak tutma yeri sayesinde parmaklarım yorulmuyor. Kalemtraşa ihtiyaç duymamak güzel.",
+    "author": "Öğrenci Ayşe",
+    "date": "2025-09-05"
+  },
+  {
+    "reviewId": "73",
+    "productId": "34",
+    "rating": 5,
+    "comment": "Ucu kolay kolay kırılmıyor. Faber-Castell kalitesi kendini belli ediyor.",
+    "author": "Veli Can",
+    "date": "2025-09-10"
+  },
+  {
+    "reviewId": "74",
+    "productId": "35",
+    "rating": 5,
+    "comment": "Boyutuna göre sesi inanılmaz güçlü ve net. Plajda, piknikte vazgeçilmezim oldu.",
+    "author": "Burak Özdemir",
+    "date": "2025-08-10"
+  },
+  {
+    "reviewId": "75",
+    "productId": "35",
+    "rating": 4,
+    "comment": "Su geçirmez olması büyük avantaj. PartyBoost özelliği ile diğer JBL'lerle bağlanabiliyor.",
+    "author": "Ceren Soylu",
+    "date": "2025-08-15"
+  },
+  {
+    "reviewId": "76",
+    "productId": "36",
+    "rating": 5,
+    "comment": "Çocukluğumun lezzeti. Hiç değişmemiş. Çayın yanında harika gidiyor.",
+    "author": "Hüseyin Can",
+    "date": "2025-01-10"
+  },
+  {
+    "reviewId": "77",
+    "productId": "36",
+    "rating": 5,
+    "comment": "Klasik ve her zaman lezzetli bir atıştırmalık.",
+    "author": "Fatma Uslu",
+    "date": "2025-01-11"
+  },
+  {
+    "reviewId": "78",
+    "productId": "37",
+    "rating": 5,
+    "comment": "Kahve ve kekler için her zaman bu sütü kullanıyorum, tadı ve kıvamı çok iyi.",
+    "author": "Elif Nur",
+    "date": "2025-02-20"
+  },
+  {
+    "reviewId": "79",
+    "productId": "37",
+    "rating": 5,
+    "comment": "Çocuklarım güvenle içiyor. Her zaman taze.",
+    "author": "Anne Melek",
+    "date": "2025-02-22"
+  },
+  {
+    "reviewId": "80",
+    "productId": "38",
+    "rating": 4,
+    "comment": "Kahvaltıda favorimiz. Bazen biraz fazla tuzlu gelebiliyor.",
+    "author": "Emre Aslan",
+    "date": "2025-03-05"
+  },
+  {
+    "reviewId": "81",
+    "productId": "38",
+    "rating": 5,
+    "comment": "Böreklere ve poğaçalara çok yakışıyor. Tam yağlı olması lezzetini artırıyor.",
+    "author": "Hatice Teyze",
+    "date": "2025-03-07"
+  },
+  {
+    "reviewId": "82",
+    "productId": "39",
+    "rating": 5,
+    "comment": "Sosları çok iyi tutuyor. Pişme süresi de ideal.",
+    "author": "Sema Yıldırım",
+    "date": "2025-04-12"
+  },
+  {
+    "reviewId": "83",
+    "productId": "39",
+    "rating": 4,
+    "comment": "Lezzetli bir makarna. Fiyatı da uygun.",
+    "author": "Öğrenci Tolga",
+    "date": "2025-04-14"
+  },
+  {
+    "reviewId": "84",
+    "productId": "40",
+    "rating": 5,
+    "comment": "Ezogelin çorbası için aldım, çok lezzetli oldu. Taneleri kaliteli ve çabuk pişiyor.",
+    "author": "Ayten Kaya",
+    "date": "2025-01-25"
+  },
+  {
+    "reviewId": "85",
+    "productId": "40",
+    "rating": 5,
+    "comment": "Besleyici ve doyurucu. Kış aylarının vazgeçilmezi.",
+    "author": "Sağlıklı Yaşamcı",
+    "date": "2025-01-28"
+  },
+  {
+    "reviewId": "86",
+    "productId": "41",
+    "rating": 5,
+    "comment": "Dem oranı ve rengi tam istediğim gibi. Kokusu bile yetiyor.",
+    "author": "Çay Tiryakisi Hasan",
+    "date": "2025-05-10"
+  },
+  {
+    "reviewId": "87",
+    "productId": "41",
+    "rating": 4,
+    "comment": "İyi bir çay ama biraz tozu fazla gibi.",
+    "author": "Mehmet Bey",
+    "date": "2025-05-12"
+  },
+  {
+    "reviewId": "88",
+    "productId": "42",
+    "rating": 5,
+    "comment": "İçinde pancar şekeri olması tercih sebebim. Tadı da harika.",
+    "author": "Bilinçli Tüketici",
+    "date": "2025-06-15"
+  },
+  {
+    "reviewId": "89",
+    "productId": "42",
+    "rating": 5,
+    "comment": "Çocuklarım bayılıyor. Fındık oranı da yüksek.",
+    "author": "Serap Hanım",
+    "date": "2025-06-18"
+  },
+  {
+    "reviewId": "90",
+    "productId": "43",
+    "rating": 5,
+    "comment": "Soğuk içince efsane. Değişmeyen lezzet.",
+    "author": "Yaz Aşığı",
+    "date": "2025-07-01"
+  },
+  {
+    "reviewId": "91",
+    "productId": "43",
+    "rating": 4,
+    "comment": "Kalabalık sofraların vazgeçilmezi. 2.5L olması iyi.",
+    "author": "Parti Canavarı",
+    "date": "2025-07-03"
+  },
+  {
+    "reviewId": "92",
+    "productId": "44",
+    "rating": 5,
+    "comment": "Limonlu sosu çok ferahlatıcı. Tam bir yaz keki.",
+    "author": "Tatlı Krizim",
+    "date": "2025-08-05"
+  },
+  {
+    "reviewId": "93",
+    "productId": "44",
+    "rating": 4,
+    "comment": "Lezzetli ama biraz küçük gibi.",
+    "author": "Atıştırmalık Uzmanı",
+    "date": "2025-08-06"
+  },
+  {
+    "reviewId": "94",
+    "productId": "45",
+    "rating": 5,
+    "comment": "Makarnaya bambaşka bir boyut katıyor. Fesleğen kokusu harika.",
+    "author": "İtalyan Mutfağı Hayranı",
+    "date": "2025-09-10"
+  },
+  {
+    "reviewId": "95",
+    "productId": "45",
+    "rating": 4,
+    "comment": "Pratik ve lezzetli bir sos. Fiyatı biraz yüksek.",
+    "author": "Pratik Anne",
+    "date": "2025-09-12"
+  },
+  {
+    "reviewId": "96",
+    "productId": "46",
+    "rating": 5,
+    "comment": "Kahvaltıda yumurtayla harika gidiyor. Baharatı tam kararında.",
+    "author": "Gurme Levent",
+    "date": "2025-10-01"
+  },
+  {
+    "reviewId": "97",
+    "productId": "46",
+    "rating": 4,
+    "comment": "Lezzetli ama biraz yağlı geldi.",
+    "author": "Kadir Usta",
+    "date": "2025-10-03"
+  },
+  {
+    "reviewId": "98",
+    "productId": "47",
+    "rating": 4,
+    "comment": "Acil durumlar için kurtarıcı. Malzemesi bol.",
+    "author": "Bekar Evi",
+    "date": "2025-11-15"
+  },
+  {
+    "reviewId": "99",
+    "productId": "47",
+    "rating": 3,
+    "comment": "Hamuru biraz kalın geldi bana. Yine de fena değil.",
+    "author": "Öğrenci Evi",
+    "date": "2025-11-18"
+  },
+  {
+    "reviewId": "100",
+    "productId": "48",
+    "rating": 5,
+    "comment": "Salatalarımın vazgeçilmezi. Sağlıklı ve pratik bir protein kaynağı.",
+    "author": "Fit Yaşam",
+    "date": "2025-12-01"
+  },
+  {
+    "reviewId": "101",
+    "productId": "48",
+    "rating": 5,
+    "comment": "Dardanel kalitesi tartışılmaz. 2'li paket olması ekonomik.",
+    "author": "Sporcu Beslenmesi",
+    "date": "2025-12-05"
+  },
+  {
+    "reviewId": "102",
+    "productId": "49",
+    "rating": 5,
+    "comment": "Maç izlerken veya film seyrederken vazgeçilmez. Tuzu tam kararında.",
+    "author": "Keyif Adamı",
+    "date": "2025-01-20"
+  },
+  {
+    "reviewId": "103",
+    "productId": "49",
+    "rating": 4,
+    "comment": "Lezzetli ama paketin içinden çok fazla boş kabuk çıkıyor.",
+    "author": "Detaycı Müşteri",
+    "date": "2025-01-22"
+  },
+  {
+    "reviewId": "104",
+    "productId": "50",
+    "rating": 5,
+    "comment": "Çıtır çıtır ve klasik lezzet. En sevdiğim cips.",
+    "author": "Cips Canavarı",
+    "date": "2025-02-10"
+  },
+  {
+    "reviewId": "105",
+    "productId": "50",
+    "rating": 4,
+    "comment": "Parti boy olması güzel ama paketin yarısı hava.",
+    "author": "Gerçekçi Tüketici",
+    "date": "2025-02-12"
+  },
+  {
+    "reviewId": "106",
+    "productId": "51",
+    "rating": 5,
+    "comment": "Patates kızartmasının en iyi arkadaşı. Tadı tam istediğim gibi.",
+    "author": "Fast Food Aşığı",
+    "date": "2025-03-15"
+  },
+  {
+    "reviewId": "107",
+    "productId": "51",
+    "rating": 5,
+    "comment": "Kıvamı ve rengi çok iyi. Koruyucu içermemesi de güzel.",
+    "author": "Anne Titizliği",
+    "date": "2025-03-18"
+  },
+  {
+    "reviewId": "108",
+    "productId": "52",
+    "rating": 5,
+    "comment": "Kızartmalarda kokusu olmuyor, hafif bir yağ.",
+    "author": "Mutfak Şefi",
+    "date": "2025-04-01"
+  },
+  {
+    "reviewId": "109",
+    "productId": "52",
+    "rating": 4,
+    "comment": "Genel olarak memnunum ama 2 litrelik şişeyi tutmak biraz zor.",
+    "author": "Pratik Ev Hanımı",
+    "date": "2025-04-04"
+  },
+  {
+    "reviewId": "110",
+    "productId": "53",
+    "rating": 5,
+    "comment": "Çocuklar süt içmiyordu, Nesquik sayesinde içmeye başladılar. Sabah kahvaltılarının kurtarıcısı.",
+    "author": "Çözümcü Anne",
+    "date": "2025-05-20"
+  },
+  {
+    "reviewId": "111",
+    "productId": "53",
+    "rating": 4,
+    "comment": "Tadı güzel ama şeker oranı biraz daha az olabilirdi.",
+    "author": "Sağlığına Dikkat Eden Baba",
+    "date": "2025-05-22"
+  },
+  {
+    "reviewId": "112",
+    "productId": "54",
+    "rating": 5,
+    "comment": "Makarnalara ve çorbalara harika bir kıvam ve lezzet katıyor.",
+    "author": "Yemek Sanatçısı",
+    "date": "2025-06-10"
+  },
+  {
+    "reviewId": "113",
+    "productId": "54",
+    "rating": 5,
+    "comment": "Tatlı yaparken kullandım, sonuç mükemmel oldu.",
+    "author": "Pasta Ustası",
+    "date": "2025-06-12"
+  },
+  {
+    "reviewId": "114",
+    "productId": "55",
+    "rating": 5,
+    "comment": "Dilimleri tam tost makinesine göre. Dağılmıyor ve çok lezzetli oluyor.",
+    "author": "Tost Kralı",
+    "date": "2025-07-01"
+  },
+  {
+    "reviewId": "115",
+    "productId": "55",
+    "rating": 4,
+    "comment": "Tadı güzel ama çabuk bayatlıyor gibi.",
+    "author": "Dikkatli Tüketici",
+    "date": "2025-07-03"
+  },
+  {
+    "reviewId": "116",
+    "productId": "56",
+    "rating": 5,
+    "comment": "Musluk suyunun klorlu tadını tamamen yok ediyor. Dışarıda su almak zorunda kalmıyorum.",
+    "author": "Levent Aksoy",
+    "date": "2024-11-10"
+  },
+  {
+    "reviewId": "117",
+    "productId": "56",
+    "rating": 4,
+    "comment": "Pratik bir çözüm. Filtresini düzenli değiştirmek gerekiyor, bu da ek maliyet.",
+    "author": "Hesabını Bilen",
+    "date": "2024-11-15"
+  },
+  {
+    "reviewId": "118",
+    "productId": "57",
+    "rating": 5,
+    "comment": "Kirpikleri tek tek ayırıp uzatıyor. Gün boyu akma yapmıyor. Favori maskaram!",
+    "author": "İpek Sarı",
+    "date": "2024-12-01"
+  },
+  {
+    "reviewId": "119",
+    "productId": "57",
+    "rating": 4,
+    "comment": "Uzatması güzel ama hacim vermiyor. Hacim isteyenler başka bir ürün denemeli.",
+    "author": "Makyaj Bloggeri",
+    "date": "2024-12-05"
+  },
+  {
+    "reviewId": "120",
+    "productId": "58",
+    "rating": 5,
+    "comment": "Çok zarif bir bileklik. İstediğim charm'ları ekleyerek kişiselleştirmek çok keyifli.",
+    "author": "Gamze Öztürk",
+    "date": "2025-01-20"
+  },
+  {
+    "reviewId": "121",
+    "productId": "58",
+    "rating": 3,
+    "comment": "Güzel ama klipsi biraz zor açılıp kapanıyor.",
+    "author": "Hande Zorlu",
+    "date": "2025-01-23"
+  },
+  {
+    "reviewId": "122",
+    "productId": "59",
+    "rating": 5,
+    "comment": "Hayallerimdeki tektaş! Pırlantanın parlaklığı ve kesimi muhteşem. Sertifikasıyla gelmesi güven verici.",
+    "author": "Ceren Erdem",
+    "date": "2025-02-14"
+  },
+  {
+    "reviewId": "123",
+    "productId": "59",
+    "rating": 5,
+    "comment": "Eşime evlilik yıldönümü için aldım, çok beğendi. Çok zarif duruyor.",
+    "author": "Romantik Eş",
+    "date": "2025-02-18"
+  },
+  {
+    "reviewId": "124",
+    "productId": "60",
+    "rating": 5,
+    "comment": "Görüntü stabilizasyonu o kadar iyi ki koşarken bile titreşimsiz videolar çekebiliyorum.",
+    "author": "Tolga Macit",
+    "date": "2024-10-15"
+  },
+  {
+    "reviewId": "125",
+    "productId": "60",
+    "rating": 4,
+    "comment": "Video kalitesi harika ama düşük ışıkta biraz grenlenme yapıyor.",
+    "author": "Aksiyon Tutkunu",
+    "date": "2024-10-20"
+  },
+  {
+    "reviewId": "126",
+    "productId": "61",
+    "rating": 5,
+    "comment": "Gerçek bir kırmızı. Sürdüğüm an kendimi daha iyi hissediyorum. Kalıcılığı da harika.",
+    "author": "Simge Bulut",
+    "date": "2025-03-08"
+  },
+  {
+    "reviewId": "127",
+    "productId": "61",
+    "rating": 4,
+    "comment": "Rengi efsane ama dudağı biraz kurutuyor. Altına nemlendirici sürmek şart.",
+    "author": "Güzellik Editörü",
+    "date": "2025-03-10"
+  },
+  {
+    "reviewId": "128",
+    "productId": "62",
+    "rating": 4,
+    "comment": "Cildimdeki kızarıklıklara ve sivilce lekelerine iyi geldi. Düzenli kullanım şart.",
+    "author": "Ebru Güneş",
+    "date": "2024-11-25"
+  },
+  {
+    "reviewId": "129",
+    "productId": "62",
+    "rating": 5,
+    "comment": "Fiyatına göre performansı inanılmaz. Cildimi daha pürüzsüz ve aydınlık yaptı.",
+    "author": "Cilt Bakım Rutinim",
+    "date": "2024-12-01"
+  },
+  {
+    "reviewId": "130",
+    "productId": "63",
+    "rating": 5,
+    "comment": "Işıltısı göz alıcı. Hem günlük hem de özel günler için çok şık bir küpe.",
+    "author": "Zarif Kadın",
+    "date": "2025-04-10"
+  },
+  {
+    "reviewId": "131",
+    "productId": "63",
+    "rating": 4,
+    "comment": "Çok güzel ama taşı düşer diye korkarak takıyorum.",
+    "author": "Titiz Kullanıcı",
+    "date": "2025-04-15"
+  },
+  {
+    "reviewId": "132",
+    "productId": "64",
+    "rating": 5,
+    "comment": "Bir saatten çok daha fazlası, bir yatırım. Kalitesi ve işçiliği her detayında belli oluyor.",
+    "author": "Saat Meraklısı",
+    "date": "2025-05-01"
+  },
+  {
+    "reviewId": "133",
+    "productId": "64",
+    "rating": 5,
+    "comment": "Babamdan yadigar. Yıllardır sorunsuz çalışıyor. Efsane bir model.",
+    "author": "Miras Sahibi",
+    "date": "2025-05-05"
+  },
+  {
+    "reviewId": "134",
+    "productId": "65",
+    "rating": 5,
+    "comment": "Geceleri kitap okumak için harika. Gözleri hiç yormuyor. Hafif ve taşıması kolay.",
+    "author": "Kitap Kurdu Gezgin",
+    "date": "2025-06-20"
+  },
+  {
+    "reviewId": "135",
+    "productId": "65",
+    "rating": 4,
+    "comment": "Ekranı çok iyi ama sayfa geçişleri biraz daha hızlı olabilirdi.",
+    "author": "Teknoloji Editörü",
+    "date": "2025-06-25"
+  },
+  {
+    "reviewId": "136",
+    "productId": "66",
+    "rating": 5,
+    "comment": "Sıcak havada bile buz gibi su içmek harika. Kaliteli ve sağlam.",
+    "author": "Spor Salonu Müdavimi",
+    "date": "2025-07-15"
+  },
+  {
+    "reviewId": "137",
+    "productId": "66",
+    "rating": 4,
+    "comment": "İçecekleri gerçekten uzun süre soğuk tutuyor ama kapağını temizlemek biraz zor.",
+    "author": "Hijyen Takıntılı",
+    "date": "2025-07-18"
+  },
+  {
+    "reviewId": "138",
+    "productId": "67",
+    "rating": 5,
+    "comment": "Kalıcılığı ve kokusu efsane. İmza parfümüm oldu.",
+    "author": "Karizmatik Adam",
+    "date": "2025-08-01"
+  },
+  {
+    "reviewId": "139",
+    "productId": "67",
+    "rating": 4,
+    "comment": "Çok güzel bir koku ama çok popüler olduğu için herkeste var.",
+    "author": "Farklı Olmayı Seven",
+    "date": "2025-08-05"
+  },
+  {
+    "reviewId": "140",
+    "productId": "68",
+    "rating": 5,
+    "comment": "Engel algılama sensörleri çok iyi çalışıyor, acemi olmama rağmen hiç bir yere çarpmadım.",
+    "author": "Yeni Başlayan Pilot",
+    "date": "2025-09-10"
+  },
+  {
+    "reviewId": "141",
+    "productId": "68",
+    "rating": 4,
+    "comment": "Görüntü kalitesi harika. Sadece uçuş süresi biraz daha uzun olsaydı keşke.",
+    "author": "Hava Fotoğrafçısı",
+    "date": "2025-09-15"
+  },
+  {
+    "reviewId": "142",
+    "productId": "69",
+    "rating": 5,
+    "comment": "Çok zarif ve anlamlı bir hediye. Eşim çok beğendi.",
+    "author": "Düşünceli Eş",
+    "date": "2025-10-20"
+  },
+  {
+    "reviewId": "143",
+    "productId": "69",
+    "rating": 4,
+    "comment": "Şık bir kolye ama zinciri biraz ince gibi geldi.",
+    "author": "Narin Takı Sever",
+    "date": "2025-10-22"
+  },
+  {
+    "reviewId": "144",
+    "productId": "70",
+    "rating": 5,
+    "comment": "Ergonomisi harika, bileğimi hiç yormuyor. MagSpeed tekerleği ile uzun sayfalarda gezinmek çok hızlı.",
+    "author": "Yazılımcı Ahmet",
+    "date": "2025-11-01"
+  },
+  {
+    "reviewId": "145",
+    "productId": "70",
+    "rating": 5,
+    "comment": "Sessiz tıklamaları sayesinde ofiste kimseyi rahatsız etmiyorum. Harika bir mouse.",
+    "author": "Ofis Çalışanı",
+    "date": "2025-11-05"
+  },
+  {
+    "reviewId": "146",
+    "productId": "71",
+    "rating": 5,
+    "comment": "Oyun dünyasının başyapıtı. Her köşesi keşfedilmeyi bekleyen devasa bir dünya. Kesinlikle oynanmalı.",
+    "author": "Kaan Vural",
+    "date": "2025-05-10"
+  },
+  {
+    "reviewId": "147",
+    "productId": "71",
+    "rating": 4,
+    "comment": "Çok zor bir oyun ama zafer hissi paha biçilmez. Sabır gerektiriyor.",
+    "author": "Mücadeleci Oyuncu",
+    "date": "2025-05-15"
+  },
+  {
+    "reviewId": "148",
+    "productId": "72",
+    "rating": 5,
+    "comment": "Gece emzirmek için yataktan kalkmama gerek kalmıyor. Bebeğim de yanımda güvende.",
+    "author": "Yeni Anne Zeynep",
+    "date": "2025-04-22"
+  },
+  {
+    "reviewId": "149",
+    "productId": "72",
+    "rating": 4,
+    "comment": "Kurulumu kolay ve kullanışlı. Sadece biraz yer kaplıyor.",
+    "author": "Pratik Baba",
+    "date": "2025-04-25"
+  },
+  {
+    "reviewId": "150",
+    "productId": "73",
+    "rating": 5,
+    "comment": "Oğlum elinden düşürmüyor. Hayal gücünü geliştirmek için harika bir oyuncak.",
+    "author": "Serhat Baba",
+    "date": "2025-06-01"
+  },
+  {
+    "reviewId": "151",
+    "productId": "73",
+    "rating": 5,
+    "comment": "Parçaların kalitesi çok iyi. Farklı senaryolar kurarak saatlerce oynuyor.",
+    "author": "Oyun Ablası",
+    "date": "2025-06-05"
+  },
+  {
+    "reviewId": "152",
+    "productId": "74",
+    "rating": 5,
+    "comment": "Arkadaşlarla oynamak için en iyi kutu oyunu. Her oyun farklı bir macera.",
+    "author": "Üniversiteli Can",
+    "date": "2025-03-19"
+  },
+  {
+    "reviewId": "153",
+    "productId": "74",
+    "rating": 4,
+    "comment": "Strateji ve şansın mükemmel birleşimi. Sadece oyun biraz uzun sürebiliyor.",
+    "author": "Kutu Oyunu Koleksiyoneri",
+    "date": "2025-03-22"
+  },
+  {
+    "reviewId": "154",
+    "productId": "75",
+    "rating": 5,
+    "comment": "Premium Care serisi pişik yapmıyor ve sızdırmıyor. Başka marka denemem.",
+    "author": "Merve Kılıç",
+    "date": "2025-05-30"
+  },
+  {
+    "reviewId": "155",
+    "productId": "75",
+    "rating": 5,
+    "comment": "Islaklık göstergesi çok işe yarıyor. Bebeğimin cildi hep kuru kalıyor.",
+    "author": "Tecrübeli Anne",
+    "date": "2025-06-02"
+  },
+  {
+    "reviewId": "156",
+    "productId": "76",
+    "rating": 5,
+    "comment": "Kızımın doğum günü hediyesiydi, bayıldı. Birlikte kurmak bile çok eğlenceliydi.",
+    "author": "Aslı Doğan",
+    "date": "2025-07-15"
+  },
+  {
+    "reviewId": "157",
+    "productId": "76",
+    "rating": 4,
+    "comment": "Çok güzel bir oyuncak ama çok fazla küçük parçası var, kaybolmaya müsait.",
+    "author": "Düzenli Anne",
+    "date": "2025-07-18"
+  },
+  {
+    "reviewId": "158",
+    "productId": "77",
+    "rating": 5,
+    "comment": "Anne memesine en yakın biberon. Bebeğim hiç yadırgamadı.",
+    "author": "Çalışan Anne",
+    "date": "2025-08-10"
+  },
+  {
+    "reviewId": "159",
+    "productId": "77",
+    "rating": 4,
+    "comment": "Kaliteli ve sağlıklı. Sadece temizlemesi biraz zor.",
+    "author": "Hijyenik Baba",
+    "date": "2025-08-12"
+  },
+  {
+    "reviewId": "160",
+    "productId": "78",
+    "rating": 5,
+    "comment": "OLED ekranla oyun oynamak bambaşka bir keyif. Renkler çok canlı.",
+    "author": "Nintendo Hayranı",
+    "date": "2025-09-01"
+  },
+  {
+    "reviewId": "161",
+    "productId": "78",
+    "rating": 4,
+    "comment": "Hem TV'de hem de taşınabilir olarak oynamak harika. Joy-con'lar biraz daha dayanıklı olabilirdi.",
+    "author": "Gezgin Oyuncu",
+    "date": "2025-09-05"
+  },
+  {
+    "reviewId": "162",
+    "productId": "79",
+    "rating": 5,
+    "comment": "Oğlumun araba koleksiyonu için harika bir set. Modeller çok güzel.",
+    "author": "Koleksiyoner Baba",
+    "date": "2025-10-10"
+  },
+  {
+    "reviewId": "163",
+    "productId": "79",
+    "rating": 5,
+    "comment": "Fiyatına göre çok iyi bir hediye. Çocuklar bayılıyor.",
+    "author": "Doğum Günü Kurtarıcısı",
+    "date": "2025-10-12"
+  },
+  {
+    "reviewId": "164",
+    "productId": "80",
+    "rating": 5,
+    "comment": "Bebeğimin hassas cildine en iyi gelen pişik kremi. Anında etkisini gösteriyor.",
+    "author": "Tavsiye Eden Anne",
+    "date": "2025-11-20"
+  },
+  {
+    "reviewId": "165",
+    "productId": "80",
+    "rating": 5,
+    "comment": "Doğal içeriği sayesinde güvenle kullanıyorum. Kokusu da çok hafif.",
+    "author": "Doğal Ürün Meraklısı",
+    "date": "2025-11-22"
+  },
+  {
+    "reviewId": "166",
+    "productId": "81",
+    "rating": 5,
+    "comment": "Mekanik tuşların sesi ve hissi harika. RGB aydınlatması ile odamın havası değişti.",
+    "author": "Profesyonel Oyuncu",
+    "date": "2025-12-01"
+  },
+  {
+    "reviewId": "167",
+    "productId": "81",
+    "rating": 4,
+    "comment": "Çok iyi bir klavye ama gece oyun oynarken tuş sesi biraz fazla çıkıyor.",
+    "author": "Evli Oyuncu",
+    "date": "2025-12-05"
+  },
+  {
+    "reviewId": "168",
+    "productId": "82",
+    "rating": 5,
+    "comment": "Her okuduğumda farklı bir anlam bulduğum büyülü bir kitap.",
+    "author": "Kitap Kurdu Elif",
+    "date": "2025-01-05"
+  },
+  {
+    "reviewId": "169",
+    "productId": "82",
+    "rating": 5,
+    "comment": "Çocuğuma okuyorum, resimlerine ve hikayesine bayılıyor.",
+    "author": "Okuyan Anne",
+    "date": "2025-01-08"
+  },
+  {
+    "reviewId": "170",
+    "productId": "83",
+    "rating": 5,
+    "comment": "Arabası olmayanlar için hayat kurtarıcı. Tekerlekleri açıp kapatmak çok pratik.",
+    "author": "Şehirli Anne",
+    "date": "2025-02-15"
+  },
+  {
+    "reviewId": "171",
+    "productId": "83",
+    "rating": 4,
+    "comment": "Harika bir ürün ama bebek büyüyünce kullanım ömrü kısa oluyor.",
+    "author": "Geleceği Düşünen Baba",
+    "date": "2025-02-18"
+  },
+  {
+    "reviewId": "172",
+    "productId": "84",
+    "rating": 5,
+    "comment": "Hem PC hem de PlayStation ile uyumlu. Ses kalitesi ve mikrofonu çok başarılı.",
+    "author": "Çok Yönlü Oyuncu",
+    "date": "2025-03-10"
+  },
+  {
+    "reviewId": "173",
+    "productId": "84",
+    "rating": 4,
+    "comment": "Kumaş pedleri çok rahat. Sadece yazın biraz terletiyor.",
+    "author": "Konforuna Düşkün",
+    "date": "2025-03-14"
+  },
+  {
+    "reviewId": "174",
+    "productId": "85",
+    "rating": 5,
+    "comment": "Işıklı tekerlekleri sayesinde akşamları da çok keyifli oluyor. Çok kaliteli ve güvenli.",
+    "author": "Parkların Müdavimi",
+    "date": "2025-04-20"
+  },
+  {
+    "reviewId": "175",
+    "productId": "85",
+    "rating": 5,
+    "comment": "3 yaşındaki oğlum denge kurmayı bu scooter ile öğrendi.",
+    "author": "Gururlu Baba",
+    "date": "2025-04-22"
+  },
+  {
+    "reviewId": "176",
+    "productId": "86",
+    "rating": 5,
+    "comment": "İşe döndüğümde süt sağmak için aldım. Çok pratik ve verimli. Sessiz çalışması da güzel.",
+    "author": "Çalışan Süper Anne",
+    "date": "2025-05-25"
+  },
+  {
+    "reviewId": "177",
+    "productId": "86",
+    "rating": 4,
+    "comment": "İyi bir pompa ama parçalarını temizlemek ve kurutmak biraz zahmetli.",
+    "author": "Detaycı Anne",
+    "date": "2025-05-28"
+  },
+  {
+    "reviewId": "178",
+    "productId": "87",
+    "rating": 5,
+    "comment": "Grafikler ve oynanış her yıl daha da iyiye gidiyor. Futbol keyfi için tek adres.",
+    "author": "Fanatik Taraftar",
+    "date": "2025-06-30"
+  },
+  {
+    "reviewId": "179",
+    "productId": "87",
+    "rating": 3,
+    "comment": "Her sene aynı oyunu ufak tefek değişikliklerle çıkarıyorlar. Yine de alıyoruz.",
+    "author": "Alışkanlıklarından Vazgeçemeyen",
+    "date": "2025-07-02"
+  },
+  {
+    "reviewId": "180",
+    "productId": "88",
+    "rating": 5,
+    "comment": "Bebeğime elma ve armut püresi yapmak için kullanıyorum. Çok sağlıklı ve pratik.",
+    "author": "Ek Gıda Serüveni",
+    "date": "2025-08-15"
+  },
+  {
+    "reviewId": "181",
+    "productId": "88",
+    "rating": 5,
+    "comment": "Cam olması nedeniyle plastik rendelere göre çok daha sağlıklı. Tavsiye ederim.",
+    "author": "Güvenilir Anne",
+    "date": "2025-08-18"
+  },
+  {
+    "reviewId": "182",
+    "productId": "89",
+    "rating": 5,
+    "comment": "Renklerin canlılığı ve kalitesi resim yapmayı daha keyifli hale getiriyor.",
+    "author": "Minik Sanatçı",
+    "date": "2025-09-01"
+  },
+  {
+    "reviewId": "183",
+    "productId": "89",
+    "rating": 5,
+    "comment": "Uçları kolay kırılmıyor. Okul için en iyisi.",
+    "author": "Okul Alışverişi Yapan Veli",
+    "date": "2025-09-03"
+  },
+  {
+    "reviewId": "184",
+    "productId": "90",
+    "rating": 5,
+    "comment": "Görüntü kalitesi ve gece görüşü çok net. İçim rahat bir şekilde bebeğimi izleyebiliyorum.",
+    "author": "Huzurlu Anne",
+    "date": "2025-10-01"
+  },
+  {
+    "reviewId": "185",
+    "productId": "90",
+    "rating": 4,
+    "comment": "Karşılıklı konuşma özelliği çok işe yarıyor. Sadece şarjı biraz daha uzun gidebilirdi.",
+    "author": "Teknolojik Baba",
+    "date": "2025-10-05"
+  },
+  {
+    "reviewId": "186",
+    "productId": "91",
+    "rating": 5,
+    "comment": "Türk edebiyatının zirvesi. Yaşar Kemal'in betimlemeleriyle Çukurova'yı yaşıyorsunuz.",
+    "author": "Edebiyat Öğretmeni Ali",
+    "date": "2025-02-11"
+  },
+  {
+    "reviewId": "187",
+    "productId": "91",
+    "rating": 5,
+    "comment": "Defalarca okunacak bir başyapıt. Her Türk gencinin okuması gerekir.",
+    "author": "Kitap Kulübü Üyesi",
+    "date": "2025-02-15"
+  },
+  {
+    "reviewId": "188",
+    "productId": "92",
+    "rating": 5,
+    "comment": "Yıllar önce yazılmasına rağmen günümüzü anlatan, ürkütücü ve bir o kadar da etkileyici bir kitap.",
+    "author": "Furkan Çelik",
+    "date": "2025-04-01"
+  },
+  {
+    "reviewId": "189",
+    "productId": "92",
+    "rating": 5,
+    "comment": "Ufkumu açan bir kitap. Okuduktan sonra dünyaya aynı gözle bakamıyorsunuz.",
+    "author": "Sorgulayan Zihin",
+    "date": "2025-04-05"
+  },
+  {
+    "reviewId": "190",
+    "productId": "93",
+    "rating": 5,
+    "comment": "İnsanlık tarihine bakış açımı tamamen değiştirdi. Herkesin okuması gereken bir eser.",
+    "author": "Doktor Murat",
+    "date": "2025-03-25"
+  },
+  {
+    "reviewId": "191",
+    "productId": "93",
+    "rating": 5,
+    "comment": "Karmaşık konuları bu kadar basit ve akıcı bir dille anlatması inanılmaz.",
+    "author": "Meraklı Okur",
+    "date": "2025-03-28"
+  },
+  {
+    "reviewId": "192",
+    "productId": "94",
+    "rating": 5,
+    "comment": "İnsanı derinden etkileyen, naif bir aşk hikayesi. Sabahattin Ali'nin kalemine hayran kaldım.",
+    "author": "Sıla Öztürk",
+    "date": "2025-05-18"
+  },
+  {
+    "reviewId": "193",
+    "productId": "94",
+    "rating": 5,
+    "comment": "Bir oturuşta bitti. Kitabın etkisinden günlerce çıkamadım.",
+    "author": "Romantik Ruh",
+    "date": "2025-05-20"
+  },
+  {
+    "reviewId": "194",
+    "productId": "95",
+    "rating": 5,
+    "comment": "Çocukluğuma döndüm. Büyülü bir dünyanın kapılarını aralayan harika bir başlangıç.",
+    "author": "Gizem Yağmur",
+    "date": "2025-06-10"
+  },
+  {
+    "reviewId": "195",
+    "productId": "95",
+    "rating": 5,
+    "comment": "Her yaştan insanın keyifle okuyacağı bir kitap. Fantastik dünyayı sevdiren eser.",
+    "author": "Hayalperest",
+    "date": "2025-06-12"
+  },
+  {
+    "reviewId": "196",
+    "productId": "96",
+    "rating": 5,
+    "comment": "Hayatıma uyguladığım küçük değişikliklerin ne kadar büyük sonuçlar doğurduğunu gördüm. Çok faydalı bir rehber.",
+    "author": "Girişimci Berk",
+    "date": "2025-07-22"
+  },
+  {
+    "reviewId": "197",
+    "productId": "96",
+    "rating": 5,
+    "comment": "Sadece iş hayatında değil, günlük yaşamda da uygulanabilecek harika taktikler içeriyor.",
+    "author": "Disiplinli İnsan",
+    "date": "2025-07-25"
+  },
+  {
+    "reviewId": "198",
+    "productId": "97",
+    "rating": 5,
+    "comment": "Fantastik edebiyatın kutsal kitabı. Tolkien'in yarattığı dünya, karakterler ve diller eşsiz.",
+    "author": "Metehan Alp",
+    "date": "2025-02-28"
+  },
+  {
+    "reviewId": "199",
+    "productId": "97",
+    "rating": 5,
+    "comment": "Filmlerinden sonra kitabını okumak çok daha keyifli. Detaylar inanılmaz.",
+    "author": "Orta Dünya Fanı",
+    "date": "2025-03-03"
+  },
+  {
+    "reviewId": "200",
+    "productId": "98",
+    "rating": 5,
+    "comment": "Okuması zor ama bittiğinde 'iyi ki okumuşum' dedirten bir başyapıt. Ufkumu genişletti.",
+    "author": "Felsefeci Ayhan",
+    "date": "2025-04-30"
+  },
+  {
+    "reviewId": "201",
+    "productId": "98",
+    "rating": 4,
+    "comment": "Türk edebiyatının en önemli romanı ama herkese göre değil. Sabır ve dikkat gerektiriyor.",
+    "author": "Derin Okur",
+    "date": "2025-05-04"
+  },
+  {
+    "reviewId": "202",
+    "productId": "99",
+    "rating": 5,
+    "comment": "İnsana kendi yolunu bulması için ilham veren, umut dolu bir hikaye.",
+    "author": "Gezgin Leyla",
+    "date": "2025-05-25"
+  },
+  {
+    "reviewId": "203",
+    "productId": "99",
+    "rating": 5,
+    "comment": "Hayata dair harika dersler içeren, akıcı ve masalsı bir kitap.",
+    "author": "Anlam Arayan",
+    "date": "2025-05-28"
+  },
+  {
+    "reviewId": "204",
+    "productId": "100",
+    "rating": 5,
+    "comment": "Bilim kurgudan çok daha fazlası. Siyasi entrikalar, din, ekoloji... Katman katman bir eser.",
+    "author": "Sinan Engin",
+    "date": "2025-06-30"
+  },
+  {
+    "reviewId": "205",
+    "productId": "100",
+    "rating": 5,
+    "comment": "Okuduğum en iyi bilim kurgu serisi. Yarattığı evren büyüleyici.",
+    "author": "Bilim Kurgu Bağımlısı",
+    "date": "2025-07-04"
+  }
 ]
