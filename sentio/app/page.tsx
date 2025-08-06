@@ -43,13 +43,19 @@ export default function Home() {
   const [hasSearched, setHasSearched] = useState(false);
   
   // Faz 2: Yeni state'ler
-  const [activeTab, setActiveTab] = useState<'search' | 'analysis' | 'compare'>('search');
+  const [activeTab, setActiveTab] = useState<'search' | 'analysis' | 'compare' | 'vision'>('search');
   const [analysis, setAnalysis] = useState<Analysis | null>(null);
   const [analysisLoading, setAnalysisLoading] = useState(false);
   const [analyzedProductName, setAnalyzedProductName] = useState('');
   const [comparisonProducts, setComparisonProducts] = useState<Product[]>([]);
   const [comparisonResult, setComparisonResult] = useState<any>(null);
   const [comparisonLoading, setComparisonLoading] = useState(false);
+  
+  // Faz 3: Vision state'leri
+  const [visionLoading, setVisionLoading] = useState(false);
+  const [visionDescription, setVisionDescription] = useState('');
+  const [visionSearchQuery, setVisionSearchQuery] = useState('');
+  const [uploadedImage, setUploadedImage] = useState<string | null>(null);
 
   const handleSearch = async (query: string, filters: SearchFilters = {}) => {
     setLoading(true);
@@ -167,6 +173,52 @@ export default function Home() {
     }
   };
 
+  // Faz 3: Görsel analizi fonksiyonu
+  const handleVisionAnalysis = async (file: File) => {
+    setVisionLoading(true);
+    setUploadedImage(URL.createObjectURL(file));
+    
+    try {
+      const formData = new FormData();
+      formData.append('image', file);
+
+      const response = await fetch('/api/vision', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error('Görsel analizi başarısız');
+      }
+
+      const data = await response.json();
+      setVisionDescription(data.originalDescription);
+      setVisionSearchQuery(data.searchQuery);
+      
+      // Otomatik olarak arama yap
+      if (data.searchQuery) {
+        await handleSearch(data.searchQuery);
+      }
+      
+    } catch (error) {
+      console.error('Vision analizi hatası:', error);
+      setVisionDescription('');
+      setVisionSearchQuery('');
+    } finally {
+      setVisionLoading(false);
+    }
+  };
+
+  // Faz 3: Görsel temizleme
+  const handleClearVision = () => {
+    setUploadedImage(null);
+    setVisionDescription('');
+    setVisionSearchQuery('');
+    setProducts([]);
+    setSearchInsight('');
+    setHasSearched(false);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
@@ -231,6 +283,23 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
               Karşılaştır ({comparisonProducts.length})
+            </div>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('vision')}
+            className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              activeTab === 'vision'
+                ? 'bg-white text-orange-600 shadow-sm'
+                : 'text-gray-600 hover:text-gray-800'
+            }`}
+          >
+            <div className="flex items-center justify-center">
+              <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Görsel Arama
             </div>
           </button>
         </div>
@@ -370,6 +439,152 @@ export default function Home() {
               comparisonResult={comparisonResult}
               isLoading={comparisonLoading}
             />
+          </div>
+        )}
+
+        {/* Vision Tab - Faz 3 */}
+        {activeTab === 'vision' && (
+          <div className="space-y-8">
+            {/* Vision Upload Section */}
+            <div className="bg-white rounded-lg shadow-sm border p-6">
+              <div className="text-center">
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">Görselle Ürün Arama</h2>
+                <p className="text-gray-600 mb-6">
+                  Bir ürün fotoğrafı yükleyin, AI teknolojisi ile analiz edip benzer ürünleri bulalım
+                </p>
+                
+                {!uploadedImage ? (
+                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 hover:border-orange-400 transition-colors">
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0];
+                        if (file) {
+                          handleVisionAnalysis(file);
+                        }
+                      }}
+                      className="hidden"
+                      id="image-upload"
+                      disabled={visionLoading}
+                    />
+                    <label 
+                      htmlFor="image-upload" 
+                      className={`cursor-pointer inline-flex flex-col items-center ${
+                        visionLoading ? 'opacity-50 cursor-not-allowed' : ''
+                      }`}
+                    >
+                      <svg className="w-12 h-12 text-gray-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      <span className="text-lg font-medium text-gray-900 mb-1">
+                        {visionLoading ? 'Analiz ediliyor...' : 'Görsel Yükle'}
+                      </span>
+                      <span className="text-sm text-gray-500">
+                        PNG, JPG, WebP formatları desteklenir (Max 10MB)
+                      </span>
+                    </label>
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    <div className="relative inline-block">
+                      <img 
+                        src={uploadedImage} 
+                        alt="Yüklenen görsel" 
+                        className="max-w-md max-h-64 object-contain rounded-lg shadow-sm"
+                      />
+                    </div>
+                    <button
+                      onClick={handleClearVision}
+                      className="px-4 py-2 text-sm text-orange-600 hover:text-orange-700 border border-orange-300 rounded-lg hover:border-orange-400 transition-colors"
+                    >
+                      Yeni Görsel Yükle
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Vision Analysis Results */}
+            {visionDescription && (
+              <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <svg className="w-5 h-5 text-orange-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-3">
+                    <h3 className="text-sm font-medium text-orange-800">AI Görsel Analizi</h3>
+                    <p className="mt-1 text-sm text-orange-700">{visionDescription}</p>
+                    {visionSearchQuery && (
+                      <p className="mt-2 text-xs text-orange-600">
+                        <strong>Arama Sorgusu:</strong> "{visionSearchQuery}"
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Search Results from Vision */}
+            {hasSearched && visionSearchQuery && (
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  Görsele Benzer Ürünler ({products.length})
+                </h3>
+                
+                {searchInsight && (
+                  <div className="mb-4 bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <svg className="w-5 h-5 text-blue-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <div className="ml-3">
+                        <h3 className="text-sm font-medium text-blue-800">AI Önerisi</h3>
+                        <p className="mt-1 text-sm text-blue-700">{searchInsight}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {loading ? (
+                  <div className="flex items-center justify-center py-12">
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600"></div>
+                    <span className="ml-3 text-gray-600">Ürünler aranıyor...</span>
+                  </div>
+                ) : (
+                  <>
+                    {products.length === 0 ? (
+                      <div className="text-center py-12">
+                        <div className="text-gray-500">
+                          <svg className="w-12 h-12 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          <h3 className="text-lg font-medium text-gray-900 mb-1">Sonuç Bulunamadı</h3>
+                          <p>Bu görsele benzer ürün bulunamadı. Farklı bir görsel deneyin.</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {products.map((product, index) => (
+                          <ProductCard
+                            key={`${product.id}-${index}`}
+                            product={product}
+                            onAnalyze={handleAnalyze}
+                            onAddToComparison={handleAddToComparison}
+                            isInComparison={comparisonProducts.some(p => p.id === product.id)}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+            )}
           </div>
         )}
       </main>
