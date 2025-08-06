@@ -17,13 +17,17 @@ export async function POST(request) {
     }
 
     console.log('🖼️ Görsel analizi başlıyor...');
+    console.log('📊 Görsel boyutu:', `${Math.round(image.size / 1024)}KB`);
+    console.log('📝 Görsel tipi:', image.type);
 
     // Görseli base64 formatına çevir
+    console.log('🔄 Görsel base64 formatına çevriliyor...');
     const bytes = await image.arrayBuffer();
     const buffer = Buffer.from(bytes);
     const base64Image = buffer.toString('base64');
 
     // Gemini Vision modeli ile görseli analiz et
+    console.log('🤖 Gemini Vision modeli yükleniyor...');
     const visionModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const prompt = `Bu görselde gördüğün ürünü detaylı bir şekilde tanımla. Ürünün adını, kategorisini, renk, marka (varsa), önemli özelliklerini ve teknik detaylarını belirt. 
@@ -45,13 +49,15 @@ Eğer birden fazla ürün varsa, en belirgin olanını tanımla. Sadece gördü�
       }
     };
 
+    console.log('🔍 Görsel analizi Gemini API\'ye gönderiliyor...');
     const result = await visionModel.generateContent([prompt, imageData]);
     const description = result.response.text();
 
     console.log('✅ Görsel analizi tamamlandı');
-    console.log('📝 Açıklama:', description);
+    console.log('📝 Açıklama uzunluğu:', description.length, 'karakter');
 
     // Gemini'dan gelen açıklamayı arama sorgusu için optimize et
+    console.log('⚡ Arama sorgusu optimizasyonu başlıyor...');
     const optimizationModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const optimizationPrompt = `Aşağıdaki ürün açıklamasını, e-ticaret sitesinde arama yapmak için kısa ve etkili anahtar kelimelere çevir:
 
@@ -65,7 +71,8 @@ Maksimum 10 kelime kullan.`;
     const optimizationResult = await optimizationModel.generateContent(optimizationPrompt);
     const searchQuery = optimizationResult.response.text().trim();
 
-    console.log('🔍 Optimized search query:', searchQuery);
+    console.log('🔍 Optimize edilmiş arama sorgusu:', searchQuery);
+    console.log('🎯 İşlem başarıyla tamamlandı');
 
     return NextResponse.json({
       success: true,
