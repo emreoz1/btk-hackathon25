@@ -16,9 +16,21 @@ interface Product {
 
 interface ProductCardProps {
   product: Product;
+  onAnalyze?: (productId: string, productName: string) => void;
+  onAddToComparison?: (product: Product) => void;
+  isInComparison?: boolean;
+  showAnalyzeButton?: boolean;
+  showCompareButton?: boolean;
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ 
+  product, 
+  onAnalyze, 
+  onAddToComparison, 
+  isInComparison, 
+  showAnalyzeButton = true, 
+  showCompareButton = true 
+}: ProductCardProps) {
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('tr-TR', {
       style: 'currency',
@@ -86,17 +98,51 @@ export default function ProductCard({ product }: ProductCardProps) {
           </div>
         )}
 
-        {/* Price & Action */}
-        <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-          <div className="flex flex-col">
-            <span className="text-lg font-bold text-gray-900">
-              {formatPrice(product.price)}
-            </span>
+        {/* Price & Actions */}
+        <div className="pt-3 border-t border-gray-100">
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex flex-col">
+              <span className="text-lg font-bold text-gray-900">
+                {formatPrice(product.price)}
+              </span>
+            </div>
           </div>
           
-          <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-lg transition-colors duration-200">
-            İncele
-          </button>
+          {/* Action Buttons */}
+          <div className="flex gap-2">
+            {showAnalyzeButton && onAnalyze && (
+              <button
+                onClick={() => onAnalyze(product.id, product.name)}
+                className="flex-1 bg-green-600 hover:bg-green-700 text-white text-xs px-3 py-2 rounded-lg transition-colors duration-200 flex items-center justify-center"
+              >
+                <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                Analiz
+              </button>
+            )}
+            
+            {showCompareButton && onAddToComparison && (
+              <button
+                onClick={() => onAddToComparison(product)}
+                disabled={isInComparison}
+                className={`flex-1 text-white text-xs px-3 py-2 rounded-lg transition-colors duration-200 flex items-center justify-center ${
+                  isInComparison 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-purple-600 hover:bg-purple-700'
+                }`}
+              >
+                <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                {isInComparison ? 'Eklendi' : 'Karşılaştır'}
+              </button>
+            )}
+            
+            <button className="bg-blue-600 hover:bg-blue-700 text-white text-xs px-4 py-2 rounded-lg transition-colors duration-200">
+              İncele
+            </button>
+          </div>
         </div>
       </div>
     </div>
